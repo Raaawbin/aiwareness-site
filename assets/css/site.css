@@ -134,17 +134,13 @@ a.pill:hover svg{transform:translateX(3px)}
 .js .reveal.in{opacity:1;transform:none;filter:none}
 
 /* ---------- Home hero ---------- */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 clamp(76px,11vh,112px);overflow:hidden;isolation:isolate}
-.hero-media{position:absolute;inset:0 0 30% 0;z-index:-2;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.06);animation:kenburns 24s ease-in-out infinite alternate}
-@keyframes kenburns{to{transform:scale(1.14) translateY(-1.5%)}}
-.hero-media::after{content:"";position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(10,10,11,.5) 0%,rgba(10,10,11,0) 22%,rgba(10,10,11,.1) 55%,rgba(10,10,11,.6) 100%),
-  radial-gradient(ellipse 70% 50% at 50% 42%,transparent 40%,rgba(10,10,11,.5) 100%)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:140px 0 clamp(90px,12vh,130px);overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:-10%;width:min(1200px,130vw);height:760px;transform:translateX(-50%);z-index:-2;background:radial-gradient(ellipse at 50% 30%,rgba(124,58,237,.32),transparent 60%),radial-gradient(ellipse at 75% 55%,rgba(76,201,240,.16),transparent 55%);filter:blur(10px)}
+/* fade the glow out before its box edges so no seam shows */
+.hero::before,.page-hero::before{-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent);mask-image:radial-gradient(closest-side,#000 55%,transparent)}
 .hero canvas,.page-hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
 .hero-inner{text-align:center;width:100%}
 .hero .pill{margin-bottom:24px}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;z-index:-1;background:linear-gradient(180deg,transparent,rgba(10,10,11,.6) 40%,rgba(10,10,11,.6) 72%,transparent);pointer-events:none}
 .hero h1{font-size:clamp(40px,5.4vw,82px);font-weight:800;letter-spacing:-.045em;line-height:.98;max-width:18ch;margin:0 auto}
 .hero .sub{margin:24px auto 0;max-width:66ch;color:var(--text-soft);font-size:clamp(16.5px,1.8vw,20px);line-height:1.65}
 .hero .btn-row{justify-content:center;margin-top:38px}
@@ -554,3 +550,4 @@ main{overflow-x:clip}
 .signup-after{text-align:center;margin-top:22px;color:var(--text-mute);font-size:15px}
 .signup-after a{color:var(--purple);font-weight:600}
 @media (max-width:900px){.signup{grid-template-columns:1fr}}
+
