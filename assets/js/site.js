@@ -224,6 +224,40 @@
     });
   }
 
+  /* ---------- Newsletter signup: Substack's embedded form ---------- */
+  // Substack only allows its form inside pages served over http(s). A page opened
+  // straight from disk (file://) gets a blocked, empty frame, so offer the link instead.
+  var canEmbed = /^https?:$/.test(location.protocol);
+  document.querySelectorAll('[data-signup]').forEach(function (box) {
+    var wrap = box.querySelector('[data-signup-frame]');
+    var iframe = wrap && wrap.querySelector('iframe');
+    if (!iframe) return;
+    if (!canEmbed) {
+      iframe.remove();
+      wrap.hidden = true;
+      var alt = box.querySelector('[data-signup-alt]');
+      if (alt) alt.hidden = true;
+      var fb = box.querySelector('[data-signup-fallback]');
+      if (fb) {
+        fb.querySelector('[data-signup-fallback-msg]').textContent = 'Preview mode: Substack only shows its form on a live website, so here this opens Substack instead. On aiwareness.space the form appears right in this box.';
+        fb.hidden = false;
+      }
+      return;
+    }
+    // The frame may already have loaded before this script ran.
+    var done = performance.getEntriesByName && performance.getEntriesByName(iframe.src).some(function (e) { return e.responseEnd > 0; });
+    if (done) wrap.classList.add('ready');
+    // Once someone types into the form, the next reload is Substack's reply: give it room.
+    var engaged = false;
+    window.addEventListener('blur', function () {
+      setTimeout(function () { if (document.activeElement === iframe) engaged = true; }, 0);
+    });
+    iframe.addEventListener('load', function () {
+      wrap.classList.add('ready');
+      if (engaged) wrap.classList.add('expanded');
+    });
+  });
+
   /* ---------- Contact form (posts to send.php) ---------- */
   var form = document.getElementById('contactForm');
   if (form) {

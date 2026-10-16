@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=20261016d">
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.AIW)document.documentElement.classList.remove('js')},2500)</script>
 </head>
 <body>
@@ -85,7 +85,7 @@
     <span class="flag">This evening has taken place</span>
     <div><b>When:</b> Tuesday, June 30th, 18:00</div>
     <div><b>Where:</b> Cocreation Loft, Schinkestraße 9, 12047 Berlin</div>
-    <div class="hide-when-past" data-event-start="2026-10-20T18:00:00+02:00" data-event-end="2026-10-20T21:00:00+02:00"><b>Next one:</b> Sense-Making Evening on Tuesday, 20 October. <a href="events.html#next">See the details</a></div>
+    <div class="hide-when-past" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><b>Next one:</b> Sense-Making Evening on Tuesday, 20 October. <a href="events.html#next">See the details</a></div>
   </div>
 
   <h2>AIwareness</h2>
@@ -102,16 +102,45 @@
 
   <p style="margin-top:44px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between">
     <a class="back" href="newsletter.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All notes</a>
-    <a class="btn btn-ghost btn-sm" href="https://substack.com/@aiwareness1" target="_blank" rel="noopener">Subscribe on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="btn btn-ghost btn-sm" href="#subscribe">Subscribe <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </p>
 </article>
 
 <section class="section-tight" style="margin-top:clamp(40px,6vw,70px)">
   <div class="wrap">
-    <div class="cta center reveal hide-when-past" data-event-start="2026-10-20T18:00:00+02:00" data-event-end="2026-10-20T21:00:00+02:00">
+<div class="card signup reveal" id="subscribe" data-signup>
+  <div class="signup-copy">
+    <p class="kicker">Enjoyed this note?</p>
+    <h2>Get the next one <span class="grad-text">in your inbox</span></h2>
+    <p>Honest notes on AI, awareness and agency from someone paying close attention. No doom and no overselling.</p>
+    <ul class="signup-perks">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg> Free</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg> No hype</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg> Unsubscribe anytime</li>
+    </ul>
+  </div>
+  <div class="signup-action">
+    <div class="signup-frame" data-signup-frame>
+      <span class="signup-loading"><i aria-hidden="true"></i>Loading the signup form…</span>
+      <iframe src="https://aiwareness1.substack.com/embed" title="Subscribe to the AIwareness newsletter on Substack" loading="lazy" scrolling="no"></iframe>
+    </div>
+    <p class="signup-alt" data-signup-alt>The newsletter is hosted on Substack. Trouble with the form? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a> · <a href="privacy.html#p5">Privacy</a></p>
+    <div class="signup-fallback" data-signup-fallback hidden>
+      <a class="btn btn-grad btn-lg" href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg> Subscribe on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+      <p class="signup-note" data-signup-fallback-msg>The signup form couldn’t load here, so you can subscribe on Substack instead. It takes a few seconds.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="section-tight hide-when-past" style="padding-top:0" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00">
+  <div class="wrap">
+    <div class="cta center reveal">
       <p class="kicker">Next sense-making evening</p>
       <h2>Come think with us <span class="shimmer">in person</span></h2>
-      <p>Tuesday, 20 October, 18:00 at the Cocreation Loft in Berlin.</p>
+      <p>Tuesday, 20 October, 18:30 at the Cocreation Loft in Berlin.</p>
       <div class="btn-row"><a class="btn btn-grad btn-lg" href="events.html#next">See the details <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
   </div>
@@ -125,7 +154,7 @@
       <div class="foot-brand">
         <a href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135" loading="lazy"></a>
         <p>Awareness, leadership, and culture for the organizations building and adopting AI.</p>
-        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:00:00+02:00" data-event-end="2026-10-20T21:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div>
         <h5>Explore</h5>
@@ -157,6 +186,6 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js" defer></script>
+<script src="assets/js/site.js?v=20261016d" defer></script>
 </body>
 </html>
