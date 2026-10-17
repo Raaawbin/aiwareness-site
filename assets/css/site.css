@@ -813,14 +813,14 @@ a.pill:hover .icon { transform: translateX(3px); }
 
 /* Three focus areas inside the organisations offer */
 .sub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.sub { display: flex; flex-direction: column; padding: 28px; scroll-margin-top: 110px; }
-.sub .ico { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 20px; border-radius: 15px; background: rgba(167, 139, 250, .12); border: 1px solid rgba(167, 139, 250, .25); }
-.sub .ico .icon { background: var(--grad); }
-.sub h3 { margin-bottom: 12px; font-size: 1.4rem; line-height: 1.2; }
-.sub p { font-size: .94rem; line-height: 1.75; }
-.sub .tags { margin: 4px 0 22px; }
-.sub .out { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); font-size: .88rem; }
-.sub .out b { color: var(--ink); }
+.subcard { display: flex; flex-direction: column; padding: 28px; scroll-margin-top: 110px; }
+.subcard .ico { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 20px; border-radius: 15px; background: rgba(167, 139, 250, .12); border: 1px solid rgba(167, 139, 250, .25); }
+.subcard .ico .icon { background: var(--grad); }
+.subcard h3 { margin-bottom: 12px; font-size: 1.4rem; line-height: 1.2; }
+.subcard p { font-size: .94rem; line-height: 1.75; }
+.subcard .tags { margin: 4px 0 22px; }
+.subcard .out { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); font-size: .88rem; }
+.subcard .out b { color: var(--ink); }
 
 /* Tiles (event format) */
 .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
@@ -1049,7 +1049,7 @@ html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: au
 .theme-classic .site-foot::before { opacity: .26; }
 .theme-classic .pill .live, .theme-classic .event-status .live { background: #4cc9f0; }
 .theme-classic .event-status { color: #4cc9f0; }
-.theme-classic .dd-ico, .theme-classic .sub .ico, .theme-classic .tile .ico { background: rgba(124, 58, 237, .16); border-color: rgba(201, 166, 255, .25); }
+.theme-classic .dd-ico, .theme-classic .subcard .ico, .theme-classic .tile .ico { background: rgba(124, 58, 237, .16); border-color: rgba(201, 166, 255, .25); }
 
 /* Hero: small line above the title starts flush with the title (no leading dash) */
 .eyebrow.flush::before { display: none; }
