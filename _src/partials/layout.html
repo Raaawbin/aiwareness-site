@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"
+      data-title-en="{{TITLE_EN}}"
+      data-title-de="{{TITLE_DE}}"
+      data-desc-en="{{DESC_EN}}"
+      data-desc-de="{{DESC_DE}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE_EN}}</title>
+<meta name="description" content="{{DESC_EN}}">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIwareness">
+<meta property="og:title" content="{{TITLE_EN}}">
+<meta property="og:description" content="{{DESC_EN}}">
+<meta property="og:url" content="https://aiwareness.space/{{PAGE}}">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/{{PAGE}}">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v={{VER}}">
+{{HEADEXTRA}}</head>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+<div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+{{> header}}
+
+<main id="main">
+{{BODY}}
+</main>
+
+{{> footer}}
+
+<script src="assets/js/site.js?v={{VER}}" defer></script>
+</body>
+</html>

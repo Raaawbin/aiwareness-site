@@ -1,192 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-title-en="Privacy policy · AIwareness"
+      data-title-de="Datenschutzerklärung · AIwareness"
+      data-desc-en="How personal data is handled on the AIwareness website, in accordance with the GDPR."
+      data-desc-de="Wie personenbezogene Daten auf der Website von AIwareness verarbeitet werden, gemäß DSGVO.">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacy Policy · AIwareness</title>
-<meta name="description" content="How your data is handled on aiwareness.space, in accordance with the EU General Data Protection Regulation (GDPR / DSGVO).">
-<meta name="theme-color" content="#0A0A0B">
+<title>Privacy policy · AIwareness</title>
+<meta name="description" content="How personal data is handled on the AIwareness website, in accordance with the GDPR.">
+<meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIwareness">
-<meta property="og:title" content="Privacy Policy · AIwareness">
-<meta property="og:description" content="How your data is handled on aiwareness.space, in accordance with the EU General Data Protection Regulation (GDPR / DSGVO).">
-<meta property="og:image" content="https://aiwareness.space/assets/img/hero-hands.jpg">
+<meta property="og:title" content="Privacy policy · AIwareness">
+<meta property="og:description" content="How personal data is handled on the AIwareness website, in accordance with the GDPR.">
+<meta property="og:url" content="https://aiwareness.space/privacy.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/privacy.html">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261016f">
-<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.AIW)document.documentElement.classList.remove('js')},2500)</script>
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261017k">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A6FF"/><stop offset="1" stop-color="#4CC9F0"/></linearGradient></defs></svg>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
 <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135"></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <div class="nav-sub">
-        <a href="solutions.html">Solutions <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="submenu">
-          <a href="solutions.html#culture-development"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.3" cy="9" r="2.4"/><path d="M16.2 13.9a4.8 4.8 0 0 1 5 5"/></svg></span><span><span class="sm-t">Culture Development</span><span class="sm-d">Psychological safety and real alignment for AI teams</span></span></a>
-          <a href="solutions.html#conscious-ai-adoption"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5.5" r="1.8"/><circle cx="19.5" cy="5.5" r="1.8"/><circle cx="4.5" cy="18.5" r="1.8"/><circle cx="19.5" cy="18.5" r="1.8"/><path d="M5.9 6.9l3.8 3.1M18.1 6.9l-3.8 3.1M5.9 17.1l3.8-3.1M18.1 17.1l-3.8-3.1"/></svg></span><span><span class="sm-t">Conscious AI Adoption</span><span class="sm-d">Responsible implementation that brings people along</span></span></a>
-          <a href="solutions.html#leadership-coaching"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><span><span class="sm-t">Leadership Coaching</span><span class="sm-d">Clear decisions under uncertainty</span></span></a>
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AIwareness home">
+      <img src="assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></span><span class="dd-d"><span class="lang-en">Culture, conscious AI adoption, leadership</span><span class="lang-de">Kultur, bewusste KI-Einführung, Führung</span></span></span></a>
+            <a href="solutions.html#education"><span class="dd-ico"><span class="icon icon-eye" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></span><span class="dd-d"><span class="lang-en">Learn what AI means for people</span><span class="lang-de">Verstehen, was KI für Menschen bedeutet</span></span></span></a>
+            <a href="solutions.html#one-on-one"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></span><span class="dd-d"><span class="lang-en">For founders and entrepreneurs</span><span class="lang-de">Für Gründende und Selbstständige</span></span></span></a>
+          </div>
         </div>
+        <a href="events.html">Events</a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
       </div>
-      <a href="events.html">Events</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-grad" href="newsletter.html">Newsletter</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-  </nav>
+  </div>
 </header>
+
 
 <main id="main">
 
-<section class="page-hero" style="padding-bottom:clamp(40px,5vw,60px)">
+<section class="page-hero" style="padding-bottom:40px" aria-labelledby="pageTitle">
   <div class="wrap">
-    <p class="kicker reveal">Legal</p>
-    <h1 class="reveal" style="--i:1"><span class="shimmer">Privacy Policy</span></h1>
-    <p class="intro reveal" style="--i:2">How your data is handled on this website, in accordance with the EU General Data Protection Regulation (GDPR / DSGVO).</p>
+    <span class="eyebrow reveal"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></span>
+    <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en"><span class="o">Privacy policy</span></span><span class="lang-de"><span class="o">Datenschutz</span></span></h1>
+    <p class="lead reveal" style="--i:2"><span class="lang-en">How your data is handled on this website, in accordance with the EU General Data Protection Regulation (GDPR).</span><span class="lang-de">Wie Deine Daten auf dieser Website verarbeitet werden, gemäß der Datenschutz-Grundverordnung (DSGVO).</span></p>
   </div>
 </section>
 
-<section class="section-tight" style="padding-top:0">
+<section class="sec" style="padding-top:0" aria-label="Privacy policy">
   <div class="wrap legal">
     <nav class="toc" aria-label="On this page">
-      <b>On this page</b>
-      <a href="#p1">1. Overview &amp; controller</a>
-      <a href="#p2">2. Hosting &amp; server logs</a>
-      <a href="#p3">3. Contact form &amp; email</a>
-      <a href="#p4">4. Web fonts</a>
-      <a href="#p5">5. Newsletter (Substack)</a>
-      <a href="#p6">6. Cookies &amp; analytics</a>
-      <a href="#p7">7. SSL / TLS encryption</a>
-      <a href="#p8">8. Your rights</a>
-      <a href="#p9">9. Right to complain</a>
-      <a href="#p10">10. Changes</a>
+      <b><span class="lang-en">On this page</span><span class="lang-de">Auf dieser Seite</span></b>
+      <a href="#p1"><span class="lang-en">1. Overview &amp; controller</span><span class="lang-de">1. Überblick &amp; Verantwortlicher</span></a>
+      <a href="#p2"><span class="lang-en">2. Hosting &amp; server logs</span><span class="lang-de">2. Hosting &amp; Server-Logs</span></a>
+      <a href="#p3"><span class="lang-en">3. Contact form &amp; email</span><span class="lang-de">3. Kontaktformular &amp; E-Mail</span></a>
+      <a href="#p4"><span class="lang-en">4. Fonts</span><span class="lang-de">4. Schriften</span></a>
+      <a href="#p5"><span class="lang-en">5. Newsletter (Substack)</span><span class="lang-de">5. Newsletter (Substack)</span></a>
+      <a href="#p6"><span class="lang-en">6. Cookies &amp; storage</span><span class="lang-de">6. Cookies &amp; Speicher</span></a>
+      <a href="#p7"><span class="lang-en">7. Encryption</span><span class="lang-de">7. Verschlüsselung</span></a>
+      <a href="#p8"><span class="lang-en">8. Your rights</span><span class="lang-de">8. Deine Rechte</span></a>
+      <a href="#p9"><span class="lang-en">9. Right to complain</span><span class="lang-de">9. Beschwerderecht</span></a>
+      <a href="#p10"><span class="lang-en">10. Changes</span><span class="lang-de">10. Änderungen</span></a>
     </nav>
-    <div class="legal-card reveal">
+    <div class="panel legal-card reveal">
       <div class="prose">
-        <h2 id="p1">1. Overview &amp; controller</h2>
-        <p>Protecting your personal data matters to us. This policy explains what personal data is collected when you visit this website, how it is used, and the rights you have under the EU General Data Protection Regulation (GDPR / DSGVO) and the German Federal Data Protection Act (BDSG).</p>
-        <p>The controller responsible for data processing on this website is:</p>
-        <p><strong>Robin Manuel Hotz — Sole Proprietorship</strong><br>Hohlgasse 21<br>79199 Kirchzarten, Germany<br>Phone: +49 176 56752768<br>Email: hello(at)aiwareness.space</p>
-        <p>The controller is the natural or legal person who decides, alone or jointly with others, on the purposes and means of processing personal data (such as names, email addresses, and similar).</p>
+        <section id="p1">
+          <div class="lang-en">
+            <h2>1. Overview &amp; controller</h2>
+            <p>Protecting your personal data matters to us. This policy explains what personal data is collected when you visit this website, how it is used, and the rights you have under the EU General Data Protection Regulation (GDPR) and the German Federal Data Protection Act (BDSG).</p>
+            <p>The controller responsible for data processing on this website is:</p>
+            <p><strong>Robin Manuel Hotz, sole proprietorship</strong><br>Hohlgasse 21<br>79199 Kirchzarten, Germany<br>Phone: +49 176 56752768<br>Email: hello(at)aiwareness.space</p>
+            <p>The controller is the natural or legal person who decides, alone or jointly with others, on the purposes and means of processing personal data (such as names and email addresses).</p>
+          </div>
+          <div class="lang-de">
+            <h2>1. Überblick &amp; Verantwortlicher</h2>
+            <p>Der Schutz Deiner persönlichen Daten ist uns wichtig. Diese Erklärung beschreibt, welche personenbezogenen Daten beim Besuch dieser Website erhoben werden, wie sie genutzt werden und welche Rechte Du nach der Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG) hast.</p>
+            <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+            <p><strong>Robin Manuel Hotz, Einzelunternehmen</strong><br>Hohlgasse 21<br>79199 Kirchzarten, Deutschland<br>Telefon: +49 176 56752768<br>E-Mail: hello(at)aiwareness.space</p>
+            <p>Verantwortlich ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung personenbezogener Daten (etwa Namen und E-Mail-Adressen) entscheidet.</p>
+          </div>
+        </section>
 
-        <h2 id="p2">2. Hosting &amp; server log files</h2>
-        <p>This website is hosted by STRATO AG (Germany). When you visit the site, the hosting provider’s servers automatically collect and store information that your browser transmits, in so-called server log files:</p>
-        <ul>
-          <li>browser type and version</li>
-          <li>operating system used</li>
-          <li>referrer URL (the previously visited page)</li>
-          <li>the requested page and time of the server request</li>
-          <li>your IP address (typically shortened or anonymized)</li>
-        </ul>
-        <p>This data is not merged with other data sources and is processed to ensure a secure, stable, and technically functional website. The legal basis is our legitimate interest in the proper operation and security of the site (Art. 6(1)(f) GDPR). Hosting is carried out by STRATO AG as a processor on our behalf, on the basis of a data processing agreement (Auftragsverarbeitungsvertrag) pursuant to Art. 28 GDPR.</p>
+        <section id="p2">
+          <div class="lang-en">
+            <h2>2. Hosting &amp; server log files</h2>
+            <p>This website is hosted on GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. When you visit the site, GitHub’s servers automatically collect information that your browser transmits, in so-called server log files:</p>
+            <ul>
+              <li>your IP address</li>
+              <li>browser type and version</li>
+              <li>operating system used</li>
+              <li>referrer URL (the previously visited page)</li>
+              <li>the requested page and time of the request</li>
+            </ul>
+            <p>This data is processed to deliver the website securely and reliably. The legal basis is our legitimate interest in the proper operation and security of the site (Art. 6(1)(f) GDPR). GitHub may process data in the USA. GitHub is certified under the EU-U.S. Data Privacy Framework, on which the transfer is based (Art. 45 GDPR). More information: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+          </div>
+          <div class="lang-de">
+            <h2>2. Hosting &amp; Server-Logfiles</h2>
+            <p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Besuch der Website erfassen die Server von GitHub automatisch Informationen, die Dein Browser übermittelt, in sogenannten Server-Logfiles:</p>
+            <ul>
+              <li>Deine IP-Adresse</li>
+              <li>Browsertyp und Browserversion</li>
+              <li>verwendetes Betriebssystem</li>
+              <li>Referrer-URL (die zuvor besuchte Seite)</li>
+              <li>die aufgerufene Seite und Uhrzeit der Anfrage</li>
+            </ul>
+            <p>Diese Daten werden verarbeitet, um die Website sicher und zuverlässig auszuliefern. Rechtsgrundlage ist unser berechtigtes Interesse am ordnungsgemäßen und sicheren Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO). GitHub kann Daten in den USA verarbeiten. GitHub ist unter dem EU-U.S. Data Privacy Framework zertifiziert, auf dem die Übermittlung beruht (Art. 45 DSGVO). Mehr dazu: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>
+          </div>
+        </section>
 
-        <h2 id="p3">3. Contact form &amp; email contact</h2>
-        <p>If you use the contact form, the details you enter — your name, email address, company and role, your described challenge, and any optional message — are transmitted to us by email so we can respond to your enquiry. We do not use this data for any other purpose without your consent, and we do not share it with third parties beyond what is necessary to deliver the message (our hosting provider).</p>
-        <p>If you contact us directly by email, the information you provide will be stored for the purpose of handling your request and any follow-up questions.</p>
-        <p>The legal basis for processing this data is Art. 6(1)(b) GDPR where your request relates to a (potential) contract, and otherwise our legitimate interest in responding to enquiries (Art. 6(1)(f) GDPR). The data is retained until your request has been fully dealt with, and thereafter only as long as required by statutory retention obligations. You may ask us to delete it at any time (see your rights below).</p>
+        <section id="p3">
+          <div class="lang-en">
+            <h2>3. Contact form &amp; email contact</h2>
+            <p>The contact form on this website does not send or store anything itself. When you submit it, your own email program opens with your details already filled in (name, email address, optional company and role, topic and message). Only when you send that email does it reach us.</p>
+            <p>If you contact us by email, we store the information you provide in order to handle your request and any follow-up questions. The legal basis is Art. 6(1)(b) GDPR where your request relates to a (potential) contract, and otherwise our legitimate interest in answering enquiries (Art. 6(1)(f) GDPR). We keep the data until your request has been dealt with, and after that only as long as statutory retention obligations require. You can ask us to delete it at any time (see your rights below).</p>
+          </div>
+          <div class="lang-de">
+            <h2>3. Kontaktformular &amp; Kontakt per E-Mail</h2>
+            <p>Das Kontaktformular auf dieser Website versendet und speichert selbst nichts. Beim Absenden öffnet sich Dein eigenes E-Mail-Programm mit Deinen Angaben (Name, E-Mail-Adresse, optional Organisation und Rolle, Thema und Nachricht). Erst wenn Du diese E-Mail abschickst, erreicht sie uns.</p>
+            <p>Wenn Du uns per E-Mail kontaktierst, speichern wir Deine Angaben, um Deine Anfrage und mögliche Rückfragen zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn Deine Anfrage mit einem (möglichen) Vertrag zusammenhängt, ansonsten unser berechtigtes Interesse an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Wir speichern die Daten, bis Deine Anfrage erledigt ist, danach nur so lange, wie gesetzliche Aufbewahrungspflichten es verlangen. Du kannst jederzeit die Löschung verlangen (siehe Deine Rechte unten).</p>
+          </div>
+        </section>
 
-        <h2 id="p4">4. Web fonts</h2>
-        <p>To present its content consistently, this website currently uses Google Fonts, provided by Google Ireland Limited. When a page loads, your browser connects to Google’s servers to retrieve the fonts, which means your IP address is transmitted to Google and may be processed on servers in the USA. This is based on our legitimate interest in a uniform and appealing presentation of our website (Art. 6(1)(f) GDPR). Further information is available in Google’s privacy policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</p>
+        <section id="p4">
+          <div class="lang-en">
+            <h2>4. Fonts</h2>
+            <p>This website does not load fonts from external servers. It uses fonts that are already installed on your device, so no data is transmitted to font providers.</p>
+          </div>
+          <div class="lang-de">
+            <h2>4. Schriften</h2>
+            <p>Diese Website lädt keine Schriften von externen Servern. Sie nutzt Schriften, die bereits auf Deinem Gerät installiert sind. Dabei werden keine Daten an Schriftanbieter übertragen.</p>
+          </div>
+        </section>
 
-        <h2 id="p5">5. Newsletter sign-up (Substack)</h2>
-        <p>Our newsletter is hosted by Substack, Inc. (USA). Some pages of this website (Home, Newsletter, Events and our newsletter notes) contain Substack's sign-up form, which is loaded directly from Substack's servers when that part of the page comes into view. Your browser then transmits technical data such as your IP address and browser information to Substack, and Substack may set its own cookies. If you subscribe, the email address you enter is sent directly to Substack, which manages your subscription and delivers the newsletter.</p>
-        <p>We embed the form based on our legitimate interest in offering a simple way to subscribe (Art. 6(1)(f) GDPR); the subscription itself is based on your request (Art. 6(1)(b) GDPR). You can unsubscribe at any time via the link in every email. Substack may process data in the USA; its own privacy policy applies: <a href="https://substack.com/privacy" target="_blank" rel="noopener">https://substack.com/privacy</a>.</p>
+        <section id="p5">
+          <div class="lang-en">
+            <h2>5. Newsletter sign-up (Substack)</h2>
+            <p>Our newsletter is hosted by Substack, Inc. (USA). Some pages of this website (Home, Newsletter, Events and our newsletter notes) contain Substack’s sign-up form, which is loaded directly from Substack’s servers when that part of the page comes into view. Your browser then transmits technical data such as your IP address and browser information to Substack, and Substack may set its own cookies. If you subscribe, the email address you enter is sent directly to Substack, which manages your subscription and delivers the newsletter.</p>
+            <p>We embed the form based on our legitimate interest in offering a simple way to subscribe (Art. 6(1)(f) GDPR); the subscription itself is based on your request (Art. 6(1)(b) GDPR). You can unsubscribe at any time via the link in every email. Substack may process data in the USA; its own privacy policy applies: <a href="https://substack.com/privacy" target="_blank" rel="noopener">https://substack.com/privacy</a>.</p>
+          </div>
+          <div class="lang-de">
+            <h2>5. Newsletter-Anmeldung (Substack)</h2>
+            <p>Unser Newsletter wird bei Substack, Inc. (USA) betrieben. Einige Seiten dieser Website (Start, Newsletter, Events und unsere Newsletter-Notizen) enthalten das Anmeldeformular von Substack. Es wird direkt von den Servern von Substack geladen, sobald dieser Teil der Seite sichtbar wird. Dein Browser übermittelt dabei technische Daten wie Deine IP-Adresse und Browserinformationen an Substack, und Substack kann eigene Cookies setzen. Wenn Du Dich anmeldest, geht die eingegebene E-Mail-Adresse direkt an Substack, das Dein Abonnement verwaltet und den Newsletter versendet.</p>
+            <p>Wir binden das Formular auf Grundlage unseres berechtigten Interesses ein, eine einfache Anmeldung anzubieten (Art. 6 Abs. 1 lit. f DSGVO). Das Abonnement selbst beruht auf Deiner Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Du kannst Dich jederzeit über den Link in jeder E-Mail abmelden. Substack kann Daten in den USA verarbeiten; es gilt die Datenschutzerklärung von Substack: <a href="https://substack.com/privacy" target="_blank" rel="noopener">https://substack.com/privacy</a>.</p>
+          </div>
+        </section>
 
-        <h2 id="p6">6. Cookies &amp; analytics</h2>
-        <p>This website does not set tracking cookies and does not use analytics, advertising, or third-party tracking services. Any storage used is strictly technical and limited to what is necessary for the website to function. Pages that contain the newsletter sign-up form load it from Substack, which may set its own cookies (see section 5).</p>
+        <section id="p6">
+          <div class="lang-en">
+            <h2>6. Cookies &amp; local storage</h2>
+            <p>This website does not set tracking cookies and does not use analytics, advertising or third-party tracking services. To remember your language choice (English or German), the website saves one small entry in your browser’s local storage (“aiw_lang”). It stays on your device, is not sent to us and is strictly necessary for the function you chose (§ 25(2) TDDDG). You can delete it at any time in your browser settings. Pages that contain the newsletter sign-up form load it from Substack, which may set its own cookies (see section 5).</p>
+          </div>
+          <div class="lang-de">
+            <h2>6. Cookies &amp; lokaler Speicher</h2>
+            <p>Diese Website setzt keine Tracking-Cookies und nutzt keine Analyse-, Werbe- oder Tracking-Dienste Dritter. Um Deine Sprachwahl (Englisch oder Deutsch) zu merken, legt die Website einen kleinen Eintrag im lokalen Speicher Deines Browsers ab („aiw_lang“). Er bleibt auf Deinem Gerät, wird nicht an uns übertragen und ist für die von Dir gewählte Funktion unbedingt erforderlich (§ 25 Abs. 2 TDDDG). Du kannst ihn jederzeit in Deinen Browsereinstellungen löschen. Seiten mit dem Newsletter-Formular laden es von Substack, das eigene Cookies setzen kann (siehe Abschnitt 5).</p>
+          </div>
+        </section>
 
-        <h2 id="p7">7. SSL / TLS encryption</h2>
-        <p>For security, this site uses SSL/TLS encryption. You can recognize an encrypted connection by the “https://” prefix and the padlock symbol in your browser’s address bar. When encryption is active, the data you transmit to us cannot be read by third parties.</p>
+        <section id="p7">
+          <div class="lang-en">
+            <h2>7. SSL / TLS encryption</h2>
+            <p>For security, this site uses SSL/TLS encryption. You can recognise an encrypted connection by the “https://” prefix and the padlock symbol in your browser’s address bar. When encryption is active, the data you transmit cannot be read by third parties.</p>
+          </div>
+          <div class="lang-de">
+            <h2>7. SSL- / TLS-Verschlüsselung</h2>
+            <p>Aus Sicherheitsgründen nutzt diese Website SSL/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennst Du am „https://“ und am Schloss-Symbol in der Adresszeile Deines Browsers. Ist die Verschlüsselung aktiv, können Dritte die übermittelten Daten nicht mitlesen.</p>
+          </div>
+        </section>
 
-        <h2 id="p8">8. Your rights</h2>
-        <p>Under the GDPR, you have the following rights regarding your personal data, free of charge:</p>
-        <ul>
-          <li><strong>Access</strong> (Art. 15) — to know whether and what data we process about you.</li>
-          <li><strong>Rectification</strong> (Art. 16) — to have inaccurate data corrected.</li>
-          <li><strong>Erasure</strong> (Art. 17) — to have your data deleted, where no legal obligation requires its retention.</li>
-          <li><strong>Restriction</strong> (Art. 18) — to restrict processing in certain cases.</li>
-          <li><strong>Data portability</strong> (Art. 20) — to receive your data in a structured, machine-readable format.</li>
-          <li><strong>Objection</strong> (Art. 21) — to object to processing based on legitimate interest.</li>
-          <li><strong>Withdrawal of consent</strong> — where processing is based on consent, you may withdraw it at any time with effect for the future.</li>
-        </ul>
-        <p>To exercise any of these rights, contact us using the details in section 1.</p>
+        <section id="p8">
+          <div class="lang-en">
+            <h2>8. Your rights</h2>
+            <p>Under the GDPR, you have the following rights regarding your personal data, free of charge:</p>
+            <ul>
+              <li><strong>Access</strong> (Art. 15): to know whether and what data we process about you.</li>
+              <li><strong>Rectification</strong> (Art. 16): to have inaccurate data corrected.</li>
+              <li><strong>Erasure</strong> (Art. 17): to have your data deleted, where no legal obligation requires its retention.</li>
+              <li><strong>Restriction</strong> (Art. 18): to restrict processing in certain cases.</li>
+              <li><strong>Data portability</strong> (Art. 20): to receive your data in a structured, machine-readable format.</li>
+              <li><strong>Objection</strong> (Art. 21): to object to processing based on legitimate interest.</li>
+              <li><strong>Withdrawal of consent</strong>: where processing is based on consent, you may withdraw it at any time with effect for the future.</li>
+            </ul>
+            <p>To exercise any of these rights, contact us using the details in section 1.</p>
+          </div>
+          <div class="lang-de">
+            <h2>8. Deine Rechte</h2>
+            <p>Nach der DSGVO hast Du bezüglich Deiner personenbezogenen Daten kostenlos folgende Rechte:</p>
+            <ul>
+              <li><strong>Auskunft</strong> (Art. 15): zu erfahren, ob und welche Daten wir über Dich verarbeiten.</li>
+              <li><strong>Berichtigung</strong> (Art. 16): unrichtige Daten korrigieren zu lassen.</li>
+              <li><strong>Löschung</strong> (Art. 17): Deine Daten löschen zu lassen, soweit keine gesetzliche Pflicht zur Aufbewahrung besteht.</li>
+              <li><strong>Einschränkung</strong> (Art. 18): die Verarbeitung in bestimmten Fällen einschränken zu lassen.</li>
+              <li><strong>Datenübertragbarkeit</strong> (Art. 20): Deine Daten in einem strukturierten, maschinenlesbaren Format zu erhalten.</li>
+              <li><strong>Widerspruch</strong> (Art. 21): einer Verarbeitung auf Grundlage berechtigter Interessen zu widersprechen.</li>
+              <li><strong>Widerruf einer Einwilligung</strong>: Beruht eine Verarbeitung auf Deiner Einwilligung, kannst Du sie jederzeit mit Wirkung für die Zukunft widerrufen.</li>
+            </ul>
+            <p>Um diese Rechte auszuüben, wende Dich an die Kontaktdaten in Abschnitt 1.</p>
+          </div>
+        </section>
 
-        <h2 id="p9">9. Right to lodge a complaint</h2>
-        <p>If you believe the processing of your personal data infringes the GDPR, you have the right to lodge a complaint with a supervisory authority. The authority responsible for the controller is the State Commissioner for Data Protection and Freedom of Information of Baden-Württemberg (Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg): <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>.</p>
+        <section id="p9">
+          <div class="lang-en">
+            <h2>9. Right to lodge a complaint</h2>
+            <p>If you believe the processing of your personal data infringes the GDPR, you have the right to lodge a complaint with a supervisory authority. The authority responsible for the controller is the State Commissioner for Data Protection and Freedom of Information of Baden-Württemberg (Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg): <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>.</p>
+          </div>
+          <div class="lang-de">
+            <h2>9. Beschwerderecht</h2>
+            <p>Wenn Du der Ansicht bist, dass die Verarbeitung Deiner personenbezogenen Daten gegen die DSGVO verstößt, kannst Du Dich bei einer Aufsichtsbehörde beschweren. Zuständig für den Verantwortlichen ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg: <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>.</p>
+          </div>
+        </section>
 
-        <h2 id="p10">10. Changes to this privacy policy</h2>
-        <p>We may update this privacy policy to reflect changes to the website or to legal requirements. The version published here always applies.</p>
-        <p><em>Last updated: October 2026.</em></p>
+        <section id="p10">
+          <div class="lang-en">
+            <h2>10. Changes to this privacy policy</h2>
+            <p>We may update this privacy policy to reflect changes to the website or to legal requirements. The version published here always applies.</p>
+            <p><em>Last updated: October 2026.</em></p>
+          </div>
+          <div class="lang-de">
+            <h2>10. Änderungen dieser Datenschutzerklärung</h2>
+            <p>Wir passen diese Datenschutzerklärung an, wenn sich die Website oder die rechtlichen Anforderungen ändern. Es gilt jeweils die hier veröffentlichte Fassung.</p>
+            <p><em>Stand: Oktober 2026.</em></p>
+          </div>
+        </section>
       </div>
     </div>
   </div>
 </section>
-
-<section class="section-tight">
-  <div class="wrap">
-    <div class="cta center reveal">
-      <p class="kicker">Let’s talk</p>
-      <h2>Let’s build awareness into your <span class="shimmer">organisation</span></h2>
-      <p>Tell us where you are. We’ll tell you honestly whether and how we can help.</p>
-      <div class="btn-row"><a class="btn btn-grad btn-lg" href="contact.html">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-    </div>
-  </div>
-</section>
-
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot">
+    <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135" loading="lazy"></a>
-        <p>Awareness, leadership, and culture for the organizations building and adopting AI.</p>
-        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
       </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="events.html">Events</a>
+        <a href="about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="solutions.html#one-on-one"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
       </div>
-      <div>
-        <h5>Get started</h5>
-        <ul>
-          <li><a href="contact.html">Book a discovery call</a></li>
-          <li><a href="solutions.html">Our services</a></li>
-          <li><a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="imprint.html">Imprint</a></li>
-          <li><a href="privacy.html">Data Privacy</a></li>
-        </ul>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
       </div>
     </div>
     <div class="wordmark" aria-hidden="true">AIwareness</div>
-    <div class="copyright"><span>© 2026 AIwareness · aiwareness.space</span><span>Bringing awareness into AI.</span></div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=20261016f" defer></script>
+
+<script src="assets/js/site.js?v=20261017k" defer></script>
 </body>
 </html>

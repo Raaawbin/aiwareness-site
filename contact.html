@@ -1,89 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-title-en="Contact · AIwareness"
+      data-title-de="Kontakt · AIwareness"
+      data-desc-en="Book a 30-minute discovery call with AIwareness: coaching for organisations, 1:1 AI coaching for entrepreneurs, or simply a question."
+      data-desc-de="Buch ein 30-minütiges Kennenlerngespräch mit AIwareness: Coaching für Organisationen, 1:1 KI-Coaching für Selbstständige oder einfach eine Frage.">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact · Book a discovery call · AIwareness</title>
-<meta name="description" content="Book a 30-minute discovery call with AIwareness. Tell us about your current challenges and we’ll send you a personal booking link.">
-<meta name="theme-color" content="#0A0A0B">
+<title>Contact · AIwareness</title>
+<meta name="description" content="Book a 30-minute discovery call with AIwareness: coaching for organisations, 1:1 AI coaching for entrepreneurs, or simply a question.">
+<meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIwareness">
-<meta property="og:title" content="Contact · Book a discovery call · AIwareness">
-<meta property="og:description" content="Book a 30-minute discovery call with AIwareness. Tell us about your current challenges and we’ll send you a personal booking link.">
-<meta property="og:image" content="https://aiwareness.space/assets/img/hero-hands.jpg">
+<meta property="og:title" content="Contact · AIwareness">
+<meta property="og:description" content="Book a 30-minute discovery call with AIwareness: coaching for organisations, 1:1 AI coaching for entrepreneurs, or simply a question.">
+<meta property="og:url" content="https://aiwareness.space/contact.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/contact.html">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261016f">
-<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.AIW)document.documentElement.classList.remove('js')},2500)</script>
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261017k">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A6FF"/><stop offset="1" stop-color="#4CC9F0"/></linearGradient></defs></svg>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
 <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135"></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <div class="nav-sub">
-        <a href="solutions.html">Solutions <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="submenu">
-          <a href="solutions.html#culture-development"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.3" cy="9" r="2.4"/><path d="M16.2 13.9a4.8 4.8 0 0 1 5 5"/></svg></span><span><span class="sm-t">Culture Development</span><span class="sm-d">Psychological safety and real alignment for AI teams</span></span></a>
-          <a href="solutions.html#conscious-ai-adoption"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5.5" r="1.8"/><circle cx="19.5" cy="5.5" r="1.8"/><circle cx="4.5" cy="18.5" r="1.8"/><circle cx="19.5" cy="18.5" r="1.8"/><path d="M5.9 6.9l3.8 3.1M18.1 6.9l-3.8 3.1M5.9 17.1l3.8-3.1M18.1 17.1l-3.8-3.1"/></svg></span><span><span class="sm-t">Conscious AI Adoption</span><span class="sm-d">Responsible implementation that brings people along</span></span></a>
-          <a href="solutions.html#leadership-coaching"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><span><span class="sm-t">Leadership Coaching</span><span class="sm-d">Clear decisions under uncertainty</span></span></a>
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AIwareness home">
+      <img src="assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></span><span class="dd-d"><span class="lang-en">Culture, conscious AI adoption, leadership</span><span class="lang-de">Kultur, bewusste KI-Einführung, Führung</span></span></span></a>
+            <a href="solutions.html#education"><span class="dd-ico"><span class="icon icon-eye" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></span><span class="dd-d"><span class="lang-en">Learn what AI means for people</span><span class="lang-de">Verstehen, was KI für Menschen bedeutet</span></span></span></a>
+            <a href="solutions.html#one-on-one"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></span><span class="dd-d"><span class="lang-en">For founders and entrepreneurs</span><span class="lang-de">Für Gründende und Selbstständige</span></span></span></a>
+          </div>
         </div>
+        <a href="events.html">Events</a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="contact.html" aria-current="page"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
       </div>
-      <a href="events.html">Events</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-      <a class="btn btn-grad" href="newsletter.html">Newsletter</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-  </nav>
+  </div>
 </header>
+
 
 <main id="main">
 
-<section class="page-hero" style="text-align:left;padding-bottom:clamp(60px,8vw,110px)">
+<section class="page-hero" aria-labelledby="pageTitle">
   <canvas data-particles="0.5" aria-hidden="true"></canvas>
   <div class="wrap contact-grid">
-    <div class="contact-intro">
-      <p class="kicker reveal">Contact</p>
-      <h1 class="reveal" style="--i:1;margin:0;max-width:none">Book a <span class="shimmer">discovery call.</span></h1>
-      <p class="lead reveal" style="--i:2">A 30-minute conversation about your current challenges and what would help most. We’re really looking forward to your request.</p>
+    <div>
+      <span class="eyebrow reveal"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></span>
+      <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en">Book a <span class="o">discovery call.</span></span><span class="lang-de">Lass uns <span class="o">sprechen.</span></span></h1>
+      <p class="lead reveal" style="--i:2">
+        <span class="lang-en">A 30-minute conversation about where you are with AI and what would help most. We’re looking forward to hearing from you.</span>
+        <span class="lang-de">Ein 30-minütiges Gespräch darüber, wo Du mit KI gerade stehst und was am meisten helfen würde. Wir freuen uns, von Dir zu hören.</span>
+      </p>
       <ol class="next-steps reveal" style="--i:3">
-        <li><div><b>Tell us where you are</b><span>Share a few lines about your team and the challenge you’re facing.</span></div></li>
-        <li><div><b>Get your personal booking link</b><span>We’ll review your request and email you a link to pick a time that works for you.</span></div></li>
-        <li><div><b>Have a 30-minute conversation</b><span>An honest look at your situation, and whether and how we can help.</span></div></li>
+        <li><div><b><span class="lang-en">Tell us where you are</span><span class="lang-de">Erzähl uns, wo Du stehst</span></b><p><span class="lang-en">Share a few lines about you or your team and the challenge you are facing.</span><span class="lang-de">Ein paar Zeilen zu Dir oder Deinem Team und der Herausforderung, vor der Ihr steht.</span></p></div></li>
+        <li><div><b><span class="lang-en">Get your booking link</span><span class="lang-de">Buchungslink erhalten</span></b><p><span class="lang-en">We read your request and email you a link to pick a time that works for you.</span><span class="lang-de">Wir lesen Deine Anfrage und schicken Dir per Mail einen Link, mit dem Du einen passenden Termin wählst.</span></p></div></li>
+        <li><div><b><span class="lang-en">Have a 30-minute conversation</span><span class="lang-de">30 Minuten Gespräch</span></b><p><span class="lang-en">An honest look at your situation, and whether and how we can help.</span><span class="lang-de">Ein ehrlicher Blick auf Deine Situation und darauf, ob und wie wir helfen können.</span></p></div></li>
       </ol>
-      <p class="mail-line reveal" style="--i:4">Prefer email? <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a></p>
+      <div class="c-list reveal" style="--i:4">
+        <a href="mailto:hello@aiwareness.space"><span class="icon icon-mail" aria-hidden="true"></span><span class="c-text"><span class="c-label">E-Mail</span><span class="c-value">hello@aiwareness.space</span></span></a>
+        <a href="https://www.linkedin.com/in/robin-hotz-2688491a3/" target="_blank" rel="noopener"><span class="icon icon-linkedin" aria-hidden="true"></span><span class="c-text"><span class="c-label">LinkedIn</span><span class="c-value">Robin Hotz</span></span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Schinkestra%C3%9Fe%209%2C%2012047%20Berlin" target="_blank" rel="noopener"><span class="icon icon-pin" aria-hidden="true"></span><span class="c-text"><span class="c-label"><span class="lang-en">Where we meet</span><span class="lang-de">Wo wir uns treffen</span></span><span class="c-value">Cocreation Loft, Berlin</span></span></a>
+      </div>
     </div>
 
-    <div class="form-card reveal" style="--i:2">
-      <form id="contactForm" class="form" action="send.php" method="POST" novalidate>
+    <div class="panel form-card reveal" style="--i:2">
+      <figure class="contact-form-photo"><img class="graded" src="assets/img/photos/portrait-robin.webp" width="1071" height="1200" loading="lazy" decoding="async"
+           alt="Portrait of Robin Hotz" data-alt-en="Portrait of Robin Hotz" data-alt-de="Porträt von Robin Hotz"></figure>
+      <!-- No server needed: the form writes an email in the visitor's own mail app (site.js). -->
+      <form id="contactForm" class="form" action="mailto:hello@aiwareness.space" method="post" enctype="text/plain" novalidate>
         <div class="row2">
-          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required></div>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="email"><span class="lang-en">Email</span><span class="lang-de">E-Mail</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
         </div>
-        <div class="field"><label for="company">Company &amp; role</label><input id="company" name="company" type="text" placeholder="e.g. CTO at an AI scaleup" autocomplete="organization-title"></div>
-        <div class="field"><label for="challenge">What challenge are you facing right now?</label><textarea id="challenge" name="challenge" placeholder="e.g. our team is overwhelmed by new AI tools and we’ve lost alignment on what matters most…" required></textarea></div>
-        <div class="field"><label for="msg">Anything else you’d like us to know? <span class="opt">(optional)</span></label><textarea id="msg" name="message" placeholder="Context, timeline, or anything else that helps us prepare…"></textarea></div>
-        <input type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-        <button class="btn btn-grad btn-lg" type="submit">Send &amp; request a call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        <p class="form-note">We only use your details to respond to your request. See our <a href="privacy.html">privacy policy</a>.</p>
+        <div class="field"><label for="company"><span class="lang-en">Company &amp; role</span><span class="lang-de">Organisation &amp; Rolle</span> <span class="opt"><span class="lang-en">(optional)</span><span class="lang-de">(optional)</span></span></label><input id="company" name="company" type="text" autocomplete="organization-title"></div>
+        <div class="field"><label for="topic"><span class="lang-en">What is it about?</span><span class="lang-de">Worum geht es?</span></label>
+          <select id="topic" name="topic" class="select">
+            <option value="Coaching for organisations" data-de="Coaching für Organisationen">Coaching for organisations</option>
+            <option value="1:1 AI coaching" data-de="1:1 KI-Coaching">1:1 AI coaching</option>
+            <option value="Events or education" data-de="Events oder Bildung">Events or education</option>
+            <option value="Something else" data-de="Etwas anderes">Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="challenge"><span class="lang-en">What challenge are you facing right now?</span><span class="lang-de">Vor welcher Herausforderung stehst Du gerade?</span></label><textarea id="challenge" name="challenge" required></textarea></div>
+        <button class="btn" type="submit"><span class="lang-en">Write the email</span><span class="lang-de">E-Mail verfassen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></button>
+        <p class="form-note">
+          <span class="lang-en">This opens your own email app with your message filled in, so nothing is stored on this website. We only use your details to answer you. See our <a href="privacy.html#p3">privacy policy</a>.</span>
+          <span class="lang-de">Damit öffnet sich Dein eigenes E-Mail-Programm mit Deiner Nachricht, auf dieser Website wird nichts gespeichert. Wir nutzen Deine Angaben nur, um Dir zu antworten. Mehr in der <a href="privacy.html#p3">Datenschutzerklärung</a>.</span>
+        </p>
       </form>
-      <p id="formStatus" class="form-status" role="alert" hidden></p>
       <div id="formSuccess" class="form-success" hidden>
-        <div class="fs-icon"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="url(#g-brand)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <h3>Thank you, we’ve got it!</h3>
-        <p>We’re really looking forward to your request. We’ll review what you sent and email you a personal booking link shortly, so you can pick a time that works for you.</p>
+        <div class="fs-icon"><span class="icon icon-mail" aria-hidden="true"></span></div>
+        <h3><span class="lang-en">Almost done</span><span class="lang-de">Fast geschafft</span></h3>
+        <p><span class="lang-en">Your email app should now show your message. Just press send there.</span><span class="lang-de">Dein E-Mail-Programm sollte jetzt Deine Nachricht zeigen. Dort nur noch auf Senden drücken.</span></p>
+        <p><span class="lang-en">Nothing opened? Write to us directly at</span><span class="lang-de">Nichts passiert? Schreib uns direkt an</span> <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>.</p>
       </div>
     </div>
   </div>
@@ -91,44 +152,40 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot">
+    <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135" loading="lazy"></a>
-        <p>Awareness, leadership, and culture for the organizations building and adopting AI.</p>
-        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
       </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="events.html">Events</a>
+        <a href="about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="solutions.html#one-on-one"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
       </div>
-      <div>
-        <h5>Get started</h5>
-        <ul>
-          <li><a href="contact.html">Book a discovery call</a></li>
-          <li><a href="solutions.html">Our services</a></li>
-          <li><a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="imprint.html">Imprint</a></li>
-          <li><a href="privacy.html">Data Privacy</a></li>
-        </ul>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
       </div>
     </div>
     <div class="wordmark" aria-hidden="true">AIwareness</div>
-    <div class="copyright"><span>© 2026 AIwareness · aiwareness.space</span><span>Bringing awareness into AI.</span></div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=20261016f" defer></script>
+
+<script src="assets/js/site.js?v=20261017k" defer></script>
 </body>
 </html>

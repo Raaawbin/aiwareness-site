@@ -1,91 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-title-en="Newsletter · AIwareness"
+      data-title-de="Newsletter · AIwareness"
+      data-desc-en="Notes on AI, awareness and agency: grounded, no-hype reflections on where AI is heading and how we stay human in the middle of it."
+      data-desc-de="Notizen zu KI, Bewusstsein und Handlungsfähigkeit: bodenständige Gedanken ohne Hype dazu, wohin sich KI entwickelt und wie wir mittendrin menschlich bleiben.">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Newsletter · Notes on AI, Awareness, and Agency · AIwareness</title>
-<meta name="description" content="Grounded, no-hype reflections on where AI is heading, how it reshapes the way we work, lead, and think, and how we stay human and hold on to our agency.">
-<meta name="theme-color" content="#0A0A0B">
+<title>Newsletter · AIwareness</title>
+<meta name="description" content="Notes on AI, awareness and agency: grounded, no-hype reflections on where AI is heading and how we stay human in the middle of it.">
+<meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIwareness">
-<meta property="og:title" content="Newsletter · Notes on AI, Awareness, and Agency · AIwareness">
-<meta property="og:description" content="Grounded, no-hype reflections on where AI is heading, how it reshapes the way we work, lead, and think, and how we stay human and hold on to our agency.">
-<meta property="og:image" content="https://aiwareness.space/assets/img/hero-hands.jpg">
+<meta property="og:title" content="Newsletter · AIwareness">
+<meta property="og:description" content="Notes on AI, awareness and agency: grounded, no-hype reflections on where AI is heading and how we stay human in the middle of it.">
+<meta property="og:url" content="https://aiwareness.space/newsletter.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/newsletter.html">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261016f">
-<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.AIW)document.documentElement.classList.remove('js')},2500)</script>
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261017k">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A6FF"/><stop offset="1" stop-color="#4CC9F0"/></linearGradient></defs></svg>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
 <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135"></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <div class="nav-sub">
-        <a href="solutions.html">Solutions <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="submenu">
-          <a href="solutions.html#culture-development"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.3" cy="9" r="2.4"/><path d="M16.2 13.9a4.8 4.8 0 0 1 5 5"/></svg></span><span><span class="sm-t">Culture Development</span><span class="sm-d">Psychological safety and real alignment for AI teams</span></span></a>
-          <a href="solutions.html#conscious-ai-adoption"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5.5" r="1.8"/><circle cx="19.5" cy="5.5" r="1.8"/><circle cx="4.5" cy="18.5" r="1.8"/><circle cx="19.5" cy="18.5" r="1.8"/><path d="M5.9 6.9l3.8 3.1M18.1 6.9l-3.8 3.1M5.9 17.1l3.8-3.1M18.1 17.1l-3.8-3.1"/></svg></span><span><span class="sm-t">Conscious AI Adoption</span><span class="sm-d">Responsible implementation that brings people along</span></span></a>
-          <a href="solutions.html#leadership-coaching"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><span><span class="sm-t">Leadership Coaching</span><span class="sm-d">Clear decisions under uncertainty</span></span></a>
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AIwareness home">
+      <img src="assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></span><span class="dd-d"><span class="lang-en">Culture, conscious AI adoption, leadership</span><span class="lang-de">Kultur, bewusste KI-Einführung, Führung</span></span></span></a>
+            <a href="solutions.html#education"><span class="dd-ico"><span class="icon icon-eye" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></span><span class="dd-d"><span class="lang-en">Learn what AI means for people</span><span class="lang-de">Verstehen, was KI für Menschen bedeutet</span></span></span></a>
+            <a href="solutions.html#one-on-one"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></span><span class="dd-d"><span class="lang-en">For founders and entrepreneurs</span><span class="lang-de">Für Gründende und Selbstständige</span></span></span></a>
+          </div>
         </div>
+        <a href="events.html">Events</a>
+        <a href="newsletter.html#notes" aria-current="page">Blog</a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
       </div>
-      <a href="events.html">Events</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-grad" href="newsletter.html" aria-current="page">Newsletter</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-  </nav>
+  </div>
 </header>
+
 
 <main id="main">
 
-<section class="page-hero">
+<section class="page-hero" aria-labelledby="pageTitle">
+  <div class="ph-bg" aria-hidden="true" style="background-image:url('assets/img/photos/gss-2024-robin.webp')"></div>
   <canvas data-particles="0.6" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="kicker reveal">Newsletter</p>
-    <h1 class="reveal" style="--i:1">Notes on AI, <span class="shimmer">Awareness</span>, and Agency</h1>
-    <p class="intro reveal" style="--i:2">I’ve been learning a lot about the risks and the potential of AI, and I want to share those insights with you. Expect grounded, no-hype reflections on where this technology is heading, how it’s reshaping the way we work, lead, and think, and how we stay human and hold on to our agency in the middle of it all. No doom and no overselling, just honest notes from someone paying close attention.</p>
-    <div class="btn-row reveal" style="--i:3">
-      <a class="btn btn-grad btn-lg" href="#subscribe">Subscribe <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost btn-lg" href="#notes">Read the notes</a>
+    <span class="eyebrow reveal">Newsletter</span>
+    <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en">Notes on AI, <span class="o">awareness</span> and agency</span><span class="lang-de">Notizen zu KI, <span class="o">Bewusstsein</span> und Handlungsfähigkeit</span></h1>
+    <p class="lead reveal" style="--i:2">
+      <span class="lang-en">I’ve been learning a lot about the risks and the potential of AI, and I want to share it with you: grounded, no-hype reflections on where this technology is heading, how it changes the way we work, lead and think, and how we hold on to our agency in the middle of it. No doom and no overselling, just honest notes from someone paying close attention.</span>
+      <span class="lang-de">Ich lerne gerade viel über die Risiken und Möglichkeiten von KI und möchte das mit Dir teilen: bodenständige Gedanken ohne Hype dazu, wohin sich diese Technologie entwickelt, wie sie unser Arbeiten, Führen und Denken verändert und wie wir mittendrin handlungsfähig bleiben. Keine Untergangsstimmung und keine Übertreibung, nur ehrliche Notizen von jemandem, der genau hinschaut. Der Newsletter erscheint auf Englisch.</span>
+    </p>
+    <div class="ctas reveal" style="--i:3">
+      <a class="btn" href="#subscribe"><span class="lang-en">Subscribe</span><span class="lang-de">Abonnieren</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+      <a class="btn ghost" href="#notes"><span class="lang-en">Read the notes</span><span class="lang-de">Notizen lesen</span></a>
     </div>
   </div>
 </section>
 
-<section class="section-tight" style="padding-top:0">
-  <div class="wrap" style="max-width:1040px">
-<div class="card signup reveal" id="subscribe" data-signup>
+<section class="sec" style="padding-top:16px" aria-labelledby="signupTitle">
+  <div class="wrap" style="max-width:1100px">
+<div class="panel signup reveal" id="subscribe" data-signup>
   <div class="signup-copy">
-    <p class="kicker">Subscribe</p>
-    <h2>Get the next note <span class="grad-text">in your inbox</span></h2>
-    <p>New notes on AI, awareness and agency, plus first word on the next sense-making evenings in Berlin.</p>
+
+    <span class="eyebrow"><span class="lang-en">Subscribe</span><span class="lang-de">Abonnieren</span></span>
+    <h2 id="signupTitle"><span class="lang-en">Get the next note <span class="o">in your inbox</span></span><span class="lang-de">Die nächste Notiz <span class="o">in Dein Postfach</span></span></h2>
+    <p><span class="lang-en">New notes on AI, awareness and agency, plus first word on the next Sense-Making Evenings in Berlin.</span><span class="lang-de">Neue Notizen zu KI, Bewusstsein und Handlungsfähigkeit, und Du erfährst als Erstes von den nächsten Sense-Making-Abenden in Berlin.</span></p>
     <ul class="signup-perks">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg> Free</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg> No hype</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg> Unsubscribe anytime</li>
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">Free</span><span class="lang-de">Kostenlos</span></li>
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">No hype</span><span class="lang-de">Ohne Hype</span></li>
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">Unsubscribe anytime</span><span class="lang-de">Jederzeit abbestellbar</span></li>
     </ul>
   </div>
   <div class="signup-action">
     <div class="signup-frame" data-signup-frame>
-      <span class="signup-loading"><i aria-hidden="true"></i>Loading the signup form…</span>
-      <iframe src="https://aiwareness1.substack.com/embed" title="Subscribe to the AIwareness newsletter on Substack" loading="lazy" scrolling="no"></iframe>
+      <span class="signup-loading"><i aria-hidden="true"></i><span class="lang-en">Loading the signup form…</span><span class="lang-de">Anmeldeformular lädt…</span></span>
+      <iframe src="https://aiwareness1.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:white; max-width:480px;" frameborder="0" scrolling="no" title="Subscribe to the AIwareness newsletter on Substack"></iframe>
     </div>
-    <p class="signup-alt" data-signup-alt>The newsletter is hosted on Substack. Trouble with the form? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a> · <a href="privacy.html#p5">Privacy</a></p>
+    <p class="signup-alt" data-signup-alt>
+      <span class="lang-en">The newsletter is hosted on Substack and written in English. Trouble with the form? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a> · <a href="privacy.html#p5">Privacy</a></span>
+      <span class="lang-de">Der Newsletter läuft über Substack und erscheint auf Englisch. Probleme mit dem Formular? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Auf Substack abonnieren</a> · <a href="privacy.html#p5">Datenschutz</a></span>
+    </p>
     <div class="signup-fallback" data-signup-fallback hidden>
-      <a class="btn btn-grad btn-lg" href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg> Subscribe on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
-      <p class="signup-note" data-signup-fallback-msg>The signup form couldn’t load here, so you can subscribe on Substack instead. It takes a few seconds.</p>
+      <a class="btn" href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener"><span class="icon icon-mail sm" aria-hidden="true"></span><span class="lang-en">Subscribe on Substack</span><span class="lang-de">Auf Substack abonnieren</span></a>
+      <p class="signup-note">
+        <span class="lang-en" data-fallback-en>The signup form couldn’t load here, so you can subscribe on Substack instead. It takes a few seconds.</span>
+        <span class="lang-de" data-fallback-de>Das Formular konnte hier nicht laden. Du kannst Dich direkt auf Substack eintragen, das dauert nur ein paar Sekunden.</span>
+      </p>
     </div>
   </div>
 </div>
@@ -93,34 +146,44 @@
   </div>
 </section>
 
-<section class="section-tight" id="notes" style="padding-top:0">
-  <div class="wrap" style="max-width:1040px">
-    <div class="section-head reveal" style="margin-bottom:28px">
-      <p class="kicker">Latest notes</p>
+<section class="sec" id="notes" aria-labelledby="notesTitle">
+  <div class="wrap" style="max-width:1100px">
+    <div class="sec-head reveal" style="margin-bottom:28px">
+      <span class="eyebrow"><span class="lang-en">Latest notes</span><span class="lang-de">Neueste Notizen</span></span>
+      <h2 id="notesTitle" class="visually-hidden"><span class="lang-en">Latest notes</span><span class="lang-de">Neueste Notizen</span></h2>
     </div>
-    <a class="card spot post-card lift reveal" href="newsletter-1.html">
-      <div class="post-thumb" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lgEye" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A6FF"/><stop offset=".5" stop-color="#7C3AED"/><stop offset="1" stop-color="#4CC9F0"/></linearGradient><filter id="blurEye" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g stroke="url(#lgEye)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#blurEye)"><path d="M12 60 C12 60 30 33 60 33 C90 33 108 60 108 60 C108 60 90 87 60 87 C30 87 12 60 12 60 Z"/><circle cx="60" cy="60" r="19"/><path d="M41 60 H79"/><ellipse cx="60" cy="60" rx="8" ry="19"/><circle cx="60" cy="60" r="4.2" fill="#4CC9F0" stroke="none"/></g></svg></div>
+    <a class="panel post-card reveal" href="newsletters/newsletter-2.html" style="margin-bottom:18px">
+      <div class="post-thumb" aria-hidden="true"><img src="assets/img/aiw-eye-classic.png" alt="" width="190" height="135" loading="lazy"></div>
       <div class="post-body">
-        <div class="post-meta"><span class="tag">Note 01</span><span class="sep"></span><time datetime="2026-06-14">14 June 2026</time><span class="sep"></span><span>3 min read</span></div>
-        <h3>Why AI needs <span class="grad-text">AIwareness</span></h3>
-        <p>Why the AI 2027 report sent me down the rabbit hole of AI safety, how I moved from anxiety to agency, and an invitation to a sense-making evening in Berlin.</p>
-        <span class="text-link">Read the note <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="post-meta"><span class="tag-txt"><span class="lang-en">Note 02</span><span class="lang-de">Notiz 02</span></span><span class="sep"></span><time datetime="2026-10-17"><span class="lang-en">17 October 2026</span><span class="lang-de">17. Oktober 2026</span></time><span class="sep"></span><span><span class="lang-en">5 min read</span><span class="lang-de">5 Min. Lesezeit</span></span></div>
+        <h3><span class="lang-en">Becoming a father <span class="o">in the age of AI</span></span><span class="lang-de">Vater werden <span class="o">im Zeitalter der KI</span></span></h3>
+        <p><span class="lang-en">I’m going to have a daughter, and AI safety has become personal. What experts say about the risks, why I’m moving my work into AI safety, and an invitation for Tuesday.</span><span class="lang-de">Ich bekomme eine Tochter, und KI-Sicherheit ist persönlich geworden. Was Fachleute über die Risiken sagen, warum ich meine Arbeit in Richtung KI-Sicherheit verlagere, und eine Einladung für Dienstag.</span></p>
+        <span class="text-link"><span class="lang-en">Read the note</span><span class="lang-de">Notiz lesen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></span>
+      </div>
+    </a>
+    <a class="panel post-card reveal" href="newsletters/newsletter-1.html">
+      <div class="post-thumb" aria-hidden="true"><img src="assets/img/aiw-eye-classic.png" alt="" width="190" height="135" loading="lazy"></div>
+      <div class="post-body">
+        <div class="post-meta"><span class="tag-txt"><span class="lang-en">Note 01</span><span class="lang-de">Notiz 01</span></span><span class="sep"></span><time datetime="2026-06-14"><span class="lang-en">14 June 2026</span><span class="lang-de">14. Juni 2026</span></time><span class="sep"></span><span><span class="lang-en">3 min read</span><span class="lang-de">3 Min. Lesezeit</span></span></div>
+        <h3><span class="lang-en">Why AI needs <span class="o">AIwareness</span></span><span class="lang-de">Warum KI <span class="o">AIwareness</span> braucht</span></h3>
+        <p><span class="lang-en">Why the AI 2027 report sent me down the rabbit hole of AI safety, how I moved from anxiety to agency, and an invitation to a sense-making evening in Berlin.</span><span class="lang-de">Warum mich der Bericht AI 2027 tief in das Thema KI-Sicherheit gezogen hat, wie ich von der Angst ins Handeln gekommen bin, und eine Einladung zu einem Sense-Making-Abend in Berlin.</span></p>
+        <span class="text-link"><span class="lang-en">Read the note</span><span class="lang-de">Notiz lesen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></span>
       </div>
     </a>
     <div class="coming reveal">
-      <span>More notes are on the way. You can also read everything on Substack.</span>
-      <a class="btn btn-ghost btn-sm" href="https://aiwareness1.substack.com/" target="_blank" rel="noopener">Visit Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+      <span><span class="lang-en">More notes are on the way. You can also read everything on Substack.</span><span class="lang-de">Weitere Notizen sind unterwegs. Alles gibt es auch auf Substack zu lesen.</span></span>
+      <a class="btn ghost sm" href="https://aiwareness1.substack.com/" target="_blank" rel="noopener"><span class="lang-en">Visit Substack</span><span class="lang-de">Zu Substack</span></a>
     </div>
   </div>
 </section>
 
-<section class="section-tight">
+<section class="sec cta-sec">
   <div class="wrap">
-    <div class="cta center reveal">
-      <p class="kicker">Let’s talk</p>
-      <h2>Let’s build awareness into your <span class="shimmer">organisation</span></h2>
-      <p>Tell us where you are. We’ll tell you honestly whether and how we can help.</p>
-      <div class="btn-row"><a class="btn btn-grad btn-lg" href="contact.html">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="cta-band center reveal">
+      <span class="eyebrow"><span class="lang-en">Let’s talk</span><span class="lang-de">Lass uns sprechen</span></span>
+      <h2><span class="lang-en">Let’s build awareness into your <span class="o">organisation</span></span><span class="lang-de">Lass uns Bewusstsein in Deine <span class="o">Organisation</span> bringen</span></h2>
+      <p><span class="lang-en">Tell us where you are. We’ll tell you honestly whether and how we can help.</span><span class="lang-de">Erzähl uns, wo Du stehst. Wir sagen Dir ehrlich, ob und wie wir helfen können.</span></p>
+      <div class="ctas"><a class="btn" href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a></div>
     </div>
   </div>
 </section>
@@ -128,44 +191,40 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot">
+    <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135" loading="lazy"></a>
-        <p>Awareness, leadership, and culture for the organizations building and adopting AI.</p>
-        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
       </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="events.html">Events</a>
+        <a href="about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="solutions.html#one-on-one"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
       </div>
-      <div>
-        <h5>Get started</h5>
-        <ul>
-          <li><a href="contact.html">Book a discovery call</a></li>
-          <li><a href="solutions.html">Our services</a></li>
-          <li><a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="imprint.html">Imprint</a></li>
-          <li><a href="privacy.html">Data Privacy</a></li>
-        </ul>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
       </div>
     </div>
     <div class="wordmark" aria-hidden="true">AIwareness</div>
-    <div class="copyright"><span>© 2026 AIwareness · aiwareness.space</span><span>Bringing awareness into AI.</span></div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=20261016f" defer></script>
+
+<script src="assets/js/site.js?v=20261017k" defer></script>
 </body>
 </html>

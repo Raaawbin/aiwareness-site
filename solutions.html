@@ -1,176 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-title-en="Offers · AIwareness"
+      data-title-de="Angebote · AIwareness"
+      data-desc-en="Coaching for organisations, newsletter and events, and 1:1 AI coaching for entrepreneurs. Three ways AIwareness brings awareness into AI."
+      data-desc-de="Coaching für Organisationen, Newsletter und Events sowie 1:1 KI-Coaching für Selbstständige. Drei Wege, wie AIwareness Bewusstsein in die KI bringt.">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Solutions · AIwareness</title>
-<meta name="description" content="Culture Development for AI teams, Conscious AI Adoption, and Leadership Coaching. Three ways AIwareness brings awareness into AI, built on Assess, Align, Act.">
-<meta name="theme-color" content="#0A0A0B">
+<title>Offers · AIwareness</title>
+<meta name="description" content="Coaching for organisations, newsletter and events, and 1:1 AI coaching for entrepreneurs. Three ways AIwareness brings awareness into AI.">
+<meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIwareness">
-<meta property="og:title" content="Solutions · AIwareness">
-<meta property="og:description" content="Culture Development for AI teams, Conscious AI Adoption, and Leadership Coaching. Three ways AIwareness brings awareness into AI, built on Assess, Align, Act.">
-<meta property="og:image" content="https://aiwareness.space/assets/img/hero-hands.jpg">
+<meta property="og:title" content="Offers · AIwareness">
+<meta property="og:description" content="Coaching for organisations, newsletter and events, and 1:1 AI coaching for entrepreneurs. Three ways AIwareness brings awareness into AI.">
+<meta property="og:url" content="https://aiwareness.space/solutions.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/solutions.html">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261016f">
-<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.AIW)document.documentElement.classList.remove('js')},2500)</script>
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261017k">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A6FF"/><stop offset="1" stop-color="#4CC9F0"/></linearGradient></defs></svg>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
 <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135"></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <div class="nav-sub">
-        <a href="solutions.html" aria-current="page">Solutions <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="submenu">
-          <a href="solutions.html#culture-development"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.3" cy="9" r="2.4"/><path d="M16.2 13.9a4.8 4.8 0 0 1 5 5"/></svg></span><span><span class="sm-t">Culture Development</span><span class="sm-d">Psychological safety and real alignment for AI teams</span></span></a>
-          <a href="solutions.html#conscious-ai-adoption"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5.5" r="1.8"/><circle cx="19.5" cy="5.5" r="1.8"/><circle cx="4.5" cy="18.5" r="1.8"/><circle cx="19.5" cy="18.5" r="1.8"/><path d="M5.9 6.9l3.8 3.1M18.1 6.9l-3.8 3.1M5.9 17.1l3.8-3.1M18.1 17.1l-3.8-3.1"/></svg></span><span><span class="sm-t">Conscious AI Adoption</span><span class="sm-d">Responsible implementation that brings people along</span></span></a>
-          <a href="solutions.html#leadership-coaching"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><span><span class="sm-t">Leadership Coaching</span><span class="sm-d">Clear decisions under uncertainty</span></span></a>
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AIwareness home">
+      <img src="assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="solutions.html" aria-current="page"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></span><span class="dd-d"><span class="lang-en">Culture, conscious AI adoption, leadership</span><span class="lang-de">Kultur, bewusste KI-Einführung, Führung</span></span></span></a>
+            <a href="solutions.html#education"><span class="dd-ico"><span class="icon icon-eye" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></span><span class="dd-d"><span class="lang-en">Learn what AI means for people</span><span class="lang-de">Verstehen, was KI für Menschen bedeutet</span></span></span></a>
+            <a href="solutions.html#one-on-one"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></span><span class="dd-d"><span class="lang-en">For founders and entrepreneurs</span><span class="lang-de">Für Gründende und Selbstständige</span></span></span></a>
+          </div>
         </div>
+        <a href="events.html">Events</a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
       </div>
-      <a href="events.html">Events</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-grad" href="newsletter.html">Newsletter</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-  </nav>
+  </div>
 </header>
+
 
 <main id="main">
 
-<section class="page-hero">
+<section class="page-hero" aria-labelledby="pageTitle">
+  <div class="ph-bg" aria-hidden="true" style="background-image:url('assets/img/photos/strategietag-vision-1.webp')"></div>
   <canvas data-particles="0.6" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="kicker reveal">Solutions</p>
-    <h1 class="reveal" style="--i:1">Three ways we bring <span class="shimmer">awareness into AI</span></h1>
-    <p class="intro reveal" style="--i:2">Each engagement starts with your real challenges and ends with practices your team actually keeps using.</p>
-    <div class="btn-row reveal" style="--i:3">
-      <a class="btn btn-grad btn-lg" href="contact.html">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost btn-lg" href="#approach">How we work</a>
+    <span class="eyebrow reveal"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></span>
+    <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en">Three ways we bring <span class="o">awareness into AI</span></span><span class="lang-de">Drei Wege, wie wir <span class="o">Bewusstsein in die KI</span> bringen</span></h1>
+    <p class="lead reveal" style="--i:2">
+      <span class="lang-en">Coaching for organisations, education for everyone who is curious, and personal coaching for entrepreneurs. Each one starts with your real situation and ends with practices you keep using.</span>
+      <span class="lang-de">Coaching für Organisationen, Bildung für alle, die neugierig sind, und persönliches Coaching für Selbstständige. Jedes Angebot beginnt bei Deiner echten Situation und endet mit Gewohnheiten, die bleiben.</span>
+    </p>
+    <div class="ctas reveal" style="--i:3">
+      <a class="btn" href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+      <a class="btn ghost" href="#approach"><span class="lang-en">How we work</span><span class="lang-de">So arbeiten wir</span></a>
     </div>
   </div>
 </section>
 
-<section class="section-tight" style="padding-top:0">
+<!-- ============ OVERVIEW ============ -->
+<section class="sec" style="padding-top:24px" aria-label="Overview">
   <div class="wrap">
-    <div class="tiles">
-      <a class="card spot tile lift reveal" href="#culture-development">
-        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g-brand)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.3" cy="9" r="2.4"/><path d="M16.2 13.9a4.8 4.8 0 0 1 5 5"/></svg></span>
-        <span class="n">01</span>
-        <h3>Culture Development for AI Teams</h3>
-        <p>Create healthy, high-performing AI organizations where speed doesn’t cost trust.</p>
-        <span class="text-link">Learn more <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    <div class="method-grid">
+      <a class="panel mcell reveal" href="#organisations">
+        <figure class="mcell-photo"><img class="graded" src="assets/img/photos/hohenheim-buehne.webp" width="1024" height="768" loading="lazy" decoding="async" alt="" ></figure>
+        <span class="n">01 · <span class="lang-en">Organisations</span><span class="lang-de">Organisationen</span></span>
+        <h3><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></h3>
+        <p><span class="lang-en">Culture development, conscious AI adoption and leadership coaching for teams working with AI.</span><span class="lang-de">Kulturentwicklung, bewusste KI-Einführung und Führungscoaching für Teams, die mit KI arbeiten.</span></p>
+        <span class="text-link"><span class="lang-en">Learn more</span><span class="lang-de">Mehr erfahren</span><span class="icon icon-arrow sm" aria-hidden="true"></span></span>
       </a>
-      <a class="card spot tile lift reveal" style="--i:1" href="#conscious-ai-adoption">
-        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g-brand)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5.5" r="1.8"/><circle cx="19.5" cy="5.5" r="1.8"/><circle cx="4.5" cy="18.5" r="1.8"/><circle cx="19.5" cy="18.5" r="1.8"/><path d="M5.9 6.9l3.8 3.1M18.1 6.9l-3.8 3.1M5.9 17.1l3.8-3.1M18.1 17.1l-3.8-3.1"/></svg></span>
-        <span class="n">02</span>
-        <h3>Conscious AI Adoption</h3>
-        <p>For organizations implementing AI who want it to land, technically and humanly.</p>
-        <span class="text-link">Learn more <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <a class="panel mcell reveal" style="--i:1" href="#education">
+        <figure class="mcell-photo"><img class="graded" src="assets/img/photos/aoh-training.webp" width="2000" height="1333" loading="lazy" decoding="async" alt=""></figure>
+        <span class="n">02 · <span class="lang-en">Education</span><span class="lang-de">Bildung</span></span>
+        <h3><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></h3>
+        <p><span class="lang-en">Grounded notes on where AI is heading, and evenings in Berlin where we think it through together.</span><span class="lang-de">Bodenständige Notizen dazu, wohin sich KI entwickelt, und Abende in Berlin, an denen wir gemeinsam weiterdenken.</span></p>
+        <span class="text-link"><span class="lang-en">Learn more</span><span class="lang-de">Mehr erfahren</span><span class="icon icon-arrow sm" aria-hidden="true"></span></span>
       </a>
-      <a class="card spot tile lift reveal" style="--i:2" href="#leadership-coaching">
-        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g-brand)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span>
-        <span class="n">03</span>
-        <h3>Leadership Coaching</h3>
-        <p>For founders and leaders navigating high-stakes decisions at speed.</p>
-        <span class="text-link">Learn more <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <a class="panel mcell reveal" style="--i:2" href="#one-on-one">
+        <figure class="mcell-photo"><img class="graded" src="assets/img/photos/strategietag-vision-1.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></figure>
+        <span class="n">03 · <span class="lang-en">Entrepreneurs</span><span class="lang-de">Selbstständige</span></span>
+        <h3><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></h3>
+        <p><span class="lang-en">Personal sessions for founders and entrepreneurs who want AI to fit their business and their values.</span><span class="lang-de">Persönliche Sessions für Gründende und Selbstständige, bei denen KI zu Business und Werten passen soll.</span></p>
+        <span class="text-link"><span class="lang-en">Learn more</span><span class="lang-de">Mehr erfahren</span><span class="icon icon-arrow sm" aria-hidden="true"></span></span>
       </a>
     </div>
   </div>
 </section>
 
-<section class="section" id="approach">
+<!-- ============ 01 ORGANISATIONS ============ -->
+<section class="sol" id="organisations" aria-labelledby="orgTitle">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="kicker">How we work</p>
-      <h2 class="h2">Assess <span class="grad-text">→</span> Align <span class="grad-text">→</span> Act</h2>
+    <div class="sol-top">
+      <div class="sol-media reveal">
+        <img class="graded" src="assets/img/photos/nordex-themenarbeit.webp" width="1536" height="1024" loading="lazy" decoding="async"
+             alt="Workshop participants work in small groups in a bright hall"
+             data-alt-en="Workshop participants work in small groups in a bright hall"
+             data-alt-de="Workshop-Teilnehmende arbeiten in kleinen Gruppen in einer hellen Halle">
+        <div class="badge"><small><span class="lang-en">Who it’s for</span><span class="lang-de">Für wen</span></small><span><span class="lang-en">Teams and organisations adopting AI who want it to land, technically and humanly.</span><span class="lang-de">Teams und Organisationen, die KI einführen und wollen, dass sie technisch und menschlich ankommt.</span></span></div>
+      </div>
+      <div class="reveal" style="--i:1">
+        <span class="eyebrow"><span class="lang-en">Offer 01</span><span class="lang-de">Angebot 01</span></span>
+        <h2 id="orgTitle"><span class="lang-en">Coaching for <span class="o">organisations</span></span><span class="lang-de">Coaching für <span class="o">Organisationen</span></span></h2>
+        <p class="sol-intro">
+          <span class="lang-en">When a team moves fast on AI, the hard questions are human ones: Who decides? What do we trust? How do we stay a team while the tools change every month? We work with your people on exactly that, in three focus areas you can combine.</span>
+          <span class="lang-de">Wenn ein Team bei KI schnell unterwegs ist, sind die schwierigen Fragen menschliche: Wer entscheidet? Worauf vertrauen wir? Wie bleiben wir ein Team, während sich die Tools jeden Monat ändern? Genau daran arbeiten wir mit Euren Leuten, in drei Schwerpunkten, die sich kombinieren lassen.</span>
+        </p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">Workshops</span><span class="lang-de">Workshops</span></span>
+          <span class="tag"><span class="lang-en">Team coaching</span><span class="lang-de">Teamcoaching</span></span>
+          <span class="tag"><span class="lang-en">Leadership coaching</span><span class="lang-de">Führungscoaching</span></span>
+          <span class="tag"><span class="lang-en">Facilitation</span><span class="lang-de">Moderation</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-grid">
+      <article class="panel sub reveal" id="culture-development">
+        <span class="ico"><span class="icon icon-users" aria-hidden="true"></span></span>
+        <h3><span class="lang-en">Culture development for AI teams</span><span class="lang-de">Kulturentwicklung für KI-Teams</span></h3>
+        <p><span class="lang-en">Culture is what keeps speed from costing trust. We build the psychological safety, communication habits and shared language a team needs to make hard calls quickly, without burning out or quietly falling apart.</span><span class="lang-de">Kultur sorgt dafür, dass Tempo kein Vertrauen kostet. Wir bauen die psychologische Sicherheit, die Gesprächsgewohnheiten und die gemeinsame Sprache auf, die ein Team braucht, um schwierige Entscheidungen schnell zu treffen, ohne auszubrennen oder still auseinanderzufallen.</span></p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">Psychological safety</span><span class="lang-de">Psychologische Sicherheit</span></span>
+          <span class="tag"><span class="lang-en">Feedback culture</span><span class="lang-de">Feedbackkultur</span></span>
+          <span class="tag"><span class="lang-en">Conflict navigation</span><span class="lang-de">Umgang mit Konflikten</span></span>
+        </div>
+        <p class="out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">better collaboration, faster execution and decisions the whole team can stand behind.</span><span class="lang-de">bessere Zusammenarbeit, schnellere Umsetzung und Entscheidungen, hinter denen das ganze Team steht.</span></p>
+      </article>
+      <article class="panel sub reveal" style="--i:1" id="conscious-ai-adoption">
+        <span class="ico"><span class="icon icon-spark" aria-hidden="true"></span></span>
+        <h3><span class="lang-en">Conscious AI adoption</span><span class="lang-de">Bewusste KI-Einführung</span></h3>
+        <p><span class="lang-en">AI adoption lands or stalls on people. We help you roll out AI so it sticks: a clear strategy, sensible governance and the stakeholder alignment that turns a promising tool into a practice your teams use.</span><span class="lang-de">Ob KI-Einführung gelingt, entscheidet sich bei den Menschen. Wir helfen, KI so einzuführen, dass sie bleibt: mit einer klaren Strategie, sinnvollen Regeln und der Abstimmung aller Beteiligten, die aus einem vielversprechenden Tool eine gelebte Praxis macht.</span></p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">AI strategy</span><span class="lang-de">KI-Strategie</span></span>
+          <span class="tag">Governance</span>
+          <span class="tag"><span class="lang-en">Stakeholder alignment</span><span class="lang-de">Abstimmung</span></span>
+        </div>
+        <p class="out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">successful adoption, with your people on board rather than left behind.</span><span class="lang-de">eine gelungene Einführung, bei der Eure Leute mitgehen statt zurückzubleiben.</span></p>
+      </article>
+      <article class="panel sub reveal" style="--i:2" id="leadership-coaching">
+        <span class="ico"><span class="icon icon-compass" aria-hidden="true"></span></span>
+        <h3><span class="lang-en">Leadership coaching</span><span class="lang-de">Führungscoaching</span></h3>
+        <p><span class="lang-en">Leaders set the tone, especially under pressure. In one-to-one coaching we work on the decisions, presence and self-awareness that let you lead clearly when the stakes are high and the information is incomplete.</span><span class="lang-de">Führung gibt den Ton vor, besonders unter Druck. Im Einzelcoaching arbeiten wir an Entscheidungen, Präsenz und Selbstwahrnehmung, damit Du klar führst, wenn viel auf dem Spiel steht und die Informationen unvollständig sind.</span></p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">Decisions under uncertainty</span><span class="lang-de">Entscheiden unter Unsicherheit</span></span>
+          <span class="tag"><span class="lang-en">Presence</span><span class="lang-de">Präsenz</span></span>
+          <span class="tag"><span class="lang-en">Self-awareness</span><span class="lang-de">Selbstwahrnehmung</span></span>
+        </div>
+        <p class="out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">clearer leaders who make better decisions under pressure.</span><span class="lang-de">klarere Führungskräfte, die unter Druck bessere Entscheidungen treffen.</span></p>
+      </article>
+    </div>
+    <div class="center-action reveal"><a class="btn" href="contact.html"><span class="lang-en">Talk about your team</span><span class="lang-de">Über Dein Team sprechen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a></div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section class="sec" id="approach" aria-labelledby="howTitle">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">How we work</span><span class="lang-de">So arbeiten wir</span></span>
+      <h2 id="howTitle"><span class="lang-en">Assess. Align. <span class="o">Act.</span></span><span class="lang-de">Verstehen. Ausrichten. <span class="o">Handeln.</span></span></h2>
     </div>
     <div class="steps">
       <div class="steps-line" aria-hidden="true"><i></i></div>
-      <div class="step reveal"><div class="orb"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g-brand)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/><path d="M8 10.5h5M10.5 8v5" opacity=".6"/></svg><b>1</b></div><h3>Assess</h3><p>We start by understanding where you really are. Through conversations, observation, and the right questions, we map your current dynamics and surface what’s actually driving misalignment, friction, or risk, so we solve the real problem, not just the obvious one.</p></div>
-      <div class="step reveal" style="--i:1"><div class="orb"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g-brand)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" opacity=".35"/><circle cx="8" cy="7" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="11" cy="17" r="2"/></svg><b>2</b></div><h3>Align</h3><p>Next we build shared clarity. Together we agree on the priorities, roles, and decisions that matter most, so everyone is pulling in the same direction, and the path forward is something the whole team owns rather than something handed down.</p></div>
-      <div class="step reveal" style="--i:2"><div class="orb"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g-brand)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19h4v-4h4v-4h4V7h4"/><path d="M16 3.5h4v4"/></svg><b>3</b></div><h3>Act</h3><p>Finally we put it into practice. We embed the rituals, frameworks, and shared language that turn new clarity into everyday habits, so the change sticks long after we leave, and your team keeps improving on its own.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
-  <div class="wrap">
-    <div class="prod" id="culture-development">
-      <div class="prod-media reveal">
-        <div class="frame"><img src="assets/img/solution-culture.jpg" alt="Four people in conversation around a table beneath a glowing community icon" width="595" height="658" loading="lazy"></div>
-        <div class="badge"><small>Who it’s for</small><span>AI organizations that want speed without losing trust.</span></div>
+      <div class="step reveal">
+        <div class="orb"><span class="icon icon-eye" aria-hidden="true"></span><b>1</b></div>
+        <h3><span class="lang-en">Assess</span><span class="lang-de">Verstehen</span></h3>
+        <p><span class="lang-en">We start by understanding where you really are. Through conversations, observation and the right questions, we map your current dynamics and surface what is driving friction, misalignment or risk, so we solve the real problem.</span><span class="lang-de">Zuerst verstehen wir, wo Ihr wirklich steht. Durch Gespräche, Beobachtung und die richtigen Fragen machen wir Eure Dynamik sichtbar und finden heraus, was hinter Reibung, fehlender Ausrichtung oder Risiken steckt. So lösen wir das eigentliche Problem.</span></p>
       </div>
-      <div class="prod-text reveal" style="--i:1">
-        <p class="kicker">Solution 01</p>
-        <h2 class="h2">Culture Development for <span class="grad-text">AI Teams</span></h2>
-        <p class="lead">When a team is moving fast on AI, culture is what keeps speed from costing trust. We work directly with your people to build the psychological safety, communication habits, and shared language a group needs to make hard calls quickly, without burning out or quietly fracturing along the way.</p>
-        <div class="chips"><span class="chip">Psychological safety &amp; alignment</span><span class="chip">Communication &amp; feedback culture</span><span class="chip">Conflict navigation</span><span class="chip">Team effectiveness</span><span class="chip">Leadership development</span></div>
-        <div class="outcome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg><p><b>Outcome:</b> better collaboration, faster execution, and decisions the whole team can stand behind.</p></div>
-        <a class="btn btn-grad btn-lg" href="contact.html">Inquire <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="step reveal" style="--i:1">
+        <div class="orb"><span class="icon icon-compass" aria-hidden="true"></span><b>2</b></div>
+        <h3><span class="lang-en">Align</span><span class="lang-de">Ausrichten</span></h3>
+        <p><span class="lang-en">Next we build shared clarity. Together we agree on the priorities, roles and decisions that matter most, so the path forward is something the whole team owns rather than something handed down.</span><span class="lang-de">Dann schaffen wir gemeinsame Klarheit. Zusammen einigen wir uns auf die Prioritäten, Rollen und Entscheidungen, die am meisten zählen, damit der weitere Weg dem ganzen Team gehört und nicht von oben kommt.</span></p>
+      </div>
+      <div class="step reveal" style="--i:2">
+        <div class="orb"><span class="icon icon-target" aria-hidden="true"></span><b>3</b></div>
+        <h3><span class="lang-en">Act</span><span class="lang-de">Handeln</span></h3>
+        <p><span class="lang-en">Finally we put it into practice. We embed the rituals, frameworks and shared language that turn clarity into everyday habits, so the change lasts long after we leave.</span><span class="lang-de">Zum Schluss bringen wir es in die Praxis. Wir verankern Rituale, Strukturen und eine gemeinsame Sprache, damit aus Klarheit Alltag wird und die Veränderung bleibt, auch wenn wir längst weg sind.</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<!-- ============ 02 EDUCATION ============ -->
+<section class="sol" id="education" aria-labelledby="eduTitle">
   <div class="wrap">
-    <div class="prod flip" id="conscious-ai-adoption">
-      <div class="prod-media reveal">
-        <div class="frame"><img src="assets/img/solution-adoption.jpg" alt="A glowing data tree encircled by shield, people and growth icons, with silhouettes looking on" width="600" height="640" loading="lazy"></div>
-        <div class="badge"><small>Who it’s for</small><span>Organizations implementing AI who want it to land, technically and humanly.</span></div>
+    <div class="sol-top flip">
+      <div class="sol-media reveal">
+        <img class="graded" src="assets/img/photos/hohenheim-buehne.webp" width="1024" height="768" loading="lazy" decoding="async"
+             alt="Robin Hotz speaking with a microphone in front of a large hand-drawn wall"
+             data-alt-en="Robin Hotz speaking with a microphone in front of a large hand-drawn wall"
+             data-alt-de="Robin Hotz spricht mit Mikrofon vor einer großen handgezeichneten Wand">
+        <div class="badge"><small><span class="lang-en">Who it’s for</span><span class="lang-de">Für wen</span></small><span><span class="lang-en">Everyone who wants to understand what AI means for people.</span><span class="lang-de">Alle, die verstehen wollen, was KI für Menschen bedeutet.</span></span></div>
       </div>
-      <div class="prod-text reveal" style="--i:1">
-        <p class="kicker">Solution 02</p>
-        <h2 class="h2">Conscious <span class="grad-text">AI Adoption</span></h2>
-        <p class="lead">Adopting AI is rarely a purely technical problem: it lands, or stalls, on people. We help organisations roll out AI so it actually sticks: a clear strategy, sensible governance, and the stakeholder alignment that turns a promising tool into a practice your teams genuinely use.</p>
-        <div class="chips"><span class="chip">AI strategy</span><span class="chip">Governance</span><span class="chip">Adoption &amp; enablement</span><span class="chip">Stakeholder alignment</span><span class="chip">Responsible implementation</span></div>
-        <div class="outcome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg><p><b>Outcome:</b> successful AI adoption, with your people on board rather than left behind.</p></div>
-        <a class="btn btn-grad btn-lg" href="contact.html">Inquire <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="reveal" style="--i:1">
+        <span class="eyebrow"><span class="lang-en">Offer 02 · Education</span><span class="lang-de">Angebot 02 · Bildung</span></span>
+        <h2 id="eduTitle"><span class="lang-en">Newsletter <span class="o">&amp; events</span></span><span class="lang-de">Newsletter <span class="o">&amp; Events</span></span></h2>
+        <p class="sol-intro">
+          <span class="lang-en">Public awareness lags far behind what AI systems can already do. We want to close that gap a little: with honest notes on where AI is heading, and with evenings where people meet, think and talk instead of scrolling alone.</span>
+          <span class="lang-de">Das öffentliche Bewusstsein hinkt weit hinter dem her, was KI-Systeme schon können. Diese Lücke wollen wir ein Stück schließen: mit ehrlichen Notizen dazu, wohin sich KI entwickelt, und mit Abenden, an denen Menschen sich treffen, nachdenken und reden, statt allein zu scrollen.</span>
+        </p>
+      </div>
+    </div>
+    <div class="sol-cols">
+      <div class="reveal">
+        <h3 class="block-title">Newsletter</h3>
+        <ul class="checks">
+          <li><span class="icon icon-check" aria-hidden="true"></span><span><span class="lang-en">Grounded, no-hype notes on AI, awareness and agency</span><span class="lang-de">Bodenständige Notizen ohne Hype zu KI, Bewusstsein und Handlungsfähigkeit</span></span></li>
+          <li><span class="icon icon-check" aria-hidden="true"></span><span><span class="lang-en">First word on the next Sense-Making Evenings</span><span class="lang-de">Neue Sense-Making-Abende erfährst Du zuerst</span></span></li>
+          <li><span class="icon icon-check" aria-hidden="true"></span><span><span class="lang-en">Free, on Substack, written in English</span><span class="lang-de">Kostenlos, auf Substack, auf Englisch</span></span></li>
+        </ul>
+        <div class="sol-actions"><a class="btn" href="newsletter.html"><span class="lang-en">Subscribe</span><span class="lang-de">Abonnieren</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a></div>
+      </div>
+      <div class="reveal" style="--i:1">
+        <h3 class="block-title"><span class="lang-en">Sense-Making Evenings</span><span class="lang-de">Sense-Making-Abende</span></h3>
+        <ol class="flow">
+          <li><b>Input</b><span><span class="lang-en">A bit of input to get us on the same page about where AI is heading and why it matters.</span><span class="lang-de">Ein kurzer Input, damit alle wissen, wohin sich KI entwickelt und warum das wichtig ist.</span></span></li>
+          <li><b><span class="lang-en">Hands-on</span><span class="lang-de">Ausprobieren</span></b><span><span class="lang-en">A hands-on piece, so you experience the questions instead of only hearing about them.</span><span class="lang-de">Ein praktischer Teil, damit Du die Fragen erlebst, statt nur davon zu hören.</span></span></li>
+          <li><b><span class="lang-en">Sense-making circle</span><span class="lang-de">Gesprächskreis</span></b><span><span class="lang-en">We make sense of it together, and you walk away knowing a little better where you stand.</span><span class="lang-de">Wir ordnen es gemeinsam ein, und Du gehst mit einem klareren Gefühl dafür nach Hause, wo Du stehst.</span></span></li>
+        </ol>
+        <div class="sol-actions"><a class="btn ghost" href="events.html"><span class="lang-en">See the events</span><span class="lang-de">Zu den Events</span></a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<!-- ============ 03 ONE-ON-ONE ============ -->
+<section class="sol" id="one-on-one" aria-labelledby="oneTitle">
   <div class="wrap">
-    <div class="prod" id="leadership-coaching">
-      <div class="prod-media reveal">
-        <div class="frame"><img src="assets/img/solution-coaching.jpg" alt="A lone figure at a crossroads of glowing light paths beneath a guiding star" width="590" height="599" loading="lazy"></div>
-        <div class="badge"><small>Who it’s for</small><span>Founders and leaders navigating high-stakes decisions at speed.</span></div>
+    <div class="sol-top">
+      <div class="sol-media reveal">
+        <img class="graded" src="assets/img/photos/recording-web.webp" width="2000" height="1333" loading="lazy" decoding="async"
+             alt="Robin Hotz sketching a framework on a whiteboard"
+             data-alt-en="Robin Hotz sketching a framework on a whiteboard"
+             data-alt-de="Robin Hotz skizziert ein Modell auf einem Whiteboard">
+        <div class="badge"><small><span class="lang-en">Who it’s for</span><span class="lang-de">Für wen</span></small><span><span class="lang-en">Founders, freelancers and owners of small businesses.</span><span class="lang-de">Gründende, Freiberufliche und Inhabende kleiner Unternehmen.</span></span></div>
       </div>
-      <div class="prod-text reveal" style="--i:1">
-        <p class="kicker">Solution 03</p>
-        <h2 class="h2">Leadership <span class="grad-text">Coaching</span></h2>
-        <p class="lead">Founders and leaders set the tone for everything around them, especially under pressure. In one-to-one coaching we work on the decisions, presence, and self-awareness that let you lead clearly when the stakes are high, the information is incomplete, and everyone is looking to you.</p>
-        <div class="chips"><span class="chip">Decision-making under uncertainty</span><span class="chip">Leadership presence</span><span class="chip">Communication</span><span class="chip">Responsibility</span><span class="chip">Self-awareness</span></div>
-        <div class="outcome"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg><p><b>Outcome:</b> clearer leaders who make better decisions under pressure.</p></div>
-        <a class="btn btn-grad btn-lg" href="contact.html">Inquire <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="reveal" style="--i:1">
+        <span class="eyebrow"><span class="lang-en">Offer 03 · Entrepreneurs</span><span class="lang-de">Angebot 03 · Selbstständige</span></span>
+        <h2 id="oneTitle"><span class="lang-en">1:1 <span class="o">AI coaching</span></span><span class="lang-de">1:1 <span class="o">KI-Coaching</span></span></h2>
+        <p class="sol-intro">
+          <span class="lang-en">Personal coaching for founders and entrepreneurs who want to work with AI in a way that fits their business, their values and their pace. We look at your real work, find where AI helps and where it doesn’t, and build habits you can keep.</span>
+          <span class="lang-de">Persönliches Coaching für Gründende und Selbstständige, die so mit KI arbeiten wollen, wie es zu ihrem Business, ihren Werten und ihrem Tempo passt. Wir schauen auf Deine echte Arbeit, finden heraus, wo KI hilft und wo nicht, und bauen Gewohnheiten auf, die bleiben.</span>
+        </p>
+      </div>
+    </div>
+    <div class="sol-cols">
+      <div class="reveal">
+        <h3 class="block-title"><span class="lang-en">What we work on</span><span class="lang-de">Woran wir arbeiten</span></h3>
+        <ul class="checks">
+          <li><span class="icon icon-check" aria-hidden="true"></span><span><span class="lang-en">Find the tools that fit your work</span><span class="lang-de">Die Tools finden, die zu Deiner Arbeit passen</span></span></li>
+          <li><span class="icon icon-check" aria-hidden="true"></span><span><span class="lang-en">Build your own AI workflows</span><span class="lang-de">Eigene KI-Workflows aufbauen</span></span></li>
+          <li><span class="icon icon-check" aria-hidden="true"></span><span><span class="lang-en">Decide where AI helps and where it doesn’t</span><span class="lang-de">Entscheiden, wo KI hilft und wo nicht</span></span></li>
+          <li><span class="icon icon-check" aria-hidden="true"></span><span><span class="lang-en">Keep your own judgement and your own voice</span><span class="lang-de">Das eigene Urteil und die eigene Stimme behalten</span></span></li>
+        </ul>
+        <div class="result-box">
+          <b><span class="lang-en">Outcome</span><span class="lang-de">Ergebnis</span></b>
+          <p><span class="lang-en">You use AI with confidence and stay in charge of your work.</span><span class="lang-de">Du nutzt KI mit Sicherheit und behältst Deine Arbeit in der Hand.</span></p>
+        </div>
+      </div>
+      <div class="reveal" style="--i:1">
+        <h3 class="block-title"><span class="lang-en">How it works</span><span class="lang-de">So läuft es ab</span></h3>
+        <ol class="flow">
+          <li><b><span class="lang-en">Discovery call</span><span class="lang-de">Kennenlernen</span></b><span><span class="lang-en">We clarify what you want to achieve and whether 1:1 coaching is the right fit.</span><span class="lang-de">Wir klären, was Du erreichen willst und ob ein 1:1-Coaching passt.</span></span></li>
+          <li><b><span class="lang-en">Working sessions</span><span class="lang-de">Arbeitssessions</span></b><span><span class="lang-en">We work hands-on with your real tasks, not with generic examples.</span><span class="lang-de">Wir arbeiten praktisch an Deinen echten Aufgaben, nicht an Beispielen von der Stange.</span></span></li>
+          <li><b><span class="lang-en">Your own routine</span><span class="lang-de">Deine eigene Routine</span></b><span><span class="lang-en">You leave with workflows and habits you keep using on your own.</span><span class="lang-de">Du gehst mit Workflows und Gewohnheiten, die Du allein weiter nutzt.</span></span></li>
+        </ol>
+        <div class="sol-actions"><a class="btn" href="contact.html"><span class="lang-en">Ask for a session</span><span class="lang-de">Termin anfragen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-tight">
+<section class="sec cta-sec">
   <div class="wrap">
-    <div class="cta center reveal">
-      <p class="kicker">Let’s talk</p>
-      <h2>Ready to build awareness into your <span class="shimmer">organization?</span></h2>
-      <p>A 30-minute discovery call to understand where you are and what would help most.</p>
-      <div class="btn-row"><a class="btn btn-grad btn-lg" href="contact.html">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="cta-band center reveal">
+      <span class="eyebrow"><span class="lang-en">Let’s talk</span><span class="lang-de">Lass uns sprechen</span></span>
+      <h2><span class="lang-en">Let’s build awareness into your <span class="o">organisation</span></span><span class="lang-de">Lass uns Bewusstsein in Deine <span class="o">Organisation</span> bringen</span></h2>
+      <p><span class="lang-en">Tell us where you are. We’ll tell you honestly whether and how we can help.</span><span class="lang-de">Erzähl uns, wo Du stehst. Wir sagen Dir ehrlich, ob und wie wir helfen können.</span></p>
+      <div class="ctas"><a class="btn" href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a></div>
     </div>
   </div>
 </section>
@@ -178,44 +337,40 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot">
+    <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135" loading="lazy"></a>
-        <p>Awareness, leadership, and culture for the organizations building and adopting AI.</p>
-        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
       </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="events.html">Events</a>
+        <a href="about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="solutions.html#one-on-one"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
       </div>
-      <div>
-        <h5>Get started</h5>
-        <ul>
-          <li><a href="contact.html">Book a discovery call</a></li>
-          <li><a href="solutions.html">Our services</a></li>
-          <li><a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="imprint.html">Imprint</a></li>
-          <li><a href="privacy.html">Data Privacy</a></li>
-        </ul>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
       </div>
     </div>
     <div class="wordmark" aria-hidden="true">AIwareness</div>
-    <div class="copyright"><span>© 2026 AIwareness · aiwareness.space</span><span>Bringing awareness into AI.</span></div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=20261016f" defer></script>
+
+<script src="assets/js/site.js?v=20261017k" defer></script>
 </body>
 </html>

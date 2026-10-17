@@ -1,151 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-title-en="About · AIwareness"
+      data-title-de="Über uns · AIwareness"
+      data-desc-en="AIwareness brings conscious attention to the culture, leadership and decisions behind AI. Meet founder Robin Hotz and the team at the Cocreation Loft in Berlin."
+      data-desc-de="AIwareness bringt bewusste Aufmerksamkeit in die Kultur, Führung und Entscheidungen hinter KI. Lerne Gründer Robin Hotz und das Team im Cocreation Loft in Berlin kennen.">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>About · AIwareness</title>
-<meta name="description" content="AIwareness brings conscious attention to the culture, leadership, and decisions behind AI. Meet founder Robin Hotz and our facilitators at the Cocreation Loft in Berlin.">
-<meta name="theme-color" content="#0A0A0B">
+<meta name="description" content="AIwareness brings conscious attention to the culture, leadership and decisions behind AI. Meet founder Robin Hotz and the team at the Cocreation Loft in Berlin.">
+<meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIwareness">
 <meta property="og:title" content="About · AIwareness">
-<meta property="og:description" content="AIwareness brings conscious attention to the culture, leadership, and decisions behind AI. Meet founder Robin Hotz and our facilitators at the Cocreation Loft in Berlin.">
-<meta property="og:image" content="https://aiwareness.space/assets/img/hero-hands.jpg">
+<meta property="og:description" content="AIwareness brings conscious attention to the culture, leadership and decisions behind AI. Meet founder Robin Hotz and the team at the Cocreation Loft in Berlin.">
+<meta property="og:url" content="https://aiwareness.space/about.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/about.html">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261016f">
-<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.AIW)document.documentElement.classList.remove('js')},2500)</script>
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261017k">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A6FF"/><stop offset="1" stop-color="#4CC9F0"/></linearGradient></defs></svg>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
 <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135"></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <div class="nav-sub">
-        <a href="solutions.html">Solutions <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="submenu">
-          <a href="solutions.html#culture-development"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.3" cy="9" r="2.4"/><path d="M16.2 13.9a4.8 4.8 0 0 1 5 5"/></svg></span><span><span class="sm-t">Culture Development</span><span class="sm-d">Psychological safety and real alignment for AI teams</span></span></a>
-          <a href="solutions.html#conscious-ai-adoption"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5.5" r="1.8"/><circle cx="19.5" cy="5.5" r="1.8"/><circle cx="4.5" cy="18.5" r="1.8"/><circle cx="19.5" cy="18.5" r="1.8"/><path d="M5.9 6.9l3.8 3.1M18.1 6.9l-3.8 3.1M5.9 17.1l3.8-3.1M18.1 17.1l-3.8-3.1"/></svg></span><span><span class="sm-t">Conscious AI Adoption</span><span class="sm-d">Responsible implementation that brings people along</span></span></a>
-          <a href="solutions.html#leadership-coaching"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><span><span class="sm-t">Leadership Coaching</span><span class="sm-d">Clear decisions under uncertainty</span></span></a>
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AIwareness home">
+      <img src="assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></span><span class="dd-d"><span class="lang-en">Culture, conscious AI adoption, leadership</span><span class="lang-de">Kultur, bewusste KI-Einführung, Führung</span></span></span></a>
+            <a href="solutions.html#education"><span class="dd-ico"><span class="icon icon-eye" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></span><span class="dd-d"><span class="lang-en">Learn what AI means for people</span><span class="lang-de">Verstehen, was KI für Menschen bedeutet</span></span></span></a>
+            <a href="solutions.html#one-on-one"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></span><span class="dd-d"><span class="lang-en">For founders and entrepreneurs</span><span class="lang-de">Für Gründende und Selbstständige</span></span></span></a>
+          </div>
         </div>
+        <a href="events.html">Events</a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="about.html" aria-current="page"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
       </div>
-      <a href="events.html">Events</a>
-      <a href="about.html" aria-current="page">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-grad" href="newsletter.html">Newsletter</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-  </nav>
+  </div>
 </header>
+
 
 <main id="main">
 
-<section class="page-hero">
+<section class="page-hero" aria-labelledby="pageTitle">
+  <div class="ph-bg" aria-hidden="true" style="background-image:url('assets/img/photos/klarheit-stadtraum.webp')"></div>
   <canvas data-particles="0.6" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="kicker reveal">About</p>
-    <h1 class="reveal" style="--i:1">Awareness for <span class="shimmer">the age of AI</span></h1>
-    <p class="intro reveal" style="--i:2">AIwareness exists to bring conscious attention to the culture, leadership, and decisions behind the technology reshaping our world.</p>
+    <span class="eyebrow reveal"><span class="lang-en">About</span><span class="lang-de">Über uns</span></span>
+    <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en">Awareness for <span class="o">the age of AI</span></span><span class="lang-de">Bewusstsein für <span class="o">das Zeitalter der KI</span></span></h1>
+    <p class="lead reveal" style="--i:2">
+      <span class="lang-en">AIwareness exists to bring conscious attention to the culture, leadership and decisions behind the technology reshaping our world.</span>
+      <span class="lang-de">AIwareness gibt es, um bewusste Aufmerksamkeit in die Kultur, die Führung und die Entscheidungen hinter der Technologie zu bringen, die unsere Welt verändert.</span>
+    </p>
   </div>
 </section>
 
-<section class="section-tight" style="padding-top:0">
+<!-- ============ VISION AND MISSION (AI imagery kept on purpose) ============ -->
+<section class="sec" style="padding-top:16px" aria-label="Vision and mission">
   <div class="wrap">
     <div class="vm">
-      <article class="card spot vm-card reveal">
-        <div class="media"><img src="assets/img/vision-eye.jpg" alt="A glowing eye of light encircling planet Earth, symbolising awareness" width="900" height="507" loading="lazy"></div>
+      <article class="panel vm-card reveal">
+        <div class="media"><img src="assets/img/photos/vision-eye.jpg" width="900" height="507" loading="lazy" decoding="async"
+             alt="A glowing eye of light encircling planet Earth, symbolising awareness"
+             data-alt-en="A glowing eye of light encircling planet Earth, symbolising awareness"
+             data-alt-de="Ein leuchtendes Auge aus Licht umgibt die Erde, ein Symbol für Bewusstsein"></div>
         <div class="body">
-          <p class="lbl">Our vision</p>
-          <h3>A conscious culture and a healthy human future</h3>
-          <p>A future where people and the technology they build grow together. We believe the systems reshaping humanity should be created with awareness, not on autopilot, so that progress serves human flourishing rather than quietly eroding the things that make us human.</p>
+          <p class="lbl"><span class="lang-en">Our vision</span><span class="lang-de">Unsere Vision</span></p>
+          <h3><span class="lang-en">A conscious culture and a healthy human future</span><span class="lang-de">Eine bewusste Kultur und eine gesunde menschliche Zukunft</span></h3>
+          <p>
+            <span class="lang-en">A future where people and the technology they build grow together. We believe the systems reshaping humanity should be created with awareness, not on autopilot, so that progress serves human flourishing rather than quietly eroding the things that make us human.</span>
+            <span class="lang-de">Eine Zukunft, in der Menschen und die Technologie, die sie bauen, gemeinsam wachsen. Wir glauben, dass die Systeme, die die Menschheit verändern, mit Bewusstsein entstehen sollten und nicht auf Autopilot, damit Fortschritt dem menschlichen Gedeihen dient, statt leise abzutragen, was uns menschlich macht.</span>
+          </p>
         </div>
       </article>
-      <article class="card spot vm-card reveal" style="--i:1">
-        <div class="media"><img src="assets/img/mission-circle.jpg" alt="Four people in conversation beneath a glowing awareness symbol" width="900" height="499" loading="lazy"></div>
+      <article class="panel vm-card reveal" style="--i:1">
+        <div class="media"><img src="assets/img/photos/mission-circle.jpg" width="900" height="499" loading="lazy" decoding="async"
+             alt="Four people in conversation beneath a glowing awareness symbol"
+             data-alt-en="Four people in conversation beneath a glowing awareness symbol"
+             data-alt-de="Vier Menschen im Gespräch unter einem leuchtenden Symbol für Bewusstsein"></div>
         <div class="body">
-          <p class="lbl">Our mission</p>
-          <h3>Bring awareness into AI</h3>
-          <p>Today’s pace of AI puts that future at risk if we don’t steer the technology well. So we bring awareness into AI through education and coaching, for teams, for teens, and for society, working from the Cocreation Loft in Berlin, a community centred on human flourishing.</p>
+          <p class="lbl"><span class="lang-en">Our mission</span><span class="lang-de">Unsere Mission</span></p>
+          <h3><span class="lang-en">Bring awareness into AI</span><span class="lang-de">Bewusstsein in die KI bringen</span></h3>
+          <p>
+            <span class="lang-en">Today’s pace of AI puts that future at risk if we don’t steer the technology well. So we bring awareness into AI through education and coaching, for teams, for teens and for society, working from the Cocreation Loft in Berlin, a community centred on human flourishing.</span>
+            <span class="lang-de">Das heutige Tempo der KI gefährdet diese Zukunft, wenn wir die Technologie nicht gut steuern. Deshalb bringen wir Bewusstsein in die KI, durch Bildung und Coaching, für Teams, für Jugendliche und für die Gesellschaft. Wir arbeiten vom Cocreation Loft in Berlin aus, einer Gemeinschaft, in der menschliches Gedeihen im Mittelpunkt steht.</span>
+          </p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap founder">
-    <div class="portrait-wrap reveal">
-      <figure class="portrait">
-        <img src="assets/img/robin-whiteboard.jpg" alt="Robin Hotz, founder of AIwareness, sketching at a whiteboard" width="720" height="857" loading="lazy">
-        <figcaption class="cap"><b>Robin Hotz</b><span>Founder &amp; Facilitator</span></figcaption>
-      </figure>
-    </div>
-    <div class="founder-text reveal" style="--i:1">
-      <p class="kicker">Founder</p>
-      <h2 class="h2" style="margin-bottom:26px">Meet <span class="grad-text">Robin</span>, founder of <span class="grad-text">AIwareness</span></h2>
-      <p>Hey, I’m Robin. I live in Berlin, and for over ten years I worked as a visual facilitator, sketching the ideas and strategies of founders and teams, and helping people step back to see the bigger picture.</p>
-      <p>I loved that work, but I kept looking for a deeper sense of purpose. I found it when I started paying real attention to AI: the wonder of it, but also how fast it’s moving, and how far public awareness lags behind what these systems can already do.</p>
-      <p>That’s why I’m running AIwareness, where the human-centred work I’ve always loved meets the conviction that we need to face AI together, with both curiosity and care. And I’m not doing it alone: behind me stands a team of excellent facilitators who make this work possible.</p>
-      <div class="btn-row">
-        <a class="btn btn-grad" href="https://www.linkedin.com/in/robin-hotz-2688491a3/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
-        <a class="btn btn-ghost" href="newsletter.html">Read my notes <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<!-- ============ FOUNDER ============ -->
+<section class="sec" id="founder" aria-labelledby="founderTitle">
+  <div class="wrap about-grid">
+    <figure class="about-media reveal">
+      <img class="graded" src="assets/img/photos/robin-hotz-moderator-natuerliches-portrait-warm.webp" width="980" height="1605" loading="lazy" decoding="async"
+           alt="Robin Hotz sitting on a stool, smiling" data-alt-en="Robin Hotz sitting on a stool, smiling" data-alt-de="Robin Hotz sitzt lächelnd auf einem Hocker">
+      <span class="shade" aria-hidden="true"></span>
+      <figcaption><b>Robin Hotz</b><span><span class="lang-en">Founder &amp; Facilitator</span><span class="lang-de">Gründer &amp; Facilitator</span></span></figcaption>
+    </figure>
+    <div class="reveal" style="--i:1">
+      <span class="eyebrow"><span class="lang-en">Founder</span><span class="lang-de">Gründer</span></span>
+      <h2 id="founderTitle"><span class="lang-en">Meet <span class="o">Robin</span></span><span class="lang-de">Das ist <span class="o">Robin</span></span></h2>
+      <p>
+        <span class="lang-en">Hey, I’m Robin. I live in Berlin, and for over ten years I have worked as a visual facilitator, making the ideas and strategies of founders and teams visible and helping people step back to see the bigger picture.</span>
+        <span class="lang-de">Hey, ich bin Robin. Ich lebe in Berlin und arbeite seit über zehn Jahren als Visual Facilitator. Ich mache die Ideen und Strategien von Gründenden und Teams sichtbar und helfe Menschen, einen Schritt zurückzutreten und das große Ganze zu sehen.</span>
+      </p>
+      <p>
+        <span class="lang-en">I loved that work, but I kept looking for a deeper sense of purpose. I found it when I started paying real attention to AI: the wonder of it, and also how fast it is moving and how far public awareness lags behind what these systems can already do.</span>
+        <span class="lang-de">Ich habe diese Arbeit geliebt und trotzdem nach einem tieferen Sinn gesucht. Gefunden habe ich ihn, als ich angefangen habe, KI wirklich aufmerksam zu verfolgen: das Staunen darüber, und gleichzeitig, wie schnell sie sich entwickelt und wie weit das öffentliche Bewusstsein hinter dem zurückliegt, was diese Systeme schon können.</span>
+      </p>
+      <p>
+        <span class="lang-en">That’s why I’m running AIwareness, where the human-centred work I’ve always loved meets the conviction that we need to face AI together, with curiosity and care. And I’m not doing it alone: a team of experienced facilitators makes this work possible.</span>
+        <span class="lang-de">Deshalb gibt es AIwareness. Hier trifft die menschenzentrierte Arbeit, die ich immer geliebt habe, auf die Überzeugung, dass wir KI gemeinsam begegnen müssen, mit Neugier und Sorgfalt. Und ich mache das nicht allein: Ein Team aus erfahrenen Moderierenden macht diese Arbeit möglich.</span>
+      </p>
+      <div class="facts">
+        <div class="fact"><div class="n">10+</div><div class="l"><span class="lang-en">years of facilitation</span><span class="lang-de">Jahre Moderation</span></div></div>
+        <div class="fact"><div class="n">250+</div><div class="l"><span class="lang-en">workshops supported</span><span class="lang-de">begleitete Workshops</span></div></div>
+        <div class="fact"><div class="n">M.A.</div><div class="l"><span class="lang-en">Adult Education</span><span class="lang-de">Erwachsenenbildung</span></div></div>
+      </div>
+      <div class="ctas">
+        <a class="btn" href="https://www.linkedin.com/in/robin-hotz-2688491a3/" target="_blank" rel="noopener">LinkedIn<span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+        <a class="btn ghost" href="newsletter.html"><span class="lang-en">Read my notes</span><span class="lang-de">Meine Notizen lesen</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<!-- ============ TEAM ============ -->
+<section class="sec" id="team" aria-labelledby="teamTitle">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="kicker">The team</p>
-      <h2 class="h2">Our <span class="grad-text">facilitators</span></h2>
-      <p class="lead">We work with a wider team of facilitators based at the <a href="https://www.cocreationloft.com" target="_blank" rel="noopener" style="color:var(--purple);border-bottom:1px solid rgba(201,166,255,.4)">Cocreation Loft</a> in Berlin, experts in leadership coaching, culture building, and organisational development.</p>
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">The team</span><span class="lang-de">Das Team</span></span>
+      <h2 id="teamTitle"><span class="lang-en">Our <span class="o">facilitators</span></span><span class="lang-de">Unsere <span class="o">Moderierenden</span></span></h2>
+      <p class="section-intro">
+        <span class="lang-en">We work with a wider team of facilitators based at the <a class="text-link" href="https://www.cocreationloft.com" target="_blank" rel="noopener">Cocreation Loft</a> in Berlin, experts in leadership coaching, culture building and organisational development.</span>
+        <span class="lang-de">Wir arbeiten mit einem größeren Team aus Moderierenden im <a class="text-link" href="https://www.cocreationloft.com" target="_blank" rel="noopener">Cocreation Loft</a> in Berlin, mit Erfahrung in Führungscoaching, Kulturentwicklung und Organisationsentwicklung.</span>
+      </p>
     </div>
     <div class="team">
-      <article class="card spot member reveal">
+      <article class="panel member reveal">
         <div class="member-top">
-          <div class="avatar"><img src="assets/img/jj-vega.jpg" alt="JJ Vega" width="360" height="360" loading="lazy"></div>
+          <div class="avatar"><img src="assets/img/photos/jj-vega.jpg" alt="JJ Vega" width="360" height="360" loading="lazy"></div>
           <div><h3>JJ Vega</h3><p class="role">Leadership Coach</p></div>
         </div>
-        <p>JJ brings 20+ years of leading teams, from the US military to ed-tech startups, to his 1:1 coaching with leaders navigating high stakes and big transitions. He pairs deep inner work with practical, strategic guidance.</p>
-        <div class="btn-row">
-          <a class="btn btn-grad btn-sm" href="https://www.linkedin.com/in/jj-vega/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
-          <a class="btn btn-dark btn-sm" href="https://www.artofunfolding.org" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5a14.5 14.5 0 0 1 0 19M12 2.5a14.5 14.5 0 0 0 0 19"/></svg> Website</a>
+        <p>
+          <span class="lang-en">JJ brings 20+ years of leading teams, from the US military to ed-tech startups, to his 1:1 coaching with leaders navigating high stakes and big transitions. He pairs deep inner work with practical, strategic guidance.</span>
+          <span class="lang-de">JJ bringt über 20 Jahre Erfahrung in der Teamführung mit, vom US-Militär bis zu Ed-Tech-Startups. Im Einzelcoaching begleitet er Führungskräfte in Situationen mit viel Verantwortung und großen Umbrüchen. Er verbindet tiefe innere Arbeit mit praktischer, strategischer Begleitung.</span>
+        </p>
+        <div class="ctas">
+          <a class="btn sm" href="https://www.linkedin.com/in/jj-vega/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost sm" href="https://www.artofunfolding.org" target="_blank" rel="noopener">Website</a>
         </div>
       </article>
-      <article class="card spot member reveal" style="--i:1">
+      <article class="panel member reveal" style="--i:1">
         <div class="member-top">
-          <div class="avatar"><img src="assets/img/johanna-schuck.jpg" alt="Johanna Schuck" width="360" height="360" loading="lazy"></div>
-          <div><h3>Johanna Schuck</h3><p class="role">Communication Expert</p></div>
+          <div class="avatar"><img src="assets/img/photos/johanna-schuck.jpg" alt="Johanna Schuck" width="360" height="360" loading="lazy"></div>
+          <div><h3>Johanna Schuck</h3><p class="role"><span class="lang-en">Communication Expert</span><span class="lang-de">Expertin für Kommunikation</span></p></div>
         </div>
-        <p>Johanna helps people communicate authentically and collaborate well. Trained in Design Thinking, Nonviolent Communication, and mediation, she facilitates workshops for human-centred innovation and constructive dialogue.</p>
-        <div class="btn-row">
-          <a class="btn btn-grad btn-sm" href="https://www.linkedin.com/in/johanna-schuck/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
-          <a class="btn btn-dark btn-sm" href="https://www.johannaschuck.de" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5a14.5 14.5 0 0 1 0 19M12 2.5a14.5 14.5 0 0 0 0 19"/></svg> Website</a>
+        <p>
+          <span class="lang-en">Johanna helps people communicate authentically and collaborate well. Trained in Design Thinking, Nonviolent Communication and mediation, she facilitates workshops for human-centred innovation and constructive dialogue.</span>
+          <span class="lang-de">Johanna hilft Menschen, authentisch zu kommunizieren und gut zusammenzuarbeiten. Sie ist in Design Thinking, Gewaltfreier Kommunikation und Mediation ausgebildet und moderiert Workshops für menschenzentrierte Innovation und konstruktiven Dialog.</span>
+        </p>
+        <div class="ctas">
+          <a class="btn sm" href="https://www.linkedin.com/in/johanna-schuck/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost sm" href="https://www.johannaschuck.de" target="_blank" rel="noopener">Website</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section-tight">
+<section class="sec cta-sec">
   <div class="wrap">
-    <div class="cta center reveal">
-      <p class="kicker">Let’s talk</p>
-      <h2>Let’s build awareness into your <span class="shimmer">organisation</span></h2>
-      <p>Tell us where you are. We’ll tell you honestly whether and how we can help.</p>
-      <div class="btn-row"><a class="btn btn-grad btn-lg" href="contact.html">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="cta-band center reveal">
+      <span class="eyebrow"><span class="lang-en">Let’s talk</span><span class="lang-de">Lass uns sprechen</span></span>
+      <h2><span class="lang-en">Let’s build awareness into your <span class="o">organisation</span></span><span class="lang-de">Lass uns Bewusstsein in Deine <span class="o">Organisation</span> bringen</span></h2>
+      <p><span class="lang-en">Tell us where you are. We’ll tell you honestly whether and how we can help.</span><span class="lang-de">Erzähl uns, wo Du stehst. Wir sagen Dir ehrlich, ob und wie wir helfen können.</span></p>
+      <div class="ctas"><a class="btn" href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a></div>
     </div>
   </div>
 </section>
@@ -153,44 +237,40 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot">
+    <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135" loading="lazy"></a>
-        <p>Awareness, leadership, and culture for the organizations building and adopting AI.</p>
-        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
       </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="events.html">Events</a>
+        <a href="about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="solutions.html#one-on-one"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
       </div>
-      <div>
-        <h5>Get started</h5>
-        <ul>
-          <li><a href="contact.html">Book a discovery call</a></li>
-          <li><a href="solutions.html">Our services</a></li>
-          <li><a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="imprint.html">Imprint</a></li>
-          <li><a href="privacy.html">Data Privacy</a></li>
-        </ul>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
       </div>
     </div>
     <div class="wordmark" aria-hidden="true">AIwareness</div>
-    <div class="copyright"><span>© 2026 AIwareness · aiwareness.space</span><span>Bringing awareness into AI.</span></div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=20261016f" defer></script>
+
+<script src="assets/js/site.js?v=20261017k" defer></script>
 </body>
 </html>

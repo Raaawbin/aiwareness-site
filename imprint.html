@@ -1,148 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-title-en="Imprint · AIwareness"
+      data-title-de="Impressum · AIwareness"
+      data-desc-en="Legal information about the AIwareness website in accordance with § 5 DDG."
+      data-desc-de="Anbieterkennzeichnung der Website AIwareness gemäß § 5 DDG.">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Imprint · AIwareness</title>
-<meta name="description" content="Imprint for aiwareness.space in accordance with § 5 TMG.">
-<meta name="theme-color" content="#0A0A0B">
+<meta name="description" content="Legal information about the AIwareness website in accordance with § 5 DDG.">
+<meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIwareness">
 <meta property="og:title" content="Imprint · AIwareness">
-<meta property="og:description" content="Imprint for aiwareness.space in accordance with § 5 TMG.">
-<meta property="og:image" content="https://aiwareness.space/assets/img/hero-hands.jpg">
+<meta property="og:description" content="Legal information about the AIwareness website in accordance with § 5 DDG.">
+<meta property="og:url" content="https://aiwareness.space/imprint.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/imprint.html">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261016f">
-<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.AIW)document.documentElement.classList.remove('js')},2500)</script>
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261017k">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A6FF"/><stop offset="1" stop-color="#4CC9F0"/></linearGradient></defs></svg>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
 <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135"></a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <div class="nav-sub">
-        <a href="solutions.html">Solutions <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="submenu">
-          <a href="solutions.html#culture-development"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.3" cy="9" r="2.4"/><path d="M16.2 13.9a4.8 4.8 0 0 1 5 5"/></svg></span><span><span class="sm-t">Culture Development</span><span class="sm-d">Psychological safety and real alignment for AI teams</span></span></a>
-          <a href="solutions.html#conscious-ai-adoption"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5.5" r="1.8"/><circle cx="19.5" cy="5.5" r="1.8"/><circle cx="4.5" cy="18.5" r="1.8"/><circle cx="19.5" cy="18.5" r="1.8"/><path d="M5.9 6.9l3.8 3.1M18.1 6.9l-3.8 3.1M5.9 17.1l3.8-3.1M18.1 17.1l-3.8-3.1"/></svg></span><span><span class="sm-t">Conscious AI Adoption</span><span class="sm-d">Responsible implementation that brings people along</span></span></a>
-          <a href="solutions.html#leadership-coaching"><span class="sm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></span><span><span class="sm-t">Leadership Coaching</span><span class="sm-d">Clear decisions under uncertainty</span></span></a>
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AIwareness home">
+      <img src="assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></span><span class="dd-d"><span class="lang-en">Culture, conscious AI adoption, leadership</span><span class="lang-de">Kultur, bewusste KI-Einführung, Führung</span></span></span></a>
+            <a href="solutions.html#education"><span class="dd-ico"><span class="icon icon-eye" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></span><span class="dd-d"><span class="lang-en">Learn what AI means for people</span><span class="lang-de">Verstehen, was KI für Menschen bedeutet</span></span></span></a>
+            <a href="solutions.html#one-on-one"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></span><span class="dd-d"><span class="lang-en">For founders and entrepreneurs</span><span class="lang-de">Für Gründende und Selbstständige</span></span></span></a>
+          </div>
         </div>
+        <a href="events.html">Events</a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
       </div>
-      <a href="events.html">Events</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-grad" href="newsletter.html">Newsletter</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-  </nav>
+  </div>
 </header>
+
 
 <main id="main">
 
-<section class="page-hero" style="padding-bottom:clamp(40px,5vw,60px)">
+<section class="page-hero" style="padding-bottom:40px" aria-labelledby="pageTitle">
   <div class="wrap">
-    <p class="kicker reveal">Legal</p>
-    <h1 class="reveal" style="--i:1"><span class="shimmer">Imprint</span></h1>
-    <p class="intro reveal" style="--i:2">Information in accordance with § 5 TMG.</p>
+    <span class="eyebrow reveal"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></span>
+    <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en"><span class="o">Imprint</span></span><span class="lang-de"><span class="o">Impressum</span></span></h1>
+    <p class="lead reveal" style="--i:2"><span class="lang-en">Information in accordance with § 5 of the German Digital Services Act (DDG).</span><span class="lang-de">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG).</span></p>
   </div>
 </section>
 
-<section class="section-tight" style="padding-top:0">
+<section class="sec" style="padding-top:0" aria-label="Imprint">
   <div class="wrap-narrow">
-    <div class="legal-card reveal">
-      <div class="prose">
-        <h2>Imprint according to § 5 TMG</h2>
+    <div class="panel legal-card reveal">
+      <div class="prose lang-en">
+        <h2>Information according to § 5 DDG</h2>
         <p><strong>Robin Hotz</strong><br>Visual Facilitator</p>
         <p><strong>Postal address</strong><br>Hohlgasse 21<br>79199 Kirchzarten<br>Germany</p>
         <p><strong>Contact</strong><br>Email: hello(at)aiwareness.space</p>
         <p><strong>VAT identification number</strong><br>DE346754511</p>
-
         <h2>Disclaimer</h2>
         <h3>Liability for content</h3>
-        <p>As a service provider, I am responsible for my own content on these pages in accordance with § 7 para. 1 TMG and general laws. However, according to §§ 8–10 TMG, I am not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Liability claims against the author for material or immaterial damage caused by the use or non-use of the information provided are excluded, unless there is proven intentional or grossly negligent fault.</p>
+        <p>As a service provider, I am responsible for my own content on these pages under the general laws. However, I am not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Liability claims against the author for material or immaterial damage caused by the use or non-use of the information provided are excluded, unless there is proven intentional or grossly negligent fault.</p>
         <h3>Liability for links</h3>
-        <p>This website contains links to external third-party websites over whose content I have no control. Therefore, I cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for their content.</p>
+        <p>This website contains links to external third-party websites over whose content I have no control. Therefore, I cannot assume any liability for this external content. The respective provider or operator of the linked pages is always responsible for their content.</p>
         <h3>Copyright</h3>
-        <p>The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization beyond the scope of copyright law requires prior written consent.</p>
-
-        <h2>Website information / professional notice</h2>
-        <h3>Nature of services</h3>
-        <p>The services offered on this website include coaching, facilitation, workshops, visual strategy consulting, and educational content. They do not constitute medical, psychological, therapeutic, or legal advice. Coaching and facilitation services are intended to support personal and professional development and do not replace professional therapy or medical treatment.</p>
-
-        <h2>Online dispute resolution</h2>
-        <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. I am not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
-
+        <p>The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution or any form of commercial use beyond the scope of copyright law requires prior written consent.</p>
+        <h2>Nature of services</h2>
+        <p>The services offered on this website include coaching, facilitation, workshops, visual strategy consulting and educational content. They do not constitute medical, psychological, therapeutic or legal advice. Coaching and facilitation services are intended to support personal and professional development and do not replace professional therapy or medical treatment.</p>
+        <h2>Consumer dispute resolution</h2>
+        <p>I am not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
         <h2>Privacy policy</h2>
-        <p>A separate Privacy Policy applies. Please refer to the <a href="privacy.html">dedicated privacy page</a> for details on data processing, cookies, analytics, and third-party services.</p>
+        <p>A separate privacy policy applies. Please see the <a href="privacy.html">privacy page</a> for details on data processing, storage and third-party services.</p>
+      </div>
+      <div class="prose lang-de">
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <p><strong>Robin Hotz</strong><br>Visual Facilitator</p>
+        <p><strong>Postanschrift</strong><br>Hohlgasse 21<br>79199 Kirchzarten<br>Deutschland</p>
+        <p><strong>Kontakt</strong><br>E-Mail: hello(at)aiwareness.space</p>
+        <p><strong>Umsatzsteuer-Identifikationsnummer</strong><br>DE346754511</p>
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Ich bin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Haftungsansprüche gegen den Autor wegen materieller oder immaterieller Schäden, die durch die Nutzung oder Nichtnutzung der bereitgestellten Informationen entstehen, sind ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.</p>
+        <h3>Haftung für Links</h3>
+        <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung.</p>
+        <h2>Art der Leistungen</h2>
+        <p>Die auf dieser Website angebotenen Leistungen umfassen Coaching, Moderation, Workshops, visuelle Strategieberatung und Bildungsinhalte. Sie stellen keine medizinische, psychologische, therapeutische oder rechtliche Beratung dar. Coaching und Moderation unterstützen die persönliche und berufliche Entwicklung und ersetzen keine Psychotherapie oder ärztliche Behandlung.</p>
+        <h2>Verbraucherstreitbeilegung</h2>
+        <p>Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        <h2>Datenschutz</h2>
+        <p>Es gilt eine gesonderte Datenschutzerklärung. Details zur Datenverarbeitung, Speicherung und zu Diensten Dritter findest Du auf der <a href="privacy.html">Datenschutzseite</a>.</p>
       </div>
     </div>
   </div>
 </section>
-
-<section class="section-tight">
-  <div class="wrap">
-    <div class="cta center reveal">
-      <p class="kicker">Let’s talk</p>
-      <h2>Let’s build awareness into your <span class="shimmer">organisation</span></h2>
-      <p>Tell us where you are. We’ll tell you honestly whether and how we can help.</p>
-      <div class="btn-row"><a class="btn btn-grad btn-lg" href="contact.html">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-    </div>
-  </div>
-</section>
-
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot">
+    <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" aria-label="AIwareness home"><img src="assets/img/logo.png" alt="AIwareness" width="560" height="135" loading="lazy"></a>
-        <p>Awareness, leadership, and culture for the organizations building and adopting AI.</p>
-        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span>Next: Sense-Making Evening · 20 Oct <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
       </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="events.html">Events</a>
+        <a href="about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="solutions.html#one-on-one"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
       </div>
-      <div>
-        <h5>Get started</h5>
-        <ul>
-          <li><a href="contact.html">Book a discovery call</a></li>
-          <li><a href="solutions.html">Our services</a></li>
-          <li><a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="imprint.html">Imprint</a></li>
-          <li><a href="privacy.html">Data Privacy</a></li>
-        </ul>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
       </div>
     </div>
     <div class="wordmark" aria-hidden="true">AIwareness</div>
-    <div class="copyright"><span>© 2026 AIwareness · aiwareness.space</span><span>Bringing awareness into AI.</span></div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=20261016f" defer></script>
+
+<script src="assets/js/site.js?v=20261017k" defer></script>
 </body>
 </html>

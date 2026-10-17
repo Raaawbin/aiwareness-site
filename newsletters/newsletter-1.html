@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"
+      data-title-en="AI needs AIwareness · Note 01 · AIwareness"
+      data-title-de="KI braucht AIwareness · Notiz 01 · AIwareness"
+      data-desc-en="Why the AI 2027 report sent Robin Hotz down the rabbit hole of AI safety, how he moved from anxiety to agency, and an invitation to think together."
+      data-desc-de="Warum der Bericht AI 2027 Robin Hotz tief in das Thema KI-Sicherheit gezogen hat, wie er von der Angst ins Handeln kam, und eine Einladung, gemeinsam zu denken.">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI needs AIwareness · Note 01 · AIwareness</title>
+<meta name="description" content="Why the AI 2027 report sent Robin Hotz down the rabbit hole of AI safety, how he moved from anxiety to agency, and an invitation to think together.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIwareness">
+<meta property="og:title" content="AI needs AIwareness · Note 01 · AIwareness">
+<meta property="og:description" content="Why the AI 2027 report sent Robin Hotz down the rabbit hole of AI safety, how he moved from anxiety to agency, and an invitation to think together.">
+<meta property="og:url" content="https://aiwareness.space/newsletters/newsletter-1.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/newsletters/newsletter-1.html">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="../assets/css/site.css?v=20261017k">
+</head>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+<div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="../index.html" aria-label="AIwareness home">
+      <img src="../assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="../index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="../solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="../solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for organisations</span><span class="lang-de">Coaching für Organisationen</span></span><span class="dd-d"><span class="lang-en">Culture, conscious AI adoption, leadership</span><span class="lang-de">Kultur, bewusste KI-Einführung, Führung</span></span></span></a>
+            <a href="../solutions.html#education"><span class="dd-ico"><span class="icon icon-eye" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Newsletter &amp; events</span><span class="lang-de">Newsletter &amp; Events</span></span><span class="dd-d"><span class="lang-en">Learn what AI means for people</span><span class="lang-de">Verstehen, was KI für Menschen bedeutet</span></span></span></a>
+            <a href="../solutions.html#one-on-one"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></span><span class="dd-d"><span class="lang-en">For founders and entrepreneurs</span><span class="lang-de">Für Gründende und Selbstständige</span></span></span></a>
+          </div>
+        </div>
+        <a href="../events.html">Events</a>
+        <a href="../newsletter.html#notes" aria-current="page">Blog</a>
+        <a href="../about.html"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="../contact.html"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="../newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
+      </div>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+
+<div class="progress" aria-hidden="true"><i></i></div>
+<section class="page-hero center" aria-labelledby="pageTitle" style="text-align:center;padding-bottom:48px">
+  <canvas data-particles="0.45" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="reveal" style="margin-bottom:26px"><a class="back" href="../newsletter.html"><span class="icon icon-arrow" aria-hidden="true"></span><span class="lang-en">All notes</span><span class="lang-de">Alle Notizen</span></a></p>
+    <span class="eyebrow reveal"><span class="lang-en">Note 01 · 14 June 2026</span><span class="lang-de">Notiz 01 · 14. Juni 2026</span></span>
+    <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en">AI needs <span class="o">AIwareness</span></span><span class="lang-de">KI braucht <span class="o">AIwareness</span></span></h1>
+    <div class="byline reveal" style="--i:2">
+      <img class="graded" src="../assets/img/photos/portrait-robin.webp" alt="" width="1071" height="1200">
+      <span style="text-align:left"><b>Robin Hotz</b><span class="lang-en">Founder, AIwareness · 3 min read</span><span class="lang-de">Gründer, AIwareness · 3 Min. Lesezeit</span></span>
+    </div>
+    <p class="lang-de"><span class="lang-hint">Deutsche Übersetzung. Das Original ist auf Englisch erschienen.</span></p>
+  </div>
+</section>
+
+<article class="wrap-narrow prose" data-article>
+  <div class="lang-en">
+    <p>For years I loved creating with AI. It unleashed my creativity, sped up my work and opened doors I didn’t even know were there. And still, somewhere underneath all that excitement, the sheer speed of it made me shiver more than once.</p>
+    <p>For a long time I pushed that feeling away. Then I read the <a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a> report, and something shifted.</p>
+    <h2>Down the AI rabbit hole</h2>
+    <p>If you haven’t come across it: AI 2027 is a scenario from the AI Futures Project, a month-by-month story of how AI could develop over the next few years. It isn’t a prediction and it doesn’t claim to be one. It’s a structured “what if” that takes today’s trajectory seriously and follows it to the end.</p>
+    <p>Reading it sent me down the rabbit hole of AI Safety and Alignment, into everything that feels off about where this is heading right now. The part that stayed with me wasn’t the doom. It was something quieter: how far public awareness is lagging behind what these systems can already do. Most of us are using the tools every day and barely talking about where they’re taking us.</p>
+    <h2>From anxiety to agency</h2>
+    <p>I realised that worrying on its own changes nothing. At some point I realised I had two options. Keep doom-scrolling the latest capability news and feel small. Or do something with it.</p>
+    <p>So I decided to reclaim my agency. Two things came out of that decision.</p>
+    <h2>A sense-making evening</h2>
+    <p>JJ Vega, Johanna and I are hosting a free evening at the Cocreation Loft in Berlin. No hype, no doom, no expert panel telling you what to think. Just space to slow down, think together and ask the big questions about AI and our place in it.</p>
+    <p>It’s built as three parts: a bit of input to get us on the same page, a hands-on piece, and a sense-making circle where we make sense of it together. Come as you are: curious, excited, concerned, sceptical and everything in between. You’ll walk away knowing a little better where you actually stand.</p>
+    <div class="note">
+      <span class="flag">This evening has taken place</span>
+      <div><b>When:</b> Tuesday, June 30th, 18:00</div>
+      <div><b>Where:</b> Cocreation Loft, Schinkestraße 9, 12047 Berlin</div>
+      <div class="hide-when-past" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><b>Next one:</b> Sense-Making Evening on Tuesday, 20 October. <a href="../events.html#next">See the details</a></div>
+    </div>
+    <h2>AIwareness</h2>
+    <p>For a while I’d been sitting on a brand and a domain I really believe in: AIwareness. It pulls together everything I feel about AI right now, the wonder and the worry in the same place.</p>
+    <p>So I taught myself vibe coding and built the site you’re reading this on. It will hold the resources, experiments and ideas to come. And I love the dark, vibrant design it turned into.</p>
+    <p>This is a beginning, not a finished thing. So have a look around and tell me what you think. The honest feedback is part of the point.</p>
+    <p class="pull" aria-hidden="true">Paying attention together beats worrying alone.</p>
+    <h2>An invitation</h2>
+    <p>I don’t have the answers here, and I’m sceptical of anyone in this space who claims they do. What I do have is the conviction that paying attention together beats worrying alone.</p>
+    <p>Reclaiming agency starts with awareness. If that resonates, come to the evening on June 30th, or just start the conversation wherever you are.</p>
+    <p>See you there.</p>
+  </div>
+
+  <div class="lang-de">
+    <p>Jahrelang habe ich es geliebt, mit KI zu gestalten. Sie hat meine Kreativität freigesetzt, meine Arbeit beschleunigt und mir Türen geöffnet, von denen ich nicht einmal wusste, dass es sie gibt. Und trotzdem hat mich irgendwo unter all der Begeisterung das schiere Tempo mehr als einmal schaudern lassen.</p>
+    <p>Lange habe ich dieses Gefühl weggeschoben. Dann habe ich den Bericht <a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a> gelesen, und etwas hat sich verschoben.</p>
+    <h2>Tief hinein ins Thema KI</h2>
+    <p>Falls Du ihn noch nicht kennst: AI 2027 ist ein Szenario des AI Futures Project, eine Geschichte Monat für Monat darüber, wie sich KI in den nächsten Jahren entwickeln könnte. Es ist keine Vorhersage und behauptet auch nicht, eine zu sein. Es ist ein strukturiertes „Was wäre, wenn“, das die heutige Entwicklung ernst nimmt und sie zu Ende denkt.</p>
+    <p>Beim Lesen bin ich tief in die Themen KI-Sicherheit und Alignment eingetaucht, in all das, was sich an der aktuellen Richtung falsch anfühlt. Hängen geblieben ist bei mir nicht die Untergangsstimmung. Es war etwas Leiseres: wie weit das öffentliche Bewusstsein hinter dem zurückliegt, was diese Systeme schon können. Die meisten von uns nutzen die Tools jeden Tag und sprechen kaum darüber, wohin sie uns führen.</p>
+    <h2>Von der Angst ins Handeln</h2>
+    <p>Mir wurde klar, dass Sorgen allein nichts verändert. Irgendwann habe ich gemerkt, dass ich zwei Möglichkeiten hatte. Weiter die neuesten KI-Nachrichten durchscrollen und mich klein fühlen. Oder etwas daraus machen.</p>
+    <p>Also habe ich beschlossen, wieder ins Handeln zu kommen. Aus dieser Entscheidung sind zwei Dinge entstanden.</p>
+    <h2>Ein Sense-Making-Abend</h2>
+    <p>JJ Vega, Johanna und ich laden zu einem kostenlosen Abend ins Cocreation Loft in Berlin ein. Kein Hype, keine Untergangsstimmung, kein Expertenpanel, das Dir sagt, was Du denken sollst. Nur Raum, um langsamer zu werden, gemeinsam zu denken und die großen Fragen zu KI und unserem Platz darin zu stellen.</p>
+    <p>Der Abend hat drei Teile: einen kurzen Input, damit alle auf demselben Stand sind, einen praktischen Teil und einen Gesprächskreis, in dem wir das Erlebte gemeinsam einordnen. Komm, wie Du bist: neugierig, begeistert, besorgt, skeptisch und alles dazwischen. Du gehst mit einem etwas klareren Gefühl dafür nach Hause, wo Du stehst.</p>
+    <div class="note">
+      <span class="flag">Dieser Abend hat stattgefunden</span>
+      <div><b>Wann:</b> Dienstag, 30. Juni, 18:00 Uhr</div>
+      <div><b>Wo:</b> Cocreation Loft, Schinkestraße 9, 12047 Berlin</div>
+      <div class="hide-when-past" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><b>Der nächste:</b> Sense-Making-Abend am Dienstag, 20. Oktober. <a href="../events.html#next">Zu den Details</a></div>
+    </div>
+    <h2>AIwareness</h2>
+    <p>Eine Weile hatte ich schon eine Marke und eine Domain, an die ich wirklich glaube: AIwareness. Darin steckt alles, was ich gerade über KI empfinde, das Staunen und die Sorge am selben Ort.</p>
+    <p>Also habe ich mir Vibe Coding beigebracht und die Website gebaut, auf der Du das hier liest. Hier sollen Ressourcen, Experimente und Ideen entstehen. Und ich liebe das dunkle, lebendige Design, das daraus geworden ist.</p>
+    <p>Das ist ein Anfang und nichts Fertiges. Schau Dich um und sag mir, was Du denkst. Ehrliches Feedback gehört dazu.</p>
+    <p class="pull" aria-hidden="true">Gemeinsam hinschauen ist besser, als allein zu grübeln.</p>
+    <h2>Eine Einladung</h2>
+    <p>Ich habe hier keine Antworten, und ich bin skeptisch gegenüber allen, die in diesem Feld behaupten, sie zu haben. Was ich habe, ist die Überzeugung, dass gemeinsames Hinschauen besser ist, als allein zu grübeln.</p>
+    <p>Handlungsfähigkeit beginnt mit Bewusstsein. Wenn Dich das anspricht, komm am 30. Juni zu dem Abend, oder fang das Gespräch einfach dort an, wo Du gerade bist.</p>
+    <p>Bis bald.</p>
+  </div>
+
+  <div class="article-foot">
+    <a class="back" href="../newsletter.html"><span class="icon icon-arrow" aria-hidden="true"></span><span class="lang-en">All notes</span><span class="lang-de">Alle Notizen</span></a>
+    <a class="btn ghost sm" href="../newsletters/newsletter-2.html"><span class="lang-en">Next note: Becoming a father in the age of AI</span><span class="lang-de">Nächste Notiz: Vater werden im Zeitalter der KI</span></a>
+  </div>
+</article>
+
+<section class="sec" style="margin-top:clamp(40px,6vw,70px)" aria-labelledby="signupTitle">
+  <div class="wrap">
+<div class="panel signup reveal" id="subscribe" data-signup>
+  <div class="signup-copy">
+
+    <span class="eyebrow"><span class="lang-en">Enjoyed this note?</span><span class="lang-de">Hat Dir die Notiz gefallen?</span></span>
+    <h2 id="signupTitle"><span class="lang-en">Get the next one <span class="o">in your inbox</span></span><span class="lang-de">Die nächste kommt <span class="o">in Dein Postfach</span></span></h2>
+    <p><span class="lang-en">Honest notes on AI, awareness and agency from someone paying close attention. No doom and no overselling.</span><span class="lang-de">Ehrliche Notizen zu KI, Bewusstsein und Handlungsfähigkeit von jemandem, der genau hinschaut. Ohne Untergangsstimmung und ohne Übertreibung.</span></p>
+    <ul class="signup-perks">
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">Free</span><span class="lang-de">Kostenlos</span></li>
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">No hype</span><span class="lang-de">Ohne Hype</span></li>
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">Unsubscribe anytime</span><span class="lang-de">Jederzeit abbestellbar</span></li>
+    </ul>
+  </div>
+  <div class="signup-action">
+    <div class="signup-frame" data-signup-frame>
+      <span class="signup-loading"><i aria-hidden="true"></i><span class="lang-en">Loading the signup form…</span><span class="lang-de">Anmeldeformular lädt…</span></span>
+      <iframe src="https://aiwareness1.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:white; max-width:480px;" frameborder="0" scrolling="no" title="Subscribe to the AIwareness newsletter on Substack"></iframe>
+    </div>
+    <p class="signup-alt" data-signup-alt>
+      <span class="lang-en">The newsletter is hosted on Substack and written in English. Trouble with the form? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a> · <a href="../privacy.html#p5">Privacy</a></span>
+      <span class="lang-de">Der Newsletter läuft über Substack und erscheint auf Englisch. Probleme mit dem Formular? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Auf Substack abonnieren</a> · <a href="../privacy.html#p5">Datenschutz</a></span>
+    </p>
+    <div class="signup-fallback" data-signup-fallback hidden>
+      <a class="btn" href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener"><span class="icon icon-mail sm" aria-hidden="true"></span><span class="lang-en">Subscribe on Substack</span><span class="lang-de">Auf Substack abonnieren</span></a>
+      <p class="signup-note">
+        <span class="lang-en" data-fallback-en>The signup form couldn’t load here, so you can subscribe on Substack instead. It takes a few seconds.</span>
+        <span class="lang-de" data-fallback-de>Das Formular konnte hier nicht laden. Du kannst Dich direkt auf Substack eintragen, das dauert nur ein paar Sekunden.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="sec cta-sec hide-when-past" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00" aria-labelledby="nextTitle">
+  <div class="wrap">
+    <div class="cta-band center reveal">
+      <span class="eyebrow"><span class="lang-en">Next Sense-Making Evening</span><span class="lang-de">Nächster Sense-Making-Abend</span></span>
+      <h2 id="nextTitle"><span class="lang-en">Come think with us <span class="o">in person</span></span><span class="lang-de">Denk mit uns <span class="o">vor Ort</span></span></h2>
+      <p><span class="lang-en">Tuesday, 20 October, 18:30 at the Cocreation Loft in Berlin.</span><span class="lang-de">Dienstag, 20. Oktober, 18:30 Uhr im Cocreation Loft in Berlin.</span></p>
+      <div class="ctas"><a class="btn" href="../events.html#next"><span class="lang-en">See the details</span><span class="lang-de">Zu den Details</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../index.html" aria-label="AIwareness home"><img src="../assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="../events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
+      </div>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="../solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="../events.html">Events</a>
+        <a href="../about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="../newsletter.html#notes">Blog</a>
+        <a href="../newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="../contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="../solutions.html#one-on-one"><span class="lang-en">1:1 AI coaching</span><span class="lang-de">1:1 KI-Coaching</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
+      </div>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="../imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="../privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">AIwareness</div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
+  </div>
+</footer>
+
+
+<script src="../assets/js/site.js?v=20261017k" defer></script>
+</body>
+</html>
