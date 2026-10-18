@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"
+      data-title-en="Links · AIwareness"
+      data-title-de="Links · AIwareness"
+      data-desc-en="All current AIwareness links in one place: events, newsletter, blog, AI safety resources and the website."
+      data-desc-de="Alle aktuellen Links von AIwareness an einem Ort: Events, Newsletter, Blog, Ressourcen zu KI-Sicherheit und die Website.">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Links · AIwareness</title>
+<meta name="description" content="All current AIwareness links in one place: events, newsletter, blog, AI safety resources and the website.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIwareness">
+<meta property="og:title" content="Links · AIwareness">
+<meta property="og:description" content="All current AIwareness links in one place: events, newsletter, blog, AI safety resources and the website.">
+<meta property="og:url" content="https://aiwareness.space/links.html">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/links.html">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261018h">
+<!-- Link-in-bio page: kept out of search results, links are still followed -->
+<meta name="robots" content="noindex, follow">
+</head>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+<div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AIwareness home">
+      <img src="assets/img/aiw-eye.png" alt="" width="318" height="200">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="solutions.html#talks"><span class="dd-ico"><span class="icon icon-mic" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Talks &amp; Education</span><span class="lang-de">Vorträge &amp; Bildung</span></span><span class="dd-d"><span class="lang-en">For conferences, teams and schools</span><span class="lang-de">Für Konferenzen, Teams und Schulen</span></span></span></a>
+            <a href="solutions.html#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Organisational Development</span><span class="lang-de">Organisationsentwicklung</span></span><span class="dd-d"><span class="lang-en">For organisations bringing AI into their work</span><span class="lang-de">Für Organisationen, die KI einführen</span></span></span></a>
+            <a href="solutions.html#coaching"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for Individuals</span><span class="lang-de">Coaching für Einzelne</span></span><span class="dd-d"><span class="lang-en">For leaders, founders and freelancers</span><span class="lang-de">Für Führung, Gründende, Selbstständige</span></span></span></a>
+          </div>
+        </div>
+        <a href="events.html">Events</a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="resources.html"><span class="lang-en">Resources</span><span class="lang-de">Ressourcen</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <a href="?lang=en" data-lang="en" lang="en" hreflang="en" aria-label="English">EN</a>
+        <a href="?lang=de" data-lang="de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
+      </div>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+
+<section class="links-hero" aria-labelledby="linksTitle">
+  <canvas data-particles="0.5" aria-hidden="true"></canvas>
+  <div class="links-wrap">
+    <img class="links-mark" src="assets/img/aiw-eye-classic.png" width="190" height="135" alt="">
+    <h1 id="linksTitle" class="links-name"><span class="o">AI</span>wareness</h1>
+    <p class="links-tag"><span class="lang-en">Awareness for the age of AI</span><span class="lang-de">Bewusstsein für das Zeitalter der KI</span></p>
+
+    <!-- ============ LINKS ============
+         One <li> per link, most important first.
+         class="is-featured" gives a link the full gradient (none right now).
+         data-event-end hides a dated link automatically once that date has passed. -->
+    <ul class="links-list">
+
+      <li>
+        <a href="newsletter.html">
+          <span class="icon icon-mail" aria-hidden="true"></span>
+          <span class="l-text">
+            <span><span class="lang-en">AIwareness newsletter</span><span class="lang-de">AIwareness-Newsletter</span></span>
+            <small><span class="lang-en">Stay informed about AIwareness events and more</span><span class="lang-de">Bleib informiert über AIwareness-Events und mehr</span></small>
+          </span>
+          <span class="icon icon-arrow l-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+
+      <li class="hide-when-past" data-event-start="2026-10-30T00:00:00+01:00" data-event-end="2026-10-30T23:59:00+01:00">
+        <a href="https://www.instagram.com/fairness_jetzt/p/DehaU64AVu9/" target="_blank" rel="noopener">
+          <span class="icon icon-users" aria-hidden="true"></span>
+          <span class="l-text">
+            <span><span class="lang-en">Demo by Fairness Jetzt e.V.</span><span class="lang-de">Demo von Fairness Jetzt e.V.</span></span>
+            <small><span class="lang-en">30 October</span><span class="lang-de">30. Oktober</span></small>
+          </span>
+          <span class="icon icon-arrow l-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+
+      <li class="hide-when-past" data-event-start="2026-11-01T00:00:00+01:00" data-event-end="2026-11-01T23:59:00+01:00">
+        <a href="https://luma.com/ncr5ylrh" target="_blank" rel="noopener">
+          <span class="icon icon-users" aria-hidden="true"></span>
+          <span class="l-text">
+            <span><span class="lang-en">PauseAI demo</span><span class="lang-de">PauseAI-Demo</span></span>
+            <small><span class="lang-en">1 November</span><span class="lang-de">1. November</span></small>
+          </span>
+          <span class="icon icon-arrow l-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="resources.html">
+          <span class="icon icon-book" aria-hidden="true"></span>
+          <span class="l-text">
+            <span><span class="lang-en">AI safety resources</span><span class="lang-de">Ressourcen zu KI-Sicherheit</span></span>
+            <small><span class="lang-en">Courses, videos, books and articles</span><span class="lang-de">Kurse, Videos, Bücher und Artikel</span></small>
+          </span>
+          <span class="icon icon-arrow l-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="index.html">
+          <span class="icon icon-globe" aria-hidden="true"></span>
+          <span class="l-text">
+            Website
+            <small>aiwareness.space</small>
+          </span>
+          <span class="icon icon-arrow l-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="AIwareness home"><img src="assets/img/aiw-eye.png" alt="" width="318" height="200" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+        <a class="pill" href="events.html#next" data-event-start="2026-10-20T18:30:00+02:00" data-event-end="2026-10-20T22:00:00+02:00"><span class="live"></span><span class="lang-en">Next: Sense-Making Evening · 20 Oct</span><span class="lang-de">Nächster Termin: Sense-Making-Abend · 20. Okt</span><span class="icon icon-arrow" aria-hidden="true"></span></a>
+      </div>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="solutions.html"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="events.html">Events</a>
+        <a href="about.html"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="newsletter.html#notes">Blog</a>
+        <a href="resources.html"><span class="lang-en">Resources</span><span class="lang-de">Ressourcen</span></a>
+        <a href="newsletter.html">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="contact.html"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="solutions.html#coaching"><span class="lang-en">Coaching for individuals</span><span class="lang-de">Coaching für Einzelne</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
+      </div>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="imprint.html"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="privacy.html"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">AIwareness</div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
+  </div>
+</footer>
+
+
+<script src="assets/js/site.js?v=20261018h" defer></script>
+</body>
+</html>
