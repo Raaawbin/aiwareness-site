@@ -17,6 +17,27 @@
   function lang() { return root.getAttribute('lang') === 'de' ? 'de' : 'en'; }
   function tr(en, de) { return lang() === 'de' ? de : en; }
 
+  /* ---------- Clean links, also offline ----------
+     Built links have no .html (aiwareness.space/about). GitHub Pages understands that,
+     a page opened from Finder or a simple local server does not. There, add .html
+     (and index.html for folder links) so the menu and all links keep working. */
+  var cleanUrlsServed = /^(www\.)?aiwareness\.space$|\.github\.io$/.test(location.hostname);
+  if (!cleanUrlsServed) {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href || /^(#|\?|\/\/|[a-z][a-z0-9+.-]*:)/i.test(href)) return;
+      var m = href.match(/^([^?#]*)(.*)$/);
+      var path = m[1], rest = m[2];
+      if (!path) return;
+      if (path.slice(-1) === '/' || path === '.' || path === '..') {
+        path = (path.slice(-1) === '/' ? path : path + '/') + 'index.html';
+      } else if (!/\.[a-z0-9]+$/i.test(path.split('/').pop())) {
+        path += '.html';
+      }
+      a.setAttribute('href', path + rest);
+    });
+  }
+
   /* ---------- Header: scroll state and mobile menu ---------- */
   var head = document.getElementById('siteHead');
   var burger = document.getElementById('burger');
@@ -59,17 +80,13 @@
     var meta = document.querySelector('meta[name="description"]');
     if (desc && meta) meta.setAttribute('content', desc);
 
+    /* The choice is remembered in the browser only; links and the address bar stay clean. */
     if (remember) {
       try { localStorage.setItem(LANG_KEY, l); } catch (e) { /* storage blocked */ }
-      try {
-        var url = new URL(location.href);
-        url.searchParams.set('lang', l);
-        history.replaceState(history.state, '', url.href);
-      } catch (e) { /* very old browsers */ }
     }
 
     switchLinks.forEach(function (a) {
-      a.setAttribute('aria-current', a.getAttribute('data-lang') === l ? 'true' : 'false');
+      a.setAttribute('aria-pressed', a.getAttribute('data-lang') === l ? 'true' : 'false');
     });
     document.querySelectorAll('img[data-alt-en][data-alt-de]').forEach(function (img) {
       img.alt = img.getAttribute('data-alt-' + l);
@@ -81,18 +98,6 @@
     if (burger) burger.setAttribute('aria-label', menu && menu.classList.contains('open') ? tr('Close menu', 'Menü schließen') : tr('Open menu', 'Menü öffnen'));
     document.querySelectorAll('[data-countdown]').forEach(function (cd) {
       cd.setAttribute('aria-label', tr('Time until the evening starts', 'Zeit bis zum Beginn des Abends'));
-    });
-
-    /* Carry the choice to other pages, also when storage is blocked */
-    document.querySelectorAll('a[href]').forEach(function (a) {
-      var href = a.getAttribute('href');
-      if (!href || href.charAt(0) === '#' || a.hasAttribute('data-lang')) return;
-      var u;
-      try { u = new URL(a.href, location.href); } catch (e) { return; }
-      if ((u.origin === location.origin || u.hostname === 'aiwareness.space') && /\.html$/.test(u.pathname)) {
-        u.searchParams.set('lang', l);
-        a.href = u.href;
-      }
     });
     updateEvents();
     try { window.dispatchEvent(new Event('aiw-lang')); } catch (e) { /* very old browsers */ }
@@ -370,5 +375,17 @@
   /* ---------- Footer year ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
-  applyLang(lang(), false);
+  /* An old or shared link with ?lang=en|de still works: apply and remember it, then tidy the address bar. */
+  var langParam = null;
+  try { langParam = new URLSearchParams(location.search).get('lang'); } catch (e) { /* very old browsers */ }
+  if (langParam === 'en' || langParam === 'de') {
+    applyLang(langParam, true);
+    try {
+      var clean = new URL(location.href);
+      clean.searchParams.delete('lang');
+      history.replaceState(history.state, '', clean.pathname + clean.search + clean.hash);
+    } catch (e) { /* very old browsers */ }
+  } else {
+    applyLang(lang(), false);
+  }
 })();

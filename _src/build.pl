@@ -11,14 +11,14 @@
 #   {{> name}}        includes _src/partials/name.html
 #   {{VER}}           cache-busting version for CSS and JS (bump below)
 #   {{cur:key}}       becomes aria-current="page" when nav: key
-#   {{PAGE}}          the page's path from the site root (for canonical URLs)
+#   {{PAGE}}          the page's public address without .html (for canonical URLs)
 use strict;
 use warnings;
 use utf8;
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
 
-my $VER = '20261018i';
+my $VER = '20261019d';
 
 my $src  = dirname(abs_path($0));
 my $root = dirname($src);
@@ -70,7 +70,10 @@ for my $p (@pages) {
   $out =~ s/\{\{TITLE_DE\}\}/attr($m{title_de})/ge;
   $out =~ s/\{\{DESC_EN\}\}/attr($m{desc_en})/ge;
   $out =~ s/\{\{DESC_DE\}\}/attr($m{desc_de})/ge;
-  $out =~ s/\{\{PAGE\}\}/$p/g;
+  # Public address of the page: no .html, the home page is the site root.
+  (my $pageurl = $p) =~ s/\.html$//;
+  $pageurl =~ s{(^|/)index$}{$1};
+  $out =~ s/\{\{PAGE\}\}/$pageurl/g;
   my $bc = $m{bodyclass} ? qq( class="$m{bodyclass}") : q();
   $out =~ s/\{\{BODYCLASS\}\}/$bc/g;
   $out =~ s/\{\{VER\}\}/$VER/g;
@@ -78,7 +81,7 @@ for my $p (@pages) {
   die "$p: unresolved placeholder $1" if $out =~ /(\{\{[^}]*\}\})/;
 
   # Pages in a subfolder: point root-relative paths up one level per folder.
-  # Absolute URLs (https:, mailto:), in-page anchors (#) and ?lang= links stay as they are.
+  # Absolute URLs (https:, mailto:), in-page anchors (#) and query-only links (?) stay as they are.
   my $depth = () = $p =~ m{/}g;
   if ($depth) {
     my $up = '../' x $depth;
@@ -87,6 +90,12 @@ for my $p (@pages) {
     my $dir = dirname("$root/$p");
     mkdir $dir unless -d $dir;
   }
+
+  # Clean links without .html: GitHub Pages serves about.html at /about, and
+  # old .html addresses keep working. index.html becomes the folder itself.
+  # Sources keep writing "page.html"; only the built pages are rewritten.
+  $out =~ s{\bhref="((?:\.\./)*)index\.html(#[^"]*)?"}{'href="' . ($1 eq '' ? './' : $1) . ($2 // '') . '"'}ge;
+  $out =~ s{\bhref="(?![a-z][a-z0-9+.-]*:|#|/|\?)([^"#?]+?)\.html(#[^"]*)?"}{'href="' . $1 . ($2 // '') . '"'}ge;
 
   open(my $fh, '>:encoding(UTF-8)', "$root/$p") or die "Cannot write $root/$p: $!";
   print $fh $out; close $fh;
