@@ -954,6 +954,11 @@ a.pill:hover .icon { transform: translateX(3px); }
 .form-success h3 { margin-bottom: 10px; font-size: 1.6rem; }
 .form-success p { max-width: 44ch; margin: 0 auto 12px; font-size: .95rem; }
 .form-success a { color: var(--accent-text); text-decoration: underline; }
+/* Contact form: spam trap kept out of sight, and the message shown when sending fails */
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.form-error { display: grid; gap: 12px; justify-items: start; padding: 16px 18px; border-radius: 14px; background: rgba(255, 120, 120, .07); border: 1px solid rgba(255, 140, 140, .28); }
+.form-error p { margin: 0; font-size: .92rem; line-height: 1.55; }
+.form-error .form-note a { color: var(--text); }
 
 @media (hover: hover) and (pointer: fine) {
   .mcell:hover .mcell-photo img { transform: scale(1.035); }

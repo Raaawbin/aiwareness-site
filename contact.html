@@ -18,10 +18,10 @@
 <meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://aiwareness.space/contact">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg?v=20261019d">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20261019d">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261019d">
-<link rel="shortcut icon" href="favicon.ico?v=20261019d">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg?v=20261019e">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20261019e">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261019e">
+<link rel="shortcut icon" href="favicon.ico?v=20261019e">
 <script>
 /* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
 (function () {
@@ -35,7 +35,7 @@
   setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
 })();
 </script>
-<link rel="stylesheet" href="assets/css/site.css?v=20261019d">
+<link rel="stylesheet" href="assets/css/site.css?v=20261019e">
 </head>
 <body class="theme-classic">
 <a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
@@ -119,8 +119,9 @@
     <div class="panel form-card reveal" style="--i:2">
       <figure class="contact-form-photo"><img class="graded" src="assets/img/photos/robin-hotz-moderator-natuerliches-portrait-warm.webp" width="980" height="1605" loading="lazy" decoding="async"
            alt="Robin Hotz sitting on a stool, smiling" data-alt-en="Robin Hotz sitting on a stool, smiling" data-alt-de="Robin Hotz sitzt lächelnd auf einem Hocker"></figure>
-      <!-- No server needed: the form writes an email in the visitor's own mail app (site.js). -->
-      <form id="contactForm" class="form" action="mailto:hello@aiwareness.space" method="post" enctype="text/plain" novalidate>
+      <!-- GitHub Pages runs no server code: the form posts to our STRATO script (aiwareness-site/_server/send.php),
+           which emails hello@aiwareness.space. If that fails, site.js offers the visitor's own mail app instead. -->
+      <form id="contactForm" class="form" action="https://forms.aiwareness.space/send.php" method="post" novalidate>
         <div class="row2">
           <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
           <div class="field"><label for="email"><span class="lang-en">Email</span><span class="lang-de">E-Mail</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
@@ -135,13 +136,27 @@
           </select>
         </div>
         <div class="field"><label for="challenge"><span class="lang-en">What challenge are you facing right now?</span><span class="lang-de">Vor welcher Herausforderung stehst Du gerade?</span></label><textarea id="challenge" name="challenge" required></textarea></div>
-        <button class="btn" type="submit"><span class="lang-en">Write the email</span><span class="lang-de">E-Mail verfassen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></button>
+        <!-- Spam trap: hidden from people, often filled in by bots. -->
+        <div class="hp-field" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <input type="hidden" name="lang" value="en">
+        <input type="hidden" name="elapsed" value="0">
+        <button class="btn" type="submit"><span class="lang-en">Send message</span><span class="lang-de">Nachricht senden</span><span class="icon icon-arrow sm" aria-hidden="true"></span></button>
         <p class="form-note">
-          <span class="lang-en">This opens your own email app with your message filled in, so nothing is stored on this website. We only use your details to answer you. See our <a href="privacy#p3">privacy policy</a>.</span>
-          <span class="lang-de">Damit öffnet sich Dein eigenes E-Mail-Programm mit Deiner Nachricht, auf dieser Website wird nichts gespeichert. Wir nutzen Deine Angaben nur, um Dir zu antworten. Mehr in der <a href="privacy#p3">Datenschutzerklärung</a>.</span>
+          <span class="lang-en">Your message goes straight to our inbox, sent through our web host STRATO in Germany. We only use your details to answer you. See our <a href="privacy#p3">privacy policy</a>.</span>
+          <span class="lang-de">Deine Nachricht geht direkt an unser Postfach, verschickt über unseren Webhoster STRATO in Deutschland. Wir nutzen Deine Angaben nur, um Dir zu antworten. Mehr in der <a href="privacy#p3">Datenschutzerklärung</a>.</span>
         </p>
+        <div id="formError" class="form-error" role="alert" hidden>
+          <p><span class="lang-en">Sending didn’t work just now. You can send the same message from your own email app instead.</span><span class="lang-de">Das Senden hat gerade nicht geklappt. Du kannst dieselbe Nachricht stattdessen aus Deinem eigenen E-Mail-Programm schicken.</span></p>
+          <button class="btn ghost sm" type="button" data-mail-app><span class="lang-en">Open in my email app</span><span class="lang-de">In meinem E-Mail-Programm öffnen</span></button>
+          <p class="form-note"><span class="lang-en">Or write to us directly at</span><span class="lang-de">Oder schreib uns direkt an</span> <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>.</p>
+        </div>
       </form>
       <div id="formSuccess" class="form-success" hidden>
+        <div class="fs-icon"><span class="icon icon-check" aria-hidden="true"></span></div>
+        <h3><span class="lang-en">Thank you</span><span class="lang-de">Danke</span></h3>
+        <p><span class="lang-en">Your message is on its way to us. We read your request and email you a link to pick a time that works for you.</span><span class="lang-de">Deine Nachricht ist unterwegs zu uns. Wir lesen Deine Anfrage und schicken Dir per Mail einen Link, mit dem Du einen passenden Termin wählst.</span></p>
+      </div>
+      <div id="formMailto" class="form-success" hidden>
         <div class="fs-icon"><span class="icon icon-mail" aria-hidden="true"></span></div>
         <h3><span class="lang-en">Almost done</span><span class="lang-de">Fast geschafft</span></h3>
         <p><span class="lang-en">Your email app should now show your message. Just press send there.</span><span class="lang-de">Dein E-Mail-Programm sollte jetzt Deine Nachricht zeigen. Dort nur noch auf Senden drücken.</span></p>
@@ -188,6 +203,6 @@
 </footer>
 
 
-<script src="assets/js/site.js?v=20261019d" defer></script>
+<script src="assets/js/site.js?v=20261019e" defer></script>
 </body>
 </html>

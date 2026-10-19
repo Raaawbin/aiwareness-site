@@ -339,15 +339,18 @@
     });
   }
 
-  /* ---------- Contact form: writes an email in the visitor's own mail app ---------- */
-  // GitHub Pages cannot run a server script, so nothing is sent or stored by the site itself.
+  /* ---------- Contact form: sends through our STRATO script, mail app as fallback ---------- */
+  // GitHub Pages runs no server code, so the form posts to forms.aiwareness.space (STRATO, Germany),
+  // which emails hello@aiwareness.space (source: _server/send.php). If that fails, the visitor
+  // can send the same message from their own mail app.
   var form = document.getElementById('contactForm');
   if (form) {
+    var loadedAt = Date.now();
     var success = document.getElementById('formSuccess');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var v = function (id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; };
+    var mailtoDone = document.getElementById('formMailto');
+    var errorBox = document.getElementById('formError');
+    var v = function (id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; };
+    var openMailApp = function () {
       var topic = form.querySelector('#topic');
       var topicText = topic ? topic.options[topic.selectedIndex].text : '';
       var subject = tr('Discovery call: ', 'Kennenlerngespräch: ') + topicText;
@@ -361,7 +364,40 @@
       ].filter(function (line, i) { return line !== '' || i === 4; }).join('\n');
       location.href = 'mailto:hello@aiwareness.space?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       form.hidden = true;
-      success.hidden = false;
+      mailtoDone.hidden = false;
+    };
+    var mailBtn = errorBox && errorBox.querySelector('[data-mail-app]');
+    if (mailBtn) mailBtn.addEventListener('click', openMailApp);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var btn = form.querySelector('button[type=submit]');
+      var label = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = tr('Sending…', 'Wird gesendet…');
+      errorBox.hidden = true;
+      form.elements.lang.value = lang();
+      form.elements.elapsed.value = String(Date.now() - loadedAt);
+      var ctrl = window.AbortController ? new AbortController() : null;
+      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 15000) : null;
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, signal: ctrl ? ctrl.signal : undefined })
+        .then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (d) {
+            if (!r.ok || !d.ok) throw new Error(d.error || 'http ' + r.status);
+          });
+        })
+        .then(function () {
+          form.hidden = true;
+          success.hidden = false;
+          success.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+        })
+        .catch(function () {
+          btn.disabled = false;
+          btn.innerHTML = label;
+          errorBox.hidden = false;
+        })
+        .then(function () { if (timer) clearTimeout(timer); });
     });
   }
   function syncOptions() {
