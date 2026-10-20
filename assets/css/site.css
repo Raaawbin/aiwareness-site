@@ -895,6 +895,7 @@ a.pill:hover .icon { transform: translateX(3px); }
 .byline img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--c2); }
 .byline b { display: block; color: var(--ink); font-weight: 650; }
 .lang-hint { display: inline-block; margin-top: 18px; padding: 8px 14px; border-radius: 12px; border: 1px solid var(--line-2); color: var(--muted); font-size: .82rem; }
+.lang-hint a { color: var(--accent-text); text-decoration: underline; text-decoration-color: rgba(181, 160, 252, .45); text-underline-offset: 3px; }
 .prose { color: var(--text); font-size: 1.06rem; line-height: 1.85; }
 .prose > * + * { margin-top: 1.1em; }
 .prose p { margin-bottom: 0; }
