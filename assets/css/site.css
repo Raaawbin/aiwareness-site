@@ -892,6 +892,7 @@ a.pill:hover .icon { transform: translateX(3px); }
 .back:hover { color: var(--ink); }
 .back .icon { width: 16px; height: 16px; transform: scaleX(-1); }
 .byline { display: inline-flex; align-items: center; gap: 12px; margin-top: 10px; color: var(--muted); font-size: .9rem; }
+.page-hero .lead + .byline { margin-top: 28px; }
 .byline img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--c2); }
 .byline b { display: block; color: var(--ink); font-weight: 650; }
 .lang-hint { display: inline-block; margin-top: 18px; padding: 8px 14px; border-radius: 12px; border: 1px solid var(--line-2); color: var(--muted); font-size: .82rem; }
