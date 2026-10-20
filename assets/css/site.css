@@ -338,8 +338,11 @@ body::after {
 .hero-main .wrap { position: relative; z-index: 3; width: min(1240px, 100%); }
 .hero h1 { max-width: 760px; margin-bottom: 28px; font-size: clamp(3.4rem, 6vw, 5.4rem); line-height: 1.03; letter-spacing: -.055em; }
 .hero h1 .o { display: block; width: fit-content; line-height: 1.12; }
+/* Vision and mission titles: the gradient words sit on their own second line */
+.vm-card h3 .o { display: block; width: fit-content; }
 .hero .sub { max-width: 600px; margin-bottom: 34px; font-size: 1.08rem; line-height: 1.8; }
 .hero .sub b { color: var(--ink); }
+.section-intro b { color: var(--ink); }
 .hero-caption {
   position: absolute; right: 6%; bottom: 172px; z-index: 2; margin: 0;
   display: flex; align-items: center; gap: 10px;
@@ -389,6 +392,8 @@ a.pill:hover .icon { transform: translateX(3px); }
 .t-list li { display: flex; gap: 16px; font-size: .93rem; line-height: 1.75; }
 .t-list b { color: var(--ink); }
 .t-list .icon { margin-top: 3px; color: var(--muted); }
+.section-intro a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
+.section-intro a:hover { color: var(--accent-text); }
 .solution .t-list .icon { background: var(--grad); }
 .solution { border-color: transparent; box-shadow: 0 24px 70px -42px rgba(167, 139, 250, .65); }
 .solution::before { content: ""; position: absolute; inset: 20% 12% 0; z-index: -1; background: var(--grad); opacity: .07; filter: blur(55px); pointer-events: none; }
@@ -1021,6 +1026,8 @@ a.pill:hover .icon { transform: translateX(3px); }
 
 /* Long German compounds must never run off small screens */
 html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: auto; hyphens: auto; overflow-wrap: break-word; }
+/* Keep a word in one piece in a heading (no automatic hyphenation inside it) */
+.nobr { white-space: nowrap; -webkit-hyphens: manual; hyphens: manual; }
 
 /* =====================================================================
    19. Classic colour variant (body.theme-classic): the original
