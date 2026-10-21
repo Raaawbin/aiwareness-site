@@ -2,11 +2,11 @@
   <!-- AIwareness eye (2026-10-21), transparent background. Deeper colours on light tab bars, brand colours on dark ones. -->
   <style>
     .a { stop-color: #7c3aed; } .m { stop-color: #5b5bd6; } .b { stop-color: #0891b2; }
-    @media (prefers-color-scheme: dark) { .a { stop-color: #a855f7; } .m { stop-color: #7f8cf6; } .b { stop-color: #4cc9f0; } }
+    @media (prefers-color-scheme: dark) { .a { stop-color: #c9a6ff; } .m { stop-color: #9fb4fb; } .b { stop-color: #5fd6f5; } }
   </style>
   <defs>
     <linearGradient id="l" gradientUnits="userSpaceOnUse" x1="256" y1="0" x2="664" y2="0"><stop offset="0" class="a"/><stop offset=".5" class="m"/><stop offset="1" class="b"/></linearGradient>
-    <linearGradient id="i" x1="0" y1=".15" x2="1" y2=".85"><stop offset="0" stop-color="#d98cff"/><stop offset=".3" stop-color="#7d55e6"/><stop offset=".6" stop-color="#4450c4"/><stop offset="1" stop-color="#3fc3ef"/></linearGradient>
+    <linearGradient id="i" x1="0" y1=".15" x2="1" y2=".85"><stop offset="0" stop-color="#f1c9ff"/><stop offset=".3" stop-color="#b99bfb"/><stop offset=".6" stop-color="#7f8cf0"/><stop offset="1" stop-color="#6fdcf8"/></linearGradient>
   </defs>
   <path fill="url(#l)" d="M256 404C300 382 380 296 460 296C540 296 620 382 664 404C620 389 540 329 460 329C380 329 300 389 256 404Z"/>
   <path fill="url(#l)" d="M256 428C300 450 380 536 460 536C540 536 620 450 664 428C620 443 540 503 460 503C380 503 300 443 256 428Z"/>
