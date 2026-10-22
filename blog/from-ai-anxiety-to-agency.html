@@ -1,19 +1,109 @@
-title_en: From AI anxiety to agency · Note 01 · AIwareness
-title_de: Von der KI-Angst ins Handeln · Notiz 01 · AIwareness
-desc_en: Why Robin Hotz came to believe AI safety is the most important thing we can deal with right now, what gives him hope, and what he decided to do about it.
-desc_de: Warum Robin Hotz überzeugt ist, dass KI-Sicherheit gerade das Wichtigste ist, worum wir uns kümmern können, was ihm Hoffnung macht und was er deshalb tun will.
-nav: newsletter
----
+<!DOCTYPE html>
+<html lang="en"
+      data-title-en="From AI anxiety to agency · Note 01 · AIwareness"
+      data-title-de="Von der KI-Angst ins Handeln · Notiz 01 · AIwareness"
+      data-desc-en="Why Robin Hotz came to believe AI safety is the most important thing we can deal with right now, what gives him hope, and what he decided to do about it."
+      data-desc-de="Warum Robin Hotz überzeugt ist, dass KI-Sicherheit gerade das Wichtigste ist, worum wir uns kümmern können, was ihm Hoffnung macht und was er deshalb tun will.">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From AI anxiety to agency · Note 01 · AIwareness</title>
+<meta name="description" content="Why Robin Hotz came to believe AI safety is the most important thing we can deal with right now, what gives him hope, and what he decided to do about it.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIwareness">
+<meta property="og:title" content="From AI anxiety to agency · Note 01 · AIwareness">
+<meta property="og:description" content="Why Robin Hotz came to believe AI safety is the most important thing we can deal with right now, what gives him hope, and what he decided to do about it.">
+<meta property="og:url" content="https://aiwareness.space/blog/from-ai-anxiety-to-agency">
+<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aiwareness.space/blog/from-ai-anxiety-to-agency">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg?v=20261021c">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=20261021c">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=20261021c">
+<link rel="shortcut icon" href="../favicon.ico?v=20261021c">
+<script>
+/* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'de') { try { l = localStorage.getItem('aiw_lang'); } catch (e) {} }
+  if (l !== 'en' && l !== 'de') { l = (navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en'; }
+  r.setAttribute('lang', l);
+  var t = r.getAttribute('data-title-' + l); if (t) document.title = t;
+  setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="../assets/css/site.css?v=20261021c">
+</head>
+<body class="theme-classic">
+<a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
+
+<!-- Colour grade for photos (from the rebrand): cool shadows, soft highlights -->
+<svg class="photo-grade-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="brand-photo-grade" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0.86"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.018 0.245 0.515 0.772 1"/>
+        <feFuncG type="table" tableValues="0.020 0.255 0.525 0.785 1"/>
+        <feFuncB type="table" tableValues="0.060 0.300 0.570 0.800 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+<div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="site-head" id="siteHead">
+  <div class="nav">
+    <a class="brand" href="../" aria-label="AIwareness home">
+      <img src="../assets/img/aiw-logo.svg" alt="" width="420" height="236">
+      <span class="brand-word"><span class="ai">AI</span>wareness</span>
+    </a>
+    <div class="nav-right">
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="../"><span class="lang-en">Home</span><span class="lang-de">Start</span></a>
+        <div class="navitem">
+          <a class="navlink" href="../solutions"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span><span class="caret" aria-hidden="true"></span></a>
+          <div class="dropdown">
+            <a href="../solutions#talks"><span class="dd-ico"><span class="icon icon-mic" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Talks &amp; Education</span><span class="lang-de">Vorträge &amp; Bildung</span></span><span class="dd-d"><span class="lang-en">For conferences, teams and schools</span><span class="lang-de">Für Konferenzen, Teams und Schulen</span></span></span></a>
+            <a href="../solutions#organisations"><span class="dd-ico"><span class="icon icon-users" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Organisational Development</span><span class="lang-de">Organisationsentwicklung</span></span><span class="dd-d"><span class="lang-en">For organisations bringing AI into their work</span><span class="lang-de">Für Organisationen, die KI einführen</span></span></span></a>
+            <a href="../solutions#coaching"><span class="dd-ico"><span class="icon icon-compass" aria-hidden="true"></span></span><span><span class="dd-t"><span class="lang-en">Coaching for Individuals</span><span class="lang-de">Coaching für Einzelne</span></span><span class="dd-d"><span class="lang-en">For leaders, founders and freelancers</span><span class="lang-de">Für Führung, Gründende, Selbstständige</span></span></span></a>
+          </div>
+        </div>
+        <a href="../events">Events</a>
+        <a href="../newsletter#notes" aria-current="page">Blog</a>
+        <a href="../resources"><span class="lang-en">Resources</span><span class="lang-de">Ressourcen</span></a>
+        <a href="../about"><span class="lang-en">About</span><span class="lang-de">Über uns</span></a>
+        <a href="../contact"><span class="lang-en">Contact</span><span class="lang-de">Kontakt</span></a>
+        <a class="btn nav-cta" href="../newsletter">Newsletter</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Sprache">
+        <span class="icon icon-globe" aria-hidden="true"></span>
+        <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
+        <button type="button" data-lang="de" lang="de" aria-label="Deutsch">DE</button>
+      </div>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+
 <div class="progress" aria-hidden="true"><i></i></div>
 <section class="page-hero center" aria-labelledby="pageTitle" style="text-align:center;padding-bottom:48px">
   <canvas data-particles="0.45" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="reveal" style="margin-bottom:26px"><a class="back" href="newsletter.html"><span class="icon icon-arrow" aria-hidden="true"></span><span class="lang-en">All notes</span><span class="lang-de">Alle Notizen</span></a></p>
+    <p class="reveal" style="margin-bottom:26px"><a class="back" href="../newsletter"><span class="icon icon-arrow" aria-hidden="true"></span><span class="lang-en">All notes</span><span class="lang-de">Alle Notizen</span></a></p>
     <span class="eyebrow reveal"><span class="lang-en">Note 01 · 22 June 2026</span><span class="lang-de">Notiz 01 · 22. Juni 2026</span></span>
     <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en">From AI anxiety <span class="o">to agency</span></span><span class="lang-de">Von der KI-Angst <span class="o">ins Handeln</span></span></h1>
     <p class="lead reveal" style="--i:2"><span class="lang-en">Why I came to believe AI safety is the most important thing we can deal with right now, and what I decided to do about it.</span><span class="lang-de">Warum ich überzeugt bin, dass KI-Sicherheit gerade das Wichtigste ist, worum wir uns kümmern können, und was ich beschlossen habe, deswegen zu tun.</span></p>
     <div class="byline reveal" style="--i:3">
-      <img class="graded" src="assets/img/photos/portrait-robin.webp" alt="" width="1071" height="1200">
+      <img class="graded" src="../assets/img/photos/portrait-robin.webp" alt="" width="1071" height="1200">
       <span style="text-align:left"><b>Robin Hotz</b><span class="lang-en">Founder, AIwareness · 4 min read</span><span class="lang-de">Gründer, AIwareness · 4 Min. Lesezeit</span></span>
     </div>
     <p class="lang-en"><span class="lang-hint"><a href="https://aiwareness1.substack.com/p/from-ai-anxiety-to-agency" target="_blank" rel="noopener">Read on Substack</a></span></p>
@@ -42,7 +132,7 @@ nav: newsletter
     <p>So we find ourselves somewhere between utopia and dystopia. So what can we do about it?</p>
     <p>I think we all need to reclaim our agency in this.</p>
     <p>AI often makes me anxious. But anxiety is not a productive emotion. So I am trying to move from anxiety to agency. Agency, the way I understand it, means being able to make an impact within your own circle of influence. And in the face of AI Agents becoming this powerful, I think it’s a nice play on words.</p>
-    <p>For me, agency meant starting a new venture called <a href="index.html">AIwareness</a>. I loved the domain name and the brand the moment it came to me. So I taught myself vibe coding with AI and built the website myself. It was such a creative pleasure. The moment I realised I could now build coded websites and apps almost felt religious.</p>
+    <p>For me, agency meant starting a new venture called <a href="../">AIwareness</a>. I loved the domain name and the brand the moment it came to me. So I taught myself vibe coding with AI and built the website myself. It was such a creative pleasure. The moment I realised I could now build coded websites and apps almost felt religious.</p>
     <p>And that’s the thing. The same technology that scares me is also the one that let me build all of this. AI can potentially help us solve the very problems we’re so worried about.</p>
 
     <h2>Beyond the doom</h2>
@@ -62,10 +152,10 @@ nav: newsletter
       <div><b>When:</b> Tuesday, 30 June 2026, 18:00 to 21:00</div>
       <div><b>Where:</b> Cocreation Loft, Schinkestraße 9, 12047 Berlin</div>
       <div><b>Entry:</b> donation-based</div>
-      <div><b>Next one:</b> find the next dates on the <a href="events.html">events page</a>.</div>
+      <div><b>Next one:</b> find the next dates on the <a href="../events">events page</a>.</div>
     </div>
     <p>We’ll talk, listen, and make sense of AI together. If you’re in Berlin, I would love to have you there. Because gathering and co-creating is, for me, the first real step towards reclaiming our agency.</p>
-    <p>Thanks for reading! <a href="newsletter.html#subscribe">Subscribe for free</a> to receive new posts and support my work.</p>
+    <p>Thanks for reading! <a href="../newsletter#subscribe">Subscribe for free</a> to receive new posts and support my work.</p>
 
     <h2>Sources and links</h2>
     <ul>
@@ -100,7 +190,7 @@ nav: newsletter
     <p>Wir befinden uns also irgendwo zwischen Utopie und Dystopie. Was können wir also tun?</p>
     <p>Ich glaube, wir alle müssen uns hier unsere Handlungsfähigkeit zurückholen.</p>
     <p>KI macht mir oft Angst. Aber Angst ist kein produktives Gefühl. Also versuche ich, von der Angst in die Handlungsfähigkeit zu kommen. Handlungsfähigkeit, so wie ich sie verstehe, heißt, im eigenen Einflussbereich etwas bewirken zu können. Im Englischen heißt das „Agency“, und jetzt, wo KI-Agenten so mächtig werden, finde ich das ein schönes Wortspiel.</p>
-    <p>Für mich hieß Handlungsfähigkeit, ein neues Vorhaben zu starten: <a href="index.html">AIwareness</a>. Ich habe den Domainnamen und die Marke geliebt, sobald sie mir eingefallen sind. Also habe ich mir mit KI Vibe Coding beigebracht und die Website selbst gebaut. Das war eine riesige kreative Freude. Der Moment, in dem mir klar wurde, dass ich jetzt selbst Websites und Apps programmieren kann, hat sich fast religiös angefühlt.</p>
+    <p>Für mich hieß Handlungsfähigkeit, ein neues Vorhaben zu starten: <a href="../">AIwareness</a>. Ich habe den Domainnamen und die Marke geliebt, sobald sie mir eingefallen sind. Also habe ich mir mit KI Vibe Coding beigebracht und die Website selbst gebaut. Das war eine riesige kreative Freude. Der Moment, in dem mir klar wurde, dass ich jetzt selbst Websites und Apps programmieren kann, hat sich fast religiös angefühlt.</p>
     <p>Und genau darum geht es. Dieselbe Technologie, die mir Angst macht, hat es mir auch ermöglicht, all das zu bauen. KI kann uns möglicherweise helfen, genau die Probleme zu lösen, über die wir uns so viele Sorgen machen.</p>
 
     <h2>Jenseits der Untergangsstimmung</h2>
@@ -120,10 +210,10 @@ nav: newsletter
       <div><b>Wann:</b> Dienstag, 30. Juni 2026, 18:00 bis 21:00 Uhr</div>
       <div><b>Wo:</b> Cocreation Loft, Schinkestraße 9, 12047 Berlin</div>
       <div><b>Eintritt:</b> auf Spendenbasis</div>
-      <div><b>Der nächste:</b> Die nächsten Termine findest Du auf der <a href="events.html">Event-Seite</a>.</div>
+      <div><b>Der nächste:</b> Die nächsten Termine findest Du auf der <a href="../events">Event-Seite</a>.</div>
     </div>
     <p>Wir sprechen, hören zu und ordnen KI gemeinsam ein. Wenn Du in Berlin bist, würde ich mich sehr freuen, Dich dort zu sehen. Denn zusammenkommen und gemeinsam gestalten ist für mich der erste echte Schritt, um uns unsere Handlungsfähigkeit zurückzuholen.</p>
-    <p>Danke fürs Lesen! <a href="newsletter.html#subscribe">Abonniere kostenlos</a>, um neue Beiträge zu bekommen und meine Arbeit zu unterstützen.</p>
+    <p>Danke fürs Lesen! <a href="../newsletter#subscribe">Abonniere kostenlos</a>, um neue Beiträge zu bekommen und meine Arbeit zu unterstützen.</p>
 
     <h2>Quellen und Links</h2>
     <ul>
@@ -139,18 +229,84 @@ nav: newsletter
   </div>
 
   <div class="article-foot">
-    <a class="back" href="newsletter.html"><span class="icon icon-arrow" aria-hidden="true"></span><span class="lang-en">All notes</span><span class="lang-de">Alle Notizen</span></a>
-    <a class="btn ghost sm" href="newsletters/newsletter-2.html"><span class="lang-en">Next note: Becoming a father in the age of AI</span><span class="lang-de">Nächste Notiz: Vater werden im Zeitalter der KI</span></a>
+    <a class="back" href="../newsletter"><span class="icon icon-arrow" aria-hidden="true"></span><span class="lang-en">All notes</span><span class="lang-de">Alle Notizen</span></a>
+    <a class="btn ghost sm" href="../blog/becoming-a-father-in-the-face-of-ai"><span class="lang-en">Next note: Becoming a father in the face of AI</span><span class="lang-de">Nächste Notiz: Vater werden im Angesicht von KI</span></a>
   </div>
 </article>
 
 <section class="sec" style="margin-top:clamp(40px,6vw,70px)" aria-labelledby="signupTitle">
   <div class="wrap">
-{{> signup-open}}
+<div class="panel signup reveal" id="subscribe" data-signup>
+  <div class="signup-copy">
+
     <span class="eyebrow"><span class="lang-en">Enjoyed this note?</span><span class="lang-de">Hat Dir die Notiz gefallen?</span></span>
     <h2 id="signupTitle"><span class="lang-en">Get the next one <span class="o">in your inbox</span></span><span class="lang-de">Die nächste kommt <span class="o">in Dein Postfach</span></span></h2>
     <p><span class="lang-en">Honest notes on AI, awareness and agency from someone paying close attention. No doom and no overselling.</span><span class="lang-de">Ehrliche Notizen zu KI, Bewusstsein und Handlungsfähigkeit von jemandem, der genau hinschaut. Ohne Untergangsstimmung und ohne Übertreibung.</span></p>
-{{> signup-close}}
+    <ul class="signup-perks">
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">Free</span><span class="lang-de">Kostenlos</span></li>
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">No hype</span><span class="lang-de">Ohne Hype</span></li>
+      <li><span class="icon icon-check" aria-hidden="true"></span><span class="lang-en">Unsubscribe anytime</span><span class="lang-de">Jederzeit abbestellbar</span></li>
+    </ul>
+  </div>
+  <div class="signup-action">
+    <div class="signup-frame" data-signup-frame>
+      <span class="signup-loading"><i aria-hidden="true"></i><span class="lang-en">Loading the signup form…</span><span class="lang-de">Anmeldeformular lädt…</span></span>
+      <iframe src="https://aiwareness1.substack.com/embed" width="100%" height="320" style="border:0; background:transparent; max-width:480px;" frameborder="0" scrolling="no" title="Subscribe to the AIwareness newsletter on Substack"></iframe>
+    </div>
+    <p class="signup-alt" data-signup-alt>
+      <span class="lang-en">The newsletter is hosted on Substack and written in English. Trouble with the form? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a> · <a href="../privacy#p5">Privacy</a></span>
+      <span class="lang-de">Der Newsletter läuft über Substack und erscheint auf Englisch. Probleme mit dem Formular? <a href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener">Auf Substack abonnieren</a> · <a href="../privacy#p5">Datenschutz</a></span>
+    </p>
+    <div class="signup-fallback" data-signup-fallback hidden>
+      <a class="btn" href="https://aiwareness1.substack.com/subscribe" target="_blank" rel="noopener"><span class="icon icon-mail sm" aria-hidden="true"></span><span class="lang-en">Subscribe on Substack</span><span class="lang-de">Auf Substack abonnieren</span></a>
+      <p class="signup-note">
+        <span class="lang-en" data-fallback-en>The signup form couldn’t load here, so you can subscribe on Substack instead. It takes a few seconds.</span>
+        <span class="lang-de" data-fallback-de>Das Formular konnte hier nicht laden. Du kannst Dich direkt auf Substack eintragen, das dauert nur ein paar Sekunden.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../" aria-label="AIwareness home"><img src="../assets/img/aiw-logo.svg" alt="" width="420" height="236" loading="lazy"><span class="brand-word"><span class="ai">AI</span>wareness</span></a>
+        <p><span class="lang-en">Awareness, leadership and culture for the people and organisations building and adopting AI.</span><span class="lang-de">Bewusstsein, Führung und Kultur für die Menschen und Organisationen, die KI entwickeln und einsetzen.</span></p>
+      </div>
+      <nav class="foot-col" aria-labelledby="footExplore">
+        <h2 class="foot-title" id="footExplore"><span class="lang-en">Explore</span><span class="lang-de">Entdecken</span></h2>
+        <a href="../solutions"><span class="lang-en">Offers</span><span class="lang-de">Angebote</span></a>
+        <a href="../events">Events</a>
+        <a href="../about"><span class="lang-en">About us</span><span class="lang-de">Über uns</span></a>
+        <a href="../newsletter#notes">Blog</a>
+        <a href="../resources"><span class="lang-en">Resources</span><span class="lang-de">Ressourcen</span></a>
+        <a href="../newsletter">Newsletter</a>
+      </nav>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Get started</span><span class="lang-de">Loslegen</span></h2>
+        <a href="../contact"><span class="lang-en">Book a discovery call</span><span class="lang-de">Kennenlerngespräch buchen</span></a>
+        <a href="../solutions#coaching"><span class="lang-en">Coaching for individuals</span><span class="lang-de">Coaching für Einzelne</span></a>
+        <a href="mailto:hello@aiwareness.space">hello@aiwareness.space</a>
+      </div>
+      <div class="foot-col">
+        <h2 class="foot-title"><span class="lang-en">Legal</span><span class="lang-de">Rechtliches</span></h2>
+        <a href="../imprint"><span class="lang-en">Imprint</span><span class="lang-de">Impressum</span></a>
+        <a href="../privacy"><span class="lang-en">Data privacy</span><span class="lang-de">Datenschutz</span></a>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">AIwareness</div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> AIwareness · aiwareness.space</span><span><span class="lang-en">Bringing awareness into AI.</span><span class="lang-de">Bewusstsein in die KI bringen.</span></span></div>
+  </div>
+</footer>
+
+
+<script src="../assets/js/site.js?v=20261021c" defer></script>
+</body>
+</html>

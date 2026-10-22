@@ -2,7 +2,7 @@
 # AIwareness rebrand: assembles the pages from _src/pages + _src/partials.
 # Run from anywhere:  perl _src/build.pl
 # Output: one .html per page in the site root (the folder above _src).
-# Pages in a subfolder of _src/pages (e.g. newsletters/) are written to the
+# Pages in a subfolder of _src/pages (e.g. blog/) are written to the
 # same subfolder. Write every link and image path in sources relative to the
 # site root; the build adds "../" for pages that live in a subfolder.
 #
@@ -102,13 +102,22 @@ for my $p (@pages) {
   print "built $p\n";
 }
 
-# Static files (e.g. redirect stubs for moved pages) are copied as they are.
-if (opendir(my $sh, "$src/static")) {
-  for my $f (grep { !/^\./ } readdir $sh) {
-    my $c = slurp("$src/static/$f");
-    open(my $fh, '>:encoding(UTF-8)', "$root/$f") or die $!;
+# Static files (e.g. redirect stubs for moved pages) are copied as they are,
+# subfolders included (static/newsletters/x.html becomes newsletters/x.html).
+sub copy_static {
+  my ($dir, $rel) = @_;
+  opendir(my $sh, $dir) or return;
+  for my $f (sort grep { !/^\./ } readdir $sh) {
+    if (-d "$dir/$f") {
+      mkdir "$root/$rel$f" unless -d "$root/$rel$f";
+      copy_static("$dir/$f", "$rel$f/");
+      next;
+    }
+    my $c = slurp("$dir/$f");
+    open(my $fh, '>:encoding(UTF-8)', "$root/$rel$f") or die $!;
     print $fh $c; close $fh;
-    print "copied $f\n";
+    print "copied $rel$f\n";
   }
   closedir $sh;
 }
+copy_static("$src/static", '');
