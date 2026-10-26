@@ -1185,3 +1185,12 @@ html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: au
 
 /* EN / DE switch: plain buttons, so no ?lang= appears in links */
 .lang-switch button { border: 0; background: none; font-family: inherit; line-height: 1.2; cursor: pointer; }
+
+/* Offers overview with four offers, and links from the offers page to the service pages */
+.method-grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.method-grid.four .mcell h3 { font-size: clamp(1.3rem, 1.7vw, 1.5rem); -webkit-hyphens: manual; hyphens: manual; }
+.sol-more { margin-top: 26px; }
+.subcard p a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
+.subcard p a:hover { color: var(--accent-text); }
+@media (max-width: 1100px) { .method-grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .method-grid.four { grid-template-columns: 1fr; } }
