@@ -18,7 +18,7 @@ use utf8;
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
 
-my $VER = '20261026b';
+my $VER = '20261026c';
 
 my $src  = dirname(abs_path($0));
 my $root = dirname($src);

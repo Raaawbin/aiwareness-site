@@ -238,7 +238,8 @@ body::after {
   transition: background-color .2s ease;
 }
 .menu > a:not(.btn):hover, .navlink:hover, .navitem:focus-within .navlink { background: var(--hover); }
-.menu > a:not(.btn)[aria-current="page"] { background: var(--hover); }
+.menu > a:not(.btn)[aria-current="page"], .navlink[aria-current="page"] { background: var(--hover); }
+.menu > a:not(.btn)[aria-current="page"]::before, .navlink[aria-current="page"]::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--grad); box-shadow: 0 0 8px rgba(167, 139, 250, .7); }
 .navitem { position: relative; display: flex; align-items: center; }
 .caret {
   width: 6px; height: 6px; margin: -3px 0 0 2px;
@@ -1194,3 +1195,10 @@ html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: au
 .subcard p a:hover { color: var(--accent-text); }
 @media (max-width: 1100px) { .method-grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 900px) { .method-grid.four { grid-template-columns: 1fr; } }
+
+/* Result highlights: a tinted box instead of a side line (home offer cards, Outcome lines on the offer pages) */
+.result { padding: 14px 16px; border-radius: 16px; background: rgba(167, 139, 250, .08); border: 1px solid rgba(167, 139, 250, .28); }
+.result::before { display: none; }
+.result b { margin-bottom: 4px; color: var(--accent-text); }
+.subcard .out { margin-top: auto; padding: 14px 16px; border: 1px solid rgba(167, 139, 250, .28); border-radius: 16px; background: rgba(167, 139, 250, .08); color: var(--ink); }
+.subcard .out b { color: var(--accent-text); }
