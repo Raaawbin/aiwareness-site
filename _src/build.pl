@@ -12,13 +12,18 @@
 #   {{VER}}           cache-busting version for CSS and JS (bump below)
 #   {{cur:key}}       becomes aria-current="page" when nav: key
 #   {{PAGE}}          the page's public address without .html (for canonical URLs)
+#   {{TITLE_EN_JSON}} {{DESC_EN_JSON}}  title and description escaped for JSON-LD
+#   {{HEADMETA}}      robots and preload tags from the optional keys
+#                     robots (e.g. "noindex, follow") and preload (an image path;
+#                     without it, the first page-hero background is preloaded)
+# The build also writes sitemap.xml with every page that is not noindex.
 use strict;
 use warnings;
 use utf8;
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
 
-my $VER = '20261026c';
+my $VER = '20261027c';
 
 my $src  = dirname(abs_path($0));
 my $root = dirname($src);
@@ -37,6 +42,8 @@ sub include {
 }
 
 sub attr { my $v = shift; $v =~ s/&(?!amp;|#)/&amp;/g; $v =~ s/"/&quot;/g; return $v; }
+sub jsonstr { my $v = shift; $v =~ s/\\/\\\\/g; $v =~ s/"/\\"/g; return $v; }
+my @sitemap;
 
 my @pages;
 sub collect {
@@ -70,6 +77,15 @@ for my $p (@pages) {
   $out =~ s/\{\{TITLE_DE\}\}/attr($m{title_de})/ge;
   $out =~ s/\{\{DESC_EN\}\}/attr($m{desc_en})/ge;
   $out =~ s/\{\{DESC_DE\}\}/attr($m{desc_de})/ge;
+  $out =~ s/\{\{TITLE_EN_JSON\}\}/jsonstr($m{title_en})/ge;
+  $out =~ s/\{\{DESC_EN_JSON\}\}/jsonstr($m{desc_en})/ge;
+  # Robots and an early start for the largest image above the fold.
+  my $headmeta = '';
+  $headmeta .= qq(<meta name="robots" content="$m{robots}">\n) if $m{robots};
+  my $pre = $m{preload};
+  ($pre) = $body =~ /class="ph-bg"[^>]*url\('([^']+)'\)/ unless $pre;
+  $headmeta .= qq(<link rel="preload" as="image" href="$pre" fetchpriority="high">\n) if $pre;
+  $out =~ s/\{\{HEADMETA\}\}/$headmeta/g;
   # Public address of the page: no .html, the home page is the site root.
   (my $pageurl = $p) =~ s/\.html$//;
   $pageurl =~ s{(^|/)index$}{$1};
@@ -100,6 +116,21 @@ for my $p (@pages) {
   open(my $fh, '>:encoding(UTF-8)', "$root/$p") or die "Cannot write $root/$p: $!";
   print $fh $out; close $fh;
   print "built $p\n";
+  push @sitemap, [$pageurl, (stat("$src/pages/$p"))[9]] unless ($m{robots} // '') =~ /noindex/;
+}
+
+# Sitemap for search engines (home first, then alphabetical).
+{
+  my @rows = sort { ($a->[0] eq '' ? 0 : 1) <=> ($b->[0] eq '' ? 0 : 1) || $a->[0] cmp $b->[0] } @sitemap;
+  open(my $fh, '>:encoding(UTF-8)', "$root/sitemap.xml") or die $!;
+  print $fh qq(<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n);
+  for my $r (@rows) {
+    my @d = gmtime($r->[1]);
+    my $date = sprintf('%04d-%02d-%02d', $d[5] + 1900, $d[4] + 1, $d[3]);
+    print $fh "  <url><loc>https://aiwareness.space/$r->[0]</loc><lastmod>$date</lastmod></url>\n";
+  }
+  print $fh "</urlset>\n"; close $fh;
+  print "wrote sitemap.xml\n";
 }
 
 # Static files (e.g. redirect stubs for moved pages) are copied as they are,

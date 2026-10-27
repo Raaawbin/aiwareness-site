@@ -1,0 +1,24 @@
+# AIwareness
+
+> AIwareness (aiwareness.space) brings awareness into AI. It helps organisations, teams and entrepreneurs adopt AI with awareness, alignment and agency, and invites everyone who is curious to think about AI and AI safety together. Founder: Robin Hotz, visual facilitator for ten years, with a team of facilitators and coaches at the Cocreation Loft, Schinkestraße 9, 12047 Berlin, Germany. The website is in English and German.
+
+AIwareness takes AI risk seriously without hype or doom: every number and expert statement on the site carries a named source and a link, and every offer ends with something concrete to do. Contact: hello@aiwareness.space.
+
+## Offers
+
+- [AI safety talks, keynotes and workshops](https://aiwareness.space/services/talks-and-education): talks, keynotes and interactive workshops that make AI and AI safety understandable for conferences, company events, schools and communities.
+- [AI adoption and AI governance workshops](https://aiwareness.space/services/organisational-development): organisational development for leadership teams, HR and teams bringing AI into their work: conscious AI adoption, AI governance workshop, culture and team development, strategy and alignment workshops. Approach: Assess, Align, Act.
+- [AI coaching and leadership coaching](https://aiwareness.space/services/coaching): one-to-one coaching for leaders, founders, freelancers and creatives, including expressing your creativity ethically with AI. In person in Berlin or online.
+- [Graphic recording and AI-assisted sense-making](https://aiwareness.space/services/ai-assisted-sense-making): live graphic recording by Robin Hotz for AI conferences and events, plus data capture and AI-assisted analysis checked by people.
+- [All offers](https://aiwareness.space/solutions)
+
+## Learn and take part
+
+- [Sense-Making Evenings in Berlin](https://aiwareness.space/events): open evenings at the Cocreation Loft to think about AI together.
+- [AI safety resources](https://aiwareness.space/resources): recommended free courses, videos, books, articles and reports.
+- [Blog and newsletter](https://aiwareness.space/newsletter): notes on AI safety and staying human, also on Substack at https://aiwareness1.substack.com/.
+
+## About
+
+- [About AIwareness, Robin Hotz and the team](https://aiwareness.space/about)
+- [Contact and discovery call](https://aiwareness.space/contact)

@@ -11,13 +11,20 @@
 <meta name="description" content="{{DESC_EN}}">
 <meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
 <meta property="og:site_name" content="AIwareness">
 <meta property="og:title" content="{{TITLE_EN}}">
 <meta property="og:description" content="{{DESC_EN}}">
 <meta property="og:url" content="https://aiwareness.space/{{PAGE}}">
-<meta property="og:image" content="https://aiwareness.space/assets/img/photos/konferenzen.webp">
+<meta property="og:image" content="https://aiwareness.space/assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AIwareness: Awareness for AI Adaptation. Awareness, Alignment, Agency.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aiwareness.space/assets/img/og-cover.jpg">
 <link rel="canonical" href="https://aiwareness.space/{{PAGE}}">
+{{HEADMETA}}<meta name="author" content="AIwareness, Robin Hotz">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg?v={{VER}}">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v={{VER}}">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v={{VER}}">
@@ -36,6 +43,7 @@
 })();
 </script>
 <link rel="stylesheet" href="assets/css/site.css?v={{VER}}">
+{{> schema-site}}
 {{HEADEXTRA}}</head>
 <body class="theme-classic">
 <a class="skip" href="#main"><span class="lang-en">Skip to content</span><span class="lang-de">Zum Inhalt springen</span></a>
