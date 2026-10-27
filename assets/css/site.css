@@ -931,6 +931,8 @@ a.pill:hover .icon { transform: translateX(3px); }
 .prose .note { display: grid; gap: 6px; padding: 22px 24px; border-radius: 20px; background: linear-gradient(120deg, rgba(124, 58, 237, .12), rgba(110, 231, 255, .05)); border: 1px solid rgba(167, 139, 250, .28); font-size: .98rem; }
 .prose .note .flag { justify-self: start; margin-bottom: 6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--muted); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .prose .pull { margin: 1.8em 0; padding: 6px 0 6px 24px; border-left: 3px solid; border-image: var(--grad-v) 1; color: var(--ink); font-family: var(--font); font-size: clamp(1.35rem, 2.6vw, 1.75rem); font-weight: 650; line-height: 1.3; letter-spacing: -.02em; }
+.prose > .pull:first-child { margin-top: 0; }
+.prose .pull-by { display: block; margin-top: 12px; color: var(--muted); font-size: .95rem; font-weight: 500; letter-spacing: 0; }
 .article-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; margin-top: 44px; }
 .article-foot .btn { max-width: 100%; white-space: normal; text-align: center; }
 .hide-when-past.is-past { display: none; }
