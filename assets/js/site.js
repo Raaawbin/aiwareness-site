@@ -148,6 +148,19 @@
     });
   });
 
+  /* ---------- Shared links with an anchor (e.g. events#Talk): land exactly there once images have loaded ---------- */
+  window.addEventListener('load', function () {
+    var id = '';
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { return; }
+    var target = id && document.getElementById(id);
+    if (!target) return;
+    /* Jump without the smooth animation from the CSS, then restore it. */
+    var html = document.documentElement, prev = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    target.scrollIntoView({ block: 'start' });
+    html.style.scrollBehavior = prev;
+  });
+
   /* ---------- Click-to-play YouTube: the player (youtube-nocookie.com) loads only after a click ---------- */
   document.querySelectorAll('[data-yt]').forEach(function (box) {
     var btn = box.querySelector('.yt-poster');

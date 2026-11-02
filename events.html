@@ -26,10 +26,10 @@
 <link rel="canonical" href="https://aiwareness.space/events">
 <link rel="preload" as="image" href="assets/img/photos/kultur-aoh-2.webp" fetchpriority="high">
 <meta name="author" content="AIwareness, Robin Hotz">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg?v=20261102f">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20261102f">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261102f">
-<link rel="shortcut icon" href="favicon.ico?v=20261102f">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg?v=20261102i">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20261102i">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261102i">
+<link rel="shortcut icon" href="favicon.ico?v=20261102i">
 <script>
 /* Language before first paint: ?lang= wins, then the saved choice, then the browser language. */
 (function () {
@@ -43,7 +43,7 @@
   setTimeout(function () { if (!window.AIW) r.classList.remove('js'); }, 2500);
 })();
 </script>
-<link rel="stylesheet" href="assets/css/site.css?v=20261102f">
+<link rel="stylesheet" href="assets/css/site.css?v=20261102i">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -104,26 +104,57 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "Sense-Making Evening",
-  "description": "An evening at the Cocreation Loft in Berlin to slow down, think together and find your own relationship to AI.",
-  "startDate": "2026-10-20T18:30:00+02:00",
-  "endDate": "2026-10-20T22:00:00+02:00",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "image": "https://aiwareness.space/assets/img/photos/aoh-training.webp",
-  "location": {
-    "@type": "Place",
-    "name": "Cocreation Loft",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Schinkestraße 9",
-      "postalCode": "12047",
-      "addressLocality": "Berlin",
-      "addressCountry": "DE"
+  "@graph": [
+    {
+      "@type": "Event",
+      "name": "AIwareness online talk on Zoom",
+      "description": "An online talk by Robin Hotz of AIwareness on AI and AI safety. Registration opens soon on Luma.",
+      "startDate": "2026-11-24T18:00:00+01:00",
+      "endDate": "2026-11-24T19:30:00+01:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://aiwareness.space/events#Talk"
+      },
+      "image": "https://aiwareness.space/assets/img/og-cover.jpg",
+      "performer": {
+        "@type": "Person",
+        "name": "Robin Hotz"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "AIwareness",
+        "url": "https://aiwareness.space"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Sense-Making Evening",
+      "description": "An evening at the Cocreation Loft in Berlin to slow down, think together and find your own relationship to AI.",
+      "startDate": "2026-10-20T18:30:00+02:00",
+      "endDate": "2026-10-20T22:00:00+02:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "image": "https://aiwareness.space/assets/img/photos/aoh-training.webp",
+      "location": {
+        "@type": "Place",
+        "name": "Cocreation Loft",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Schinkestraße 9",
+          "postalCode": "12047",
+          "addressLocality": "Berlin",
+          "addressCountry": "DE"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "AIwareness",
+        "url": "https://aiwareness.space"
+      }
     }
-  },
-  "organizer": { "@type": "Organization", "name": "AIwareness", "url": "https://aiwareness.space" }
+  ]
 }
 </script>
 </head>
@@ -231,6 +262,30 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ NEXT TALK (online). Anchor #Talk is shared as aiwareness.space/events#Talk ============ -->
+<section class="sec" id="Talk" style="padding-top:8px" aria-labelledby="nextTalkTitle">
+  <span id="talk" aria-hidden="true"></span>
+  <div class="wrap">
+    <article class="panel next-talk reveal">
+      <div class="nt-date" aria-hidden="true">
+        <b>24</b>
+        <span><span class="lang-en">Nov</span><span class="lang-de">Nov.</span></span>
+        <small>2026</small>
+      </div>
+      <div class="nt-body">
+        <p class="event-status"><span class="live"></span><span><span class="lang-en">Next talk · online</span><span class="lang-de">Nächste Rede · online</span></span></p>
+        <h2 id="nextTalkTitle"><span class="lang-en">Next talk: live <span class="o">on Zoom</span></span><span class="lang-de">Nächster Talk: live <span class="o">auf Zoom</span></span></h2>
+        <ul class="nt-facts">
+          <li><span class="icon icon-cal" aria-hidden="true"></span><span><span class="lang-en">Tuesday, 24 November 2026</span><span class="lang-de">Dienstag, 24. November 2026</span></span></li>
+          <li><span class="icon icon-clock" aria-hidden="true"></span><span><span class="lang-en">18:00 to 19:30 (Berlin time)</span><span class="lang-de">18:00 bis 19:30 Uhr (Berliner Zeit)</span></span></li>
+          <li><span class="icon icon-globe" aria-hidden="true"></span><span><span class="lang-en">Online on Zoom, join from anywhere</span><span class="lang-de">Online auf Zoom, von überall aus</span></span></li>
+        </ul>
+        <p class="nt-signup"><b><span class="lang-en">Sign-up</span><span class="lang-de">Anmeldung</span></b><span><span class="lang-en">Registration opens soon on Luma. The link will appear right here. Newsletter readers hear about it first: <a href="newsletter#subscribe">subscribe for free</a>.</span><span class="lang-de">Die Anmeldung über Luma öffnet in Kürze, der Link erscheint genau hier. Wer den Newsletter liest, erfährt zuerst davon: <a href="newsletter#subscribe">kostenlos abonnieren</a>.</span></span></p>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -471,6 +526,6 @@
 </footer>
 
 
-<script src="assets/js/site.js?v=20261102f" defer></script>
+<script src="assets/js/site.js?v=20261102i" defer></script>
 </body>
 </html>
