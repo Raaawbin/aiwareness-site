@@ -148,6 +148,21 @@
     });
   });
 
+  /* ---------- Click-to-play YouTube: the player (youtube-nocookie.com) loads only after a click ---------- */
+  document.querySelectorAll('[data-yt]').forEach(function (box) {
+    var btn = box.querySelector('.yt-poster');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + box.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = btn.textContent.replace(/\s+/g, ' ').trim();
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      btn.replaceWith(f);
+      f.focus();
+    });
+  });
+
   /* ---------- Starfield (AIwareness), now in the rebrand colours ---------- */
   document.querySelectorAll('canvas[data-particles]').forEach(function (canvas) {
     var ctx = canvas.getContext('2d');

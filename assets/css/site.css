@@ -1234,3 +1234,52 @@ html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: au
 .faq-item p a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
 .faq-item p a:hover { color: var(--accent-text); }
 @media (max-width: 560px) { .faq-item summary { padding: 18px 48px 18px 18px; font-size: 1rem; } .faq-item summary::after { right: 18px; } .faq-item p { padding: 0 18px 18px; } }
+
+/* Past events: links and sources inside timeline items */
+.tl-item p a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
+.tl-item p a:hover { color: var(--accent-text); }
+.tl-sources { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 14px !important; font-size: .86rem !important; }
+.tl-sources b { flex-basis: 100%; color: var(--accent-text); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; }
+
+/* Featured talk on the events page: click-to-play YouTube (nothing loads from Google before the click) */
+.talk-feature { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px; align-items: center; padding: 18px 34px 18px 18px; }
+.yt { min-width: 0; }
+.yt-poster, .yt iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 18px; }
+.yt-poster {
+  position: relative; overflow: hidden; padding: 0; cursor: pointer; color: var(--ink); text-align: left; font: inherit;
+  background:
+    radial-gradient(ellipse 70% 80% at 0% 0%, rgba(168, 85, 247, .55), transparent 70%),
+    radial-gradient(ellipse 70% 80% at 100% 100%, rgba(76, 201, 240, .45), transparent 70%),
+    #0d0d16;
+  background-size: cover; background-position: center;
+  box-shadow: inset 0 0 0 1px rgba(167, 139, 250, .35);
+}
+.yt-poster::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8, 8, 16, .25), rgba(8, 8, 16, .82)); }
+/* With a real video still: lighter shade, play button on the banner instead of the speaker */
+.yt-poster.has-still::before { background: linear-gradient(180deg, rgba(8, 8, 16, 0) 35%, rgba(8, 8, 16, .85)), linear-gradient(90deg, rgba(76, 40, 140, .18), rgba(8, 8, 16, 0)); }
+.yt-poster.has-still .yt-play { left: 74%; top: 40%; }
+.yt-play { position: absolute; left: 50%; top: 44%; display: grid; place-items: center; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%; background: var(--grad); box-shadow: 0 0 0 10px rgba(201, 166, 255, .16), 0 0 50px rgba(167, 139, 250, .7); transition: transform .25s ease; }
+.yt-play::after { content: ""; margin-left: 6px; border-style: solid; border-width: 15px 0 15px 24px; border-color: transparent transparent transparent var(--btn-ink); }
+.yt-poster:hover .yt-play, .yt-poster:focus-visible .yt-play { transform: scale(1.08); }
+.yt-poster:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+.yt-cap { position: absolute; left: 22px; right: 90px; bottom: 18px; display: flex; flex-direction: column; gap: 4px; }
+.yt-cap small { color: rgba(230, 226, 255, .78); font-size: .7rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+.yt-cap b { font-family: var(--font); font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
+.yt-len { position: absolute; right: 18px; bottom: 18px; padding: 4px 10px; border-radius: 999px; background: rgba(6, 7, 11, .7); border: 1px solid rgba(255, 255, 255, .18); font-size: .78rem; font-weight: 650; }
+.yt-note { margin: 10px 4px 0; color: var(--muted); font-size: .78rem; }
+.yt-note a, .talk-text p a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
+.talk-text h2 { margin: 6px 0 16px; font-size: clamp(1.9rem, 3vw, 2.6rem); }
+.talk-text > p { font-size: .98rem; line-height: 1.75; }
+.talk-text .ctas { margin-top: 22px; }
+@media (max-width: 900px) {
+  .talk-feature { grid-template-columns: 1fr; gap: 22px; padding: 12px 12px 26px; }
+  .talk-text { padding: 0 12px; }
+}
+@media (max-width: 480px) { .yt-play { top: 40%; width: 64px; height: 64px; margin: -32px 0 0 -32px; } .yt-cap small { display: none; } .yt-play::after { border-width: 11px 0 11px 18px; } .yt-cap b { font-size: 1.02rem; } .yt-cap { left: 14px; bottom: 12px; right: 74px; } .yt-len { right: 12px; bottom: 12px; } }
+
+/* Events page: linked tiles and event type labels in the timeline */
+a.tile { color: inherit; transition: border-color .2s ease, transform .2s ease; }
+a.tile:hover { transform: translateY(-2px); }
+a.tile .text-link { margin-top: auto; }
+.tl-kind { display: inline-block; margin-bottom: 10px; padding: 4px 10px; border-radius: 999px; background: rgba(167, 139, 250, .12); border: 1px solid rgba(167, 139, 250, .3); color: var(--ink); font-size: .68rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
+.talk-text .talk-h { margin: 6px 0 16px; font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1.08; }

@@ -14,7 +14,7 @@ AIwareness takes AI risk seriously without hype or doom: every number and expert
 
 ## Learn and take part
 
-- [Sense-Making Evenings in Berlin](https://aiwareness.space/events): open evenings at the Cocreation Loft to think about AI together.
+- [AI talks and events](https://aiwareness.space/events): talks and keynotes, speeches at demonstrations and public events such as Fairness Jetzt in Berlin (31 October 2026, video on the page), and Sense-Making Evenings at the Cocreation Loft.
 - [AI safety resources](https://aiwareness.space/resources): recommended free courses, videos, books, articles and reports.
 - [Blog and newsletter](https://aiwareness.space/newsletter): notes on AI safety and staying human, also on Substack at https://aiwareness1.substack.com/.
 
