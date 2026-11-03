@@ -1304,3 +1304,11 @@ a.tile .text-link { margin-top: auto; }
   .nt-date span, .nt-date small { margin-top: 0; }
   .nt-date b { font-size: 2rem; }
 }
+
+/* Home offers: gradient kicker above the title (Awareness, Alignment, Agency) */
+.svc-kicker { width: fit-content; margin: 0 0 6px; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-family: var(--font); font-size: 1.05rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+
+/* Offers page: kicker inside overview cards, sense-making note */
+.mcell .svc-kicker { margin: 0 0 6px; padding: 0 16px; }
+.sm-note { margin: 26px 0 0; text-align: center; color: var(--muted); font-size: .95rem; }
+.sm-note .text-link { margin-left: 4px; }
