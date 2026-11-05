@@ -523,18 +523,6 @@ a.pill:hover .icon { transform: translateX(3px); }
 .signup-note, .signup-alt { margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.55; }
 .signup-note a, .signup-alt a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
 .signup-note a:hover, .signup-alt a:hover { color: var(--accent-text); }
-/* Substack embed (Robin's code, 320 px tall): the iframe itself is rounded and has no border of its own, the frame draws one gradient hairline, so no light corners show */
-.signup-frame { position: relative; overflow: hidden; max-width: 480px; border-radius: 18px; border: 1px solid transparent; background: linear-gradient(#0c0c12, #0c0c12) padding-box, linear-gradient(135deg, rgba(201, 166, 255, .55), rgba(76, 201, 240, .35)) border-box; box-shadow: 0 20px 50px -30px rgba(167, 139, 250, .8); }
-.signup-frame iframe { position: relative; z-index: 1; display: block; width: 100%; height: 320px; border: 0; border-radius: 17px; background: transparent; transition: height .4s var(--ease); }
-/* After someone submits, Substack shows its reply in the frame: give it more room */
-.signup-frame.expanded iframe { height: 380px; }
-.signup-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--muted); font-size: .86rem; transition: opacity .3s; }
-.signup-loading i { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(167, 139, 250, .25); border-top-color: var(--c2); animation: spin-ring .9s linear infinite; }
-@keyframes spin-ring { to { transform: rotate(360deg); } }
-.signup-frame.ready .signup-loading { opacity: 0; pointer-events: none; }
-.signup-alt { margin-top: 12px; }
-.signup-fallback { display: grid; gap: 14px; }
-.signup-fallback .btn { width: 100%; }
 
 /* ---------- 15. Home: contact ---------- */
 .home-contact-layout {
@@ -1221,19 +1209,6 @@ html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: au
 .subcard .out { margin-top: auto; padding: 14px 16px; border: 1px solid rgba(167, 139, 250, .28); border-radius: 16px; background: rgba(167, 139, 250, .08); color: var(--ink); }
 .subcard .out b { color: var(--accent-text); }
 
-/* FAQ (home and service pages): open questions in a calm list */
-.faq { display: flex; flex-direction: column; gap: 12px; max-width: 860px; margin-inline: auto; }
-.faq-item { border: 1px solid var(--line-2); border-radius: 18px; background: rgba(255, 255, 255, .025); transition: border-color .2s ease, background .2s ease; }
-.faq-item[open] { border-color: rgba(167, 139, 250, .4); background: rgba(167, 139, 250, .06); }
-.faq-item summary { position: relative; display: block; padding: 20px 56px 20px 24px; color: var(--ink); font-family: var(--font); font-size: 1.08rem; font-weight: 650; letter-spacing: -.01em; line-height: 1.4; cursor: pointer; list-style: none; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: ""; position: absolute; right: 24px; top: 50%; width: 10px; height: 10px; margin-top: -7px; border-right: 2px solid var(--accent-text); border-bottom: 2px solid var(--accent-text); transform: rotate(45deg); transition: transform .25s ease; }
-.faq-item[open] summary::after { margin-top: -2px; transform: rotate(-135deg); }
-.faq-item summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; border-radius: 18px; }
-.faq-item p { margin: 0; padding: 0 24px 22px; font-size: .97rem; line-height: 1.75; }
-.faq-item p a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
-.faq-item p a:hover { color: var(--accent-text); }
-@media (max-width: 560px) { .faq-item summary { padding: 18px 48px 18px 18px; font-size: 1rem; } .faq-item summary::after { right: 18px; } .faq-item p { padding: 0 18px 18px; } }
 
 /* Past events: links and sources inside timeline items */
 .tl-item p a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
@@ -1296,8 +1271,9 @@ a.tile .text-link { margin-top: auto; }
 .nt-facts li { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: .95rem; }
 .nt-facts .icon { width: 18px; height: 18px; background: var(--grad); }
 .nt-signup { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 16px 18px; border-radius: 16px; background: rgba(167, 139, 250, .08); border: 1px dashed rgba(167, 139, 250, .45); font-size: .94rem; line-height: 1.65; }
+.nt-signup .ctas { margin-top: 8px; }
 .nt-signup b { color: var(--accent-text); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; }
-.nt-signup a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
+.nt-signup a:not(.btn) { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
 @media (max-width: 640px) {
   .next-talk { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px; }
   .nt-date { flex-direction: row; gap: 10px; width: auto; height: auto; padding: 12px 18px; align-self: start; }
@@ -1312,3 +1288,18 @@ a.tile .text-link { margin-top: auto; }
 .mcell .svc-kicker { margin: 0 0 6px; padding: 0 16px; }
 .sm-note { margin: 26px 0 0; text-align: center; color: var(--muted); font-size: .95rem; }
 .sm-note .text-link { margin-left: 4px; }
+
+/* Lead forms: consent checkboxes (privacy required, newsletter optional) */
+.check { display: flex; align-items: flex-start; gap: 12px; color: var(--text); font-size: .88rem; line-height: 1.55; cursor: pointer; }
+.check input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; border-radius: 6px; accent-color: #a78bfa; cursor: pointer; }
+.check a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201, 166, 255, .5); }
+.check .opt { color: var(--muted); }
+.check.required > span::after { content: " *"; color: var(--accent-text); }
+
+/* Newsletter sign-up: a plain form with name and email (Mailchimp through our Apps Script) */
+.signup-form { max-width: 480px; gap: 14px; }
+.signup-form .signup-note { margin-top: -2px; }
+.signup-action .form-success { padding-top: 6px; }
+
+/* Event info rows (same look as the contact list, but not links) */
+.c-list > div { display: flex; align-items: center; gap: 16px; padding: 10px 0; }

@@ -2,7 +2,7 @@
 
 > AIwareness (aiwareness.space) brings awareness into AI. It helps organisations, teams and entrepreneurs adopt AI with awareness, alignment and agency, and invites everyone who is curious to think about AI and AI safety together. Founder: Robin Hotz, visual facilitator for ten years, with a team of facilitators and coaches at the Cocreation Loft, Schinkestraße 9, 12047 Berlin, Germany. The website is in English and German.
 
-AIwareness takes AI risk seriously without hype or doom: every number and expert statement on the site carries a named source and a link, and every offer ends with something concrete to do. Contact: hello@aiwareness.space.
+AIwareness takes AI risk seriously without hype or doom: every number and expert statement on the site carries a named source and a link, and every offer ends with something concrete to do. Contact: through the form at https://aiwareness.space/contact.
 
 ## Offers
 
@@ -10,7 +10,7 @@ Three ways in: Awareness (talks and education, including AI-assisted sense-makin
 
 - [Awareness: AI safety talks, keynotes and workshops](https://aiwareness.space/services/talks-and-education): talks, keynotes and interactive workshops that make AI and AI safety understandable for conferences, company events, schools and communities.
 - [Alignment: workshops on AI adoption and AI governance](https://aiwareness.space/services/organisational-development): organisational development for leadership teams, HR and teams bringing AI into their work: conscious AI adoption, AI governance workshop, culture and team development, strategy and alignment workshops. Approach: Assess, Align, Act.
-- [Agency: AI coaching and leadership coaching](https://aiwareness.space/services/coaching): one-to-one coaching for leaders, founders, freelancers and creatives, including expressing your creativity ethically with AI. In person in Berlin or online.
+- [Agency: AI coaching and leadership coaching](https://aiwareness.space/services/ai-coaching): one-to-one coaching for leaders, founders, freelancers and creatives, including expressing your creativity ethically with AI. In person in Berlin or online.
 - [Awareness, part of talks and education: graphic recording and AI-assisted sense-making](https://aiwareness.space/services/ai-assisted-sense-making): live graphic recording by Robin Hotz for AI conferences and events, plus data capture and AI-assisted analysis checked by people.
 - [All offers](https://aiwareness.space/solutions)
 

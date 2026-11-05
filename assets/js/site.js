@@ -180,43 +180,61 @@
   document.querySelectorAll('canvas[data-particles]').forEach(function (canvas) {
     var ctx = canvas.getContext('2d');
     if (!ctx) return;
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    /* Phones and tablets: fewer stars, no per-star blur and a lighter pixel ratio, so the animation stays smooth. */
+    var coarse = window.matchMedia('(pointer: coarse)').matches;
+    var dpr = Math.min(window.devicePixelRatio || 1, coarse ? 1.5 : 2);
     var density = parseFloat(canvas.getAttribute('data-particles')) || 1;
-    var pts = [], w = 0, h = 0, raf = null, visible = true;
+    var pts = [], w = 0, h = 0, raf = null, last = 0, visible = true;
     var mouse = { x: -9999, y: -9999 };
     var colors = document.body.classList.contains('theme-classic')
       ? ['201,166,255', '76,201,240', '168,85,247', '255,255,255']
       : ['110,231,255', '167,139,250', '244,114,182', '253,186,116', '255,255,255', '255,255,255'];
 
-    function build() {
-      var rect = canvas.getBoundingClientRect();
-      w = rect.width; h = rect.height;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = Math.round(Math.min(110, (w * h) / 14000) * density);
-      pts = [];
-      for (var i = 0; i < count; i++) {
-        pts.push({
-          x: Math.random() * w, y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
-          r: Math.random() * 1.6 + 0.4,
-          c: colors[Math.floor(Math.random() * colors.length)],
-          a: Math.random() * 0.5 + 0.35
-        });
-      }
+    function spawn() {
+      return {
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
+        r: Math.random() * 1.6 + 0.4,
+        c: colors[Math.floor(Math.random() * colors.length)],
+        a: Math.random() * 0.5 + 0.35
+      };
+    }
+    function countFor() {
+      var n = Math.round(Math.min(110, (w * h) / 14000) * density);
+      return coarse ? Math.min(n, 55) : n;
     }
 
-    function draw() {
+    /* Matches the bitmap to the size on screen. The stars are kept and only moved with the new size, never
+       drawn again from scratch: that restart was what made them jump on phones, where scrolling slides the
+       browser bars in and out and fires resize events. */
+    function fit() {
+      var rect = canvas.getBoundingClientRect();
+      var nw = rect.width, nh = rect.height;
+      if (!nw || !nh) return;
+      if (Math.abs(nw - w) < 1 && Math.abs(nh - h) < 1) return;
+      var sx = w ? nw / w : 1, sy = h ? nh / h : 1;
+      w = nw; h = nh;
+      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      pts.forEach(function (p) { p.x *= sx; p.y *= sy; });
+      var n = countFor();
+      while (pts.length < n) pts.push(spawn());
+      if (pts.length > n) pts.length = n;
+      draw(0);
+    }
+
+    /* dt is the time since the last frame in 60 Hz frames, so the speed is the same on 60, 90 and 120 Hz screens. */
+    function draw(dt) {
       ctx.clearRect(0, 0, w, h);
-      var max = 130, max2 = max * max;
+      var max = coarse ? 110 : 130, max2 = max * max;
       for (var i = 0; i < pts.length; i++) {
         var p = pts[i];
-        if (!reduceMotion) {
-          p.x += p.vx; p.y += p.vy;
+        if (!reduceMotion && dt) {
+          p.x += p.vx * dt; p.y += p.vy * dt;
           if (p.x < -10) p.x = w + 10; else if (p.x > w + 10) p.x = -10;
           if (p.y < -10) p.y = h + 10; else if (p.y > h + 10) p.y = -10;
           var mdx = p.x - mouse.x, mdy = p.y - mouse.y, md = mdx * mdx + mdy * mdy;
-          if (md < 22000) { var f = (22000 - md) / 22000 * 0.6; p.x += mdx / Math.sqrt(md + 1) * f; p.y += mdy / Math.sqrt(md + 1) * f; }
+          if (md < 22000) { var f = (22000 - md) / 22000 * 0.6 * dt; p.x += mdx / Math.sqrt(md + 1) * f; p.y += mdy / Math.sqrt(md + 1) * f; }
         }
         for (var j = i + 1; j < pts.length; j++) {
           var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = dx * dx + dy * dy;
@@ -231,32 +249,47 @@
           ctx.strokeStyle = 'rgba(167,139,250,' + (0.35 * (1 - md2 / 32000)).toFixed(3) + ')';
           ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
         }
-        ctx.fillStyle = 'rgba(' + p.c + ',' + p.a + ')';
-        ctx.shadowColor = 'rgba(' + p.c + ',.9)';
-        ctx.shadowBlur = 6;
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
-        ctx.shadowBlur = 0;
+        if (coarse) {   /* a soft halo instead of shadowBlur, which is slow on phones */
+          ctx.fillStyle = 'rgba(' + p.c + ',' + (p.a * 0.18).toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = 'rgba(' + p.c + ',' + p.a + ')';
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+        } else {
+          ctx.fillStyle = 'rgba(' + p.c + ',' + p.a + ')';
+          ctx.shadowColor = 'rgba(' + p.c + ',.9)';
+          ctx.shadowBlur = 6;
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+          ctx.shadowBlur = 0;
+        }
       }
     }
 
-    function loop() {
-      draw();
+    function loop(t) {
+      var dt = last ? Math.min((t - last) / 16.667, 3) : 1;   /* capped, so a pause never makes the stars leap */
+      last = t;
+      draw(dt);
       raf = (visible && !document.hidden) ? requestAnimationFrame(loop) : null;
+      if (!raf) last = 0;
     }
-    function start() { if (!raf && !reduceMotion) raf = requestAnimationFrame(loop); }
+    function start() { if (!raf && !reduceMotion) { last = 0; raf = requestAnimationFrame(loop); } }
 
-    build(); draw(); start();
+    fit(); draw(0); start();
 
     var host = canvas.parentElement;
+    /* Only a mouse pushes the stars. A finger that scrolls the page must not. */
     host.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
       var r = canvas.getBoundingClientRect();
       mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
     });
     host.addEventListener('pointerleave', function () { mouse.x = mouse.y = -9999; });
-    var rt;
-    window.addEventListener('resize', function () {
-      clearTimeout(rt); rt = setTimeout(function () { build(); draw(); }, 150);
-    });
+
+    /* The hero can change height after load (fonts, images, language), without any window resize. */
+    var ft = 0;
+    function refit() { cancelAnimationFrame(ft); ft = requestAnimationFrame(fit); }
+    if ('ResizeObserver' in window) new ResizeObserver(refit).observe(canvas);
+    else window.addEventListener('resize', refit);
+
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (en) {
         visible = en[0].isIntersecting; if (visible) start();
@@ -300,40 +333,6 @@
   }
   if (eventEls.length) setInterval(updateEvents, 1000);
 
-  /* ---------- Newsletter signup: Substack's embedded form ---------- */
-  // Substack only allows its form inside pages served over http(s). A page opened
-  // straight from disk (file://) gets an empty frame, so offer the link instead.
-  var canEmbed = /^https?:$/.test(location.protocol);
-  document.querySelectorAll('[data-signup]').forEach(function (box) {
-    var wrap = box.querySelector('[data-signup-frame]');
-    var iframe = wrap && wrap.querySelector('iframe');
-    if (!iframe) return;
-    if (!canEmbed) {
-      iframe.remove();
-      wrap.hidden = true;
-      var alt = box.querySelector('[data-signup-alt]');
-      if (alt) alt.hidden = true;
-      var fb = box.querySelector('[data-signup-fallback]');
-      if (fb) {
-        fb.querySelector('[data-fallback-en]').textContent = 'Preview mode: Substack only shows its form on a live website, so here this opens Substack instead. On aiwareness.space the form appears right in this box.';
-        fb.querySelector('[data-fallback-de]').textContent = 'Vorschau: Substack zeigt sein Formular nur auf einer echten Website. Hier öffnet der Button deshalb Substack. Auf aiwareness.space erscheint das Formular direkt in diesem Feld.';
-        fb.hidden = false;
-      }
-      return;
-    }
-    var done = performance.getEntriesByName && performance.getEntriesByName(iframe.src).some(function (e) { return e.responseEnd > 0; });
-    if (done) wrap.classList.add('ready');
-    // Once someone types into the form, the next reload is Substack's reply: give it room.
-    var engaged = false;
-    window.addEventListener('blur', function () {
-      setTimeout(function () { if (document.activeElement === iframe) engaged = true; }, 0);
-    });
-    iframe.addEventListener('load', function () {
-      wrap.classList.add('ready');
-      if (engaged) wrap.classList.add('expanded');
-    });
-  });
-
   /* ---------- Reading progress (newsletter notes) ---------- */
   var bar = document.querySelector('.progress i');
   var article = document.querySelector('[data-article]');
@@ -367,67 +366,53 @@
     });
   }
 
-  /* ---------- Contact form: sends through our STRATO script, mail app as fallback ---------- */
-  // GitHub Pages runs no server code, so the form posts to forms.aiwareness.space (STRATO, Germany),
-  // which emails hello@aiwareness.space (source: _server/send.php). If that fails, the visitor
-  // can send the same message from their own mail app.
-  var form = document.getElementById('contactForm');
-  if (form) {
-    var loadedAt = Date.now();
-    var success = document.getElementById('formSuccess');
-    var mailtoDone = document.getElementById('formMailto');
-    var errorBox = document.getElementById('formError');
-    var v = function (id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; };
-    var openMailApp = function () {
-      var topic = form.querySelector('#topic');
-      var topicText = topic ? topic.options[topic.selectedIndex].text : '';
-      var subject = tr('Discovery call: ', 'Kennenlerngespräch: ') + topicText;
-      var body = [
-        tr('Name: ', 'Name: ') + v('name'),
-        tr('Email: ', 'E-Mail: ') + v('email'),
-        v('company') ? tr('Company & role: ', 'Organisation & Rolle: ') + v('company') : '',
-        tr('Topic: ', 'Thema: ') + topicText,
-        '',
-        v('challenge')
-      ].filter(function (line, i) { return line !== '' || i === 4; }).join('\n');
-      location.href = 'mailto:hello@aiwareness.space?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      form.hidden = true;
-      mailtoDone.hidden = false;
-    };
-    var mailBtn = errorBox && errorBox.querySelector('[data-mail-app]');
-    if (mailBtn) mailBtn.addEventListener('click', openMailApp);
-
-    form.addEventListener('submit', function (e) {
+  /* ---------- Lead forms (contact, event sign-up and more): Google Apps Script ----------
+     Posts to the web app in data-leads (source: _server/apps-script/aiwareness-leads.gs), which saves
+     the row in the Google Sheet "AIwareness Leads", emails the team inbox and, if the
+     optional newsletter box is ticked, adds the person to Mailchimp with double opt-in. */
+  document.querySelectorAll('form[data-leads]').forEach(function (lf) {
+    var card = lf.parentNode;
+    var ok = card.querySelector('[data-success]');
+    var err = lf.querySelector('[data-error]');
+    var pre = null;   /* ?event=key (or the form's data-param, e.g. ?topic=key) preselects an option */
+    try { pre = new URLSearchParams(location.search).get(lf.getAttribute('data-param') || 'event'); } catch (e) { /* very old browsers */ }
+    if (pre) {
+      var opt = lf.querySelector('option[data-key="' + pre.replace(/[^\w-]/g, '') + '"]');
+      if (opt) opt.selected = true;
+    }
+    lf.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var btn = form.querySelector('button[type=submit]');
+      if (!lf.checkValidity()) { lf.reportValidity(); return; }
+      var url = lf.getAttribute('data-leads');
+      var btn = lf.querySelector('button[type=submit]');
       var label = btn.innerHTML;
       btn.disabled = true;
       btn.textContent = tr('Sending…', 'Wird gesendet…');
-      errorBox.hidden = true;
-      form.elements.lang.value = lang();
-      form.elements.elapsed.value = String(Date.now() - loadedAt);
+      err.hidden = true;
+      lf.elements.lang.value = lang();
+      lf.elements.page.value = location.pathname;
+      var nlField = lf.elements.newsletter;   /* a checkbox, or a hidden field when one box covers privacy and newsletter */
+      var wantsNl = !!nlField && (nlField.type === 'checkbox' ? nlField.checked : nlField.value === 'yes');
+      var fail = function () { btn.disabled = false; btn.innerHTML = label; err.hidden = false; };
+      if (!url) { fail(); return; }
       var ctrl = window.AbortController ? new AbortController() : null;
-      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 15000) : null;
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, signal: ctrl ? ctrl.signal : undefined })
-        .then(function (r) {
-          return r.json().catch(function () { return {}; }).then(function (d) {
-            if (!r.ok || !d.ok) throw new Error(d.error || 'http ' + r.status);
-          });
+      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 20000) : null;
+      /* URL-encoded body: a "simple" request, so the browser sends no CORS preflight to Google. */
+      fetch(url, { method: 'POST', body: new URLSearchParams(new FormData(lf)), signal: ctrl ? ctrl.signal : undefined })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (!d || !d.ok) throw new Error((d && d.error) || 'failed');
+          lf.hidden = true;
+          ok.hidden = false;
+          var nl = ok.querySelector('[data-success-nl]');
+          if (nl) nl.hidden = !wantsNl;
+          ok.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
         })
-        .then(function () {
-          form.hidden = true;
-          success.hidden = false;
-          success.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
-        })
-        .catch(function () {
-          btn.disabled = false;
-          btn.innerHTML = label;
-          errorBox.hidden = false;
-        })
+        .catch(fail)
         .then(function () { if (timer) clearTimeout(timer); });
     });
-  }
+  });
+
   function syncOptions() {
     document.querySelectorAll('option[data-de]').forEach(function (o) {
       if (!o.hasAttribute('data-en')) o.setAttribute('data-en', o.textContent);

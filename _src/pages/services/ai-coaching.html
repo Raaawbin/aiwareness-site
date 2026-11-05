@@ -1,0 +1,533 @@
+title_en: AI Coaching & AI AGENCY Program · AIwareness
+title_de: KI-Coaching & Programm AI AGENCY · AIwareness
+desc_en: AI coaching for entrepreneurs and creatives: the AI AGENCY program to build your own AI co-work system, starting 1 March 2027, or single coaching in Berlin or online.
+desc_de: KI-Coaching für Entrepreneure und Kreative: das Programm AI AGENCY für Dein eigenes KI-Co-Work-System, Start 1. März 2027, oder Einzelcoaching in Berlin oder online.
+nav: solutions
+---
+<!-- AI AGENCY and single coaching, merged on 2026-11-04. Page-only styles below, kept out of site.css until the program is approved. -->
+<style>
+.agency-facts { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 26px; }
+.agency-facts .tag { background: rgba(10, 10, 11, .55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: var(--ink); }
+.agency-facts .tag b { color: var(--accent-text); font-weight: 650; }
+
+.agency-word { display: flex; justify-content: center; gap: clamp(6px, 1.6vw, 18px); margin: 0 auto 44px; }
+.agency-word a { display: grid; place-items: center; width: clamp(46px, 8vw, 84px); aspect-ratio: 1; border-radius: 20px; border: 1px solid rgba(201, 166, 255, .28); background: rgba(201, 166, 255, .06); font-family: var(--font); font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -.04em; text-decoration: none; transition: transform .3s var(--ease), border-color .3s; }
+.agency-word a span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.agency-word a:hover, .agency-word a:focus-visible { transform: translateY(-4px); border-color: rgba(201, 166, 255, .6); }
+
+.agency-flow { position: relative; display: flex; flex-direction: column; gap: 22px; max-width: 900px; margin: 0 auto; list-style: none; }
+.agency-flow::before { content: ""; position: absolute; left: 35px; top: 30px; bottom: 30px; width: 2px; border-radius: 2px; background: var(--grad-v); opacity: .45; }
+.flow-step { position: relative; display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 22px; align-items: start; scroll-margin-top: 110px; }
+.flow-letter { position: relative; z-index: 1; display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: var(--bg); border: 1px solid rgba(201, 166, 255, .4); box-shadow: 0 0 0 8px var(--bg), 0 0 36px -8px rgba(201, 166, 255, .7); color: #c9a6ff; font-family: var(--font); font-size: 2rem; font-weight: 800; letter-spacing: -.04em; }
+.flow-card { padding: 26px 28px; }
+.flow-card .sub { display: block; margin-bottom: 8px; color: var(--accent-text); font-size: .72rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+.flow-card h3 { margin-bottom: 10px; font-size: 1.45rem; line-height: 1.2; }
+.flow-card > p { font-size: .95rem; line-height: 1.75; }
+.sessions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.session { display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border: 1px solid var(--line-2); border-radius: 999px; background: rgba(255, 255, 255, .03); color: var(--ink); font-size: .8rem; font-weight: 550; }
+.session .icon { width: 15px; height: 15px; background: var(--grad); }
+.session.group { border-color: rgba(201, 166, 255, .35); }
+.session.coach { border-color: rgba(76, 201, 240, .35); }
+.flow-card .flow-out { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .92rem; line-height: 1.7; }
+.flow-out b { color: var(--ink); }
+.agency-outcome { max-width: 900px; margin: 32px auto 0; }
+
+.incl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.incl { display: flex; flex-direction: column; padding: 30px 28px; }
+.incl .n { width: fit-content; font-family: var(--font); font-size: 4.2rem; font-weight: 800; line-height: 1; letter-spacing: -.05em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.incl h3 { margin: 14px 0 4px; font-size: 1.3rem; line-height: 1.25; }
+.incl .dur { margin-bottom: 14px; color: var(--accent-text); font-size: .72rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+.incl p { font-size: .94rem; line-height: 1.75; }
+
+.agency-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
+.agency-cols .panel { padding: 28px; }
+.agency-cols h3 { margin-bottom: 14px; font-size: 1.3rem; }
+.agency-cols p { font-size: .95rem; line-height: 1.75; }
+.agency-cols .checks li { font-size: .95rem; line-height: 1.7; }
+.agency-cols .checks b { color: var(--ink); }
+
+.price-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 900px; margin: 0 auto; }
+.price { display: flex; flex-direction: column; padding: 32px 30px; }
+.price .kind { margin-bottom: 12px; color: var(--accent-text); font-size: .74rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.price .amount { color: var(--ink); font-family: var(--font); font-size: clamp(2.8rem, 5vw, 3.6rem); font-weight: 800; line-height: 1; letter-spacing: -.045em; }
+.price.solution .amount { width: fit-content; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.price .when { margin: 12px 0 22px; font-size: .95rem; }
+.price .feats { margin-bottom: 28px; }
+.price .btn { margin-top: auto; align-self: flex-start; }
+
+.dates { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; max-width: 900px; margin: 28px auto 0; }
+.dates div { padding: 16px 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--glass); text-align: center; }
+.dates b { display: block; color: var(--ink); font-family: var(--font); font-size: 1.05rem; font-weight: 700; letter-spacing: -.01em; }
+.dates small { display: block; margin-top: 4px; color: var(--muted); font-size: .8rem; line-height: 1.45; }
+
+.single-actions { justify-content: center; margin-top: 36px; }
+
+@media (max-width: 980px) {
+  .incl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .incl-grid, .agency-cols, .price-grid { grid-template-columns: 1fr; }
+  .dates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .incl, .price, .agency-cols .panel { padding: 24px; }
+  .agency-word { gap: 6px; }
+  .agency-word a { border-radius: 14px; }
+  .agency-flow::before { left: 23px; }
+  .flow-step { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; }
+  .flow-letter { width: 48px; height: 48px; font-size: 1.4rem; box-shadow: 0 0 0 6px var(--bg), 0 0 28px -8px rgba(201, 166, 255, .7); }
+  .flow-card { padding: 22px 20px; }
+}
+</style>
+
+<section class="page-hero" aria-labelledby="pageTitle">
+  <div class="ph-bg" aria-hidden="true" style="background-image:url('assets/img/photos/robin-video-coaching.webp')"></div>
+  <canvas data-particles="0.6" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="eyebrow reveal"><span class="lang-en">Agency · AI Coaching</span><span class="lang-de">Agency · AI Coaching</span></span>
+    <h1 id="pageTitle" class="reveal" style="--i:1"><span class="lang-en">From chatting with AI <span class="o">to working with agents</span></span><span class="lang-de">Vom Chatten mit KI <span class="o">zum Arbeiten mit Agenten</span></span></h1>
+    <p class="lead reveal" style="--i:2">
+      <span class="lang-en">AI AGENCY is a coaching program for entrepreneurs and creatives. In six modules you build your own AI co-work system, connected to your real tools, while you stay the one who decides.</span>
+      <span class="lang-de">AI AGENCY ist ein Coaching-Programm für Entrepreneure und Kreative. In sechs Modulen baust Du Dein eigenes KI-Co-Work-System auf, verbunden mit Deinen echten Tools, und bleibst dabei die Person, die entscheidet.</span>
+    </p>
+    <div class="ctas reveal" style="--i:3">
+      <a class="btn" href="#apply"><span class="lang-en">Apply for AI AGENCY</span><span class="lang-de">Für AI AGENCY bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+      <a class="btn ghost" href="#single"><span class="lang-en">Book a single coaching</span><span class="lang-de">Einzelcoaching buchen</span></a>
+    </div>
+    <div class="agency-facts reveal" style="--i:4">
+      <span class="tag"><span class="lang-en"><b>Start</b> 1 March 2027</span><span class="lang-de"><b>Start</b> 1. März 2027</span></span>
+      <span class="tag"><span class="lang-en"><b>Applications</b> January and February</span><span class="lang-de"><b>Bewerbung</b> Januar und Februar</span></span>
+      <span class="tag"><span class="lang-en"><b>Early bird</b> €900 until 31 January</span><span class="lang-de"><b>Early Bird</b> 900 € bis 31. Januar</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM AND SUCCESS ============ -->
+<section class="sec" aria-labelledby="problemTitle">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">The challenge</span><span class="lang-de">Die Herausforderung</span></span>
+      <h2 id="problemTitle"><span class="lang-en">AI can do real work now. <span class="o">Most days it still starts with an empty chat.</span></span><span class="lang-de">KI kann inzwischen echte Arbeit leisten. <span class="o">Trotzdem beginnt sie meist mit einem leeren Chat.</span></span></h2>
+      <p class="section-intro">
+        <span class="lang-en">AI tools can now read your files, work with your calendar and email, and take steps on your behalf. For a small business that opens real possibilities, and real questions about trust and control.</span>
+        <span class="lang-de">KI-Tools können inzwischen Deine Dateien lesen, mit Kalender und E-Mail arbeiten und Schritte für Dich ausführen. Für ein kleines Business eröffnet das echte Möglichkeiten und echte Fragen nach Vertrauen und Kontrolle.</span>
+      </p>
+    </div>
+    <div class="transform">
+      <div class="t-col panel problem reveal">
+        <h3 class="t-title"><span class="lang-en">On your own</span><span class="lang-de">Allein damit</span></h3>
+        <p class="t-intro"><span class="lang-en">Maybe you know this:</span><span class="lang-de">Vielleicht kennst Du das:</span></p>
+        <ul class="t-list">
+          <li><span class="icon icon-clock" aria-hidden="true"></span><span>
+            <span class="lang-en"><b>Starting from zero:</b> Every chat starts blank. You explain your business, your voice and your offers again and again.</span>
+            <span class="lang-de"><b>Bei null anfangen:</b> Jeder Chat beginnt leer. Du erklärst Dein Business, Deine Stimme und Deine Angebote immer wieder neu.</span>
+          </span></li>
+          <li><span class="icon icon-globe" aria-hidden="true"></span><span>
+            <span class="lang-en"><b>Copy and paste:</b> AI lives in a browser tab. Your calendar, notes, emails and clients live somewhere else.</span>
+            <span class="lang-de"><b>Kopieren und Einfügen:</b> KI lebt in einem Browser-Tab. Kalender, Notizen, E-Mails und Kundschaft liegen woanders.</span>
+          </span></li>
+          <li><span class="icon icon-users" aria-hidden="true"></span><span>
+            <span class="lang-en"><b>Unease:</b> Agents can act for you now. You are unsure what to trust them with and where they fail.</span>
+            <span class="lang-de"><b>Unbehagen:</b> Agenten können inzwischen für Dich handeln. Du bist unsicher, was Du ihnen anvertraust und wo sie scheitern.</span>
+          </span></li>
+        </ul>
+      </div>
+      <div class="t-col panel solution reveal" style="--i:1">
+        <h3 class="t-title"><span class="lang-en">After AI AGENCY</span><span class="lang-de">Nach AI AGENCY</span></h3>
+        <p class="t-intro"><span class="lang-en">What you take with you:</span><span class="lang-de">Was Du mitnimmst:</span></p>
+        <ul class="t-list">
+          <li><span class="icon icon-book" aria-hidden="true"></span><span>
+            <span class="lang-en"><b>Context:</b> Your brand, voice, offers and processes live in files. Your system works from them every time.</span>
+            <span class="lang-de"><b>Kontext:</b> Deine Marke, Stimme, Angebote und Abläufe liegen in Dateien. Dein System arbeitet jedes Mal damit.</span>
+          </span></li>
+          <li><span class="icon icon-spark" aria-hidden="true"></span><span>
+            <span class="lang-en"><b>Connection:</b> Calendar, CRM, notes, drive and email are connected. Your system sees your real business.</span>
+            <span class="lang-de"><b>Verbindung:</b> Kalender, CRM, Notizen, Drive und E-Mail sind verbunden. Dein System sieht Dein echtes Business.</span>
+          </span></li>
+          <li><span class="icon icon-compass" aria-hidden="true"></span><span>
+            <span class="lang-en"><b>Judgement:</b> You know how agents work and where they fail. You set the limits and make the decisions.</span>
+            <span class="lang-de"><b>Urteil:</b> Du weißt, wie Agenten arbeiten und wo sie scheitern. Du setzt die Grenzen und triffst die Entscheidungen.</span>
+          </span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUIDE ============ -->
+<section class="sol" aria-labelledby="guideTitle">
+  <div class="wrap">
+    <div class="sol-top">
+      <div class="sol-media reveal">
+        <img class="graded" src="assets/img/photos/portrait-robin.webp" width="1071" height="1200" loading="lazy" decoding="async"
+             alt="Portrait of Robin Hotz, founder of AIwareness"
+             data-alt-en="Portrait of Robin Hotz, founder of AIwareness"
+             data-alt-de="Porträt von Robin Hotz, Gründer von AIwareness">
+        <div class="badge top"><small><span class="lang-en">Who it’s for</span><span class="lang-de">Für wen</span></small><span><span class="lang-en">Entrepreneurs and creatives who run their own business.</span><span class="lang-de">Entrepreneure und Kreative mit eigenem Business.</span></span></div>
+      </div>
+      <div class="reveal" style="--i:1">
+        <span class="eyebrow"><span class="lang-en">Your guide</span><span class="lang-de">Wer Dich begleitet</span></span>
+        <h2 id="guideTitle"><span class="lang-en">We work <span class="o">this way ourselves</span></span><span class="lang-de">Wir arbeiten <span class="o">selbst so</span></span></h2>
+        <p class="sol-intro">
+          <span class="lang-en">Robin Hotz runs AIwareness with an agentic co-work system. Brand, voice, offers and workflows live as knowledge files that AI agents work from, and every public text still passes his own final edit. He has read deeply into AI safety, so he knows where these systems help and where they need limits. With ten years as a visual facilitator, he helps you make your thinking visible before you hand any of it to a machine.</span>
+          <span class="lang-de">Robin Hotz führt AIwareness mit einem agentischen Co-Work-System. Marke, Stimme, Angebote und Abläufe liegen als Wissensdateien vor, mit denen KI-Agenten arbeiten, und jeder öffentliche Text geht weiter durch seine eigene Schlussredaktion. Er hat sich tief in KI-Sicherheit eingelesen und weiß deshalb, wo diese Systeme helfen und wo sie Grenzen brauchen. Mit zehn Jahren Erfahrung als visueller Moderator hilft er Dir, Dein Denken sichtbar zu machen, bevor Du etwas davon an eine Maschine gibst.</span>
+        </p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">Agentic AI</span><span class="lang-de">Agentische KI</span></span>
+          <span class="tag"><span class="lang-en">AI safety</span><span class="lang-de">KI-Sicherheit</span></span>
+          <span class="tag"><span class="lang-en">Learning on the job</span><span class="lang-de">Lernen an der echten Arbeit</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE AGENCY MODEL ============ -->
+<section class="sec" id="program" aria-labelledby="programTitle">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">The program</span><span class="lang-de">Das Programm</span></span>
+      <h2 id="programTitle"><span class="lang-en">AGENCY: <span class="o">your aware AI co-work system</span></span><span class="lang-de">AGENCY: <span class="o">Dein bewusstes KI-Co-Work-System</span></span></h2>
+      <p class="section-intro">
+        <span class="lang-en">Six modules from top to bottom, one letter each. Every module comes with a group call or a 1:1 coaching and ends in something concrete you keep.</span>
+        <span class="lang-de">Sechs Module von oben nach unten, je ein Buchstabe. Zu jedem Modul gehört ein Gruppencall oder ein 1:1-Coaching, und jedes endet mit etwas Konkretem, das Du behältst.</span>
+      </p>
+    </div>
+    <nav class="agency-word reveal" aria-label="AGENCY modules">
+      <a href="#m-awareness" aria-label="A: Awareness"><span>A</span></a>
+      <a href="#m-goals" aria-label="G: Goals"><span>G</span></a>
+      <a href="#m-essence" aria-label="E: Essence"><span>E</span></a>
+      <a href="#m-network" aria-label="N: Network"><span>N</span></a>
+      <a href="#m-create" aria-label="C: Create in Public"><span>C</span></a>
+      <a href="#m-plan" aria-label="Y: Your Plan"><span>Y</span></a>
+    </nav>
+    <ol class="agency-flow">
+      <li class="flow-step reveal" id="m-awareness">
+        <span class="flow-letter" aria-hidden="true">A</span>
+        <div class="panel flow-card">
+          <span class="sub"><span class="lang-en">Module 1 · Awareness</span><span class="lang-de">Modul 1 · Awareness · Bewusstsein</span></span>
+          <h3><span class="lang-en">Understand what you are working with</span><span class="lang-de">Verstehen, womit Du arbeitest</span></h3>
+          <p><span class="lang-en">How models and agents work, where they fail, the real risks, and your own stance on AI.</span><span class="lang-de">Wie Modelle und Agenten funktionieren, wo sie scheitern, welche Risiken real sind und wie Du selbst zu KI stehst.</span></p>
+          <div class="sessions"><span class="session group"><span class="icon icon-users" aria-hidden="true"></span><span class="lang-en">Group call 1 · kick-off with peers · 120 min</span><span class="lang-de">Gruppencall 1 · Auftakt mit Gleichgesinnten · 120 Min.</span></span></div>
+          <p class="flow-out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">your stance on AI and a first draft of your personal AI policy: what you use AI for, what you never hand over, which data stays private.</span><span class="lang-de">Deine Haltung zu KI und ein erster Entwurf Deiner persönlichen KI-Policy: wofür Du KI nutzt, was Du nie abgibst, welche Daten privat bleiben.</span></p>
+        </div>
+      </li>
+      <li class="flow-step reveal" id="m-goals">
+        <span class="flow-letter" aria-hidden="true">G</span>
+        <div class="panel flow-card">
+          <span class="sub"><span class="lang-en">Module 2 · Goals</span><span class="lang-de">Modul 2 · Goals · Ziele</span></span>
+          <h3><span class="lang-en">Decide what you want AI for</span><span class="lang-de">Entscheiden, wofür Du KI willst</span></h3>
+          <p><span class="lang-en">Map your business, your offers and where your time goes.</span><span class="lang-de">Du kartierst Dein Business, Deine Angebote und wohin Deine Zeit geht.</span></p>
+          <div class="sessions"><span class="session coach"><span class="icon icon-compass" aria-hidden="true"></span><span class="lang-en">1:1 coaching 1 · 90 min</span><span class="lang-de">1:1-Coaching 1 · 90 Min.</span></span></div>
+          <p class="flow-out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">a map of your business and a shortlist of the first tasks your system will take on.</span><span class="lang-de">eine Landkarte Deines Business und eine kurze Liste der ersten Aufgaben, die Dein System übernimmt.</span></p>
+        </div>
+      </li>
+      <li class="flow-step reveal" id="m-essence">
+        <span class="flow-letter" aria-hidden="true">E</span>
+        <div class="panel flow-card">
+          <span class="sub"><span class="lang-en">Module 3 · Essence</span><span class="lang-de">Modul 3 · Essence · Essenz</span></span>
+          <h3><span class="lang-en">Put your business into words</span><span class="lang-de">Dein Business in Worte fassen</span></h3>
+          <p><span class="lang-en">Your brand, voice, offers and processes as knowledge files your system can work from.</span><span class="lang-de">Deine Marke, Stimme, Angebote und Abläufe als Wissensdateien, mit denen Dein System arbeiten kann.</span></p>
+          <div class="sessions"><span class="session group"><span class="icon icon-users" aria-hidden="true"></span><span class="lang-en">Group call 2 · 120 min</span><span class="lang-de">Gruppencall 2 · 120 Min.</span></span><span class="session coach"><span class="icon icon-compass" aria-hidden="true"></span><span class="lang-en">1:1 coaching 2 · 90 min</span><span class="lang-de">1:1-Coaching 2 · 90 Min.</span></span></div>
+          <p class="flow-out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">a set of knowledge files on your brand, voice, offers and processes in Notion or your writing tool.</span><span class="lang-de">ein Satz Wissensdateien zu Marke, Stimme, Angeboten und Abläufen in Notion oder Deinem Schreibtool.</span></p>
+        </div>
+      </li>
+      <li class="flow-step reveal" id="m-network">
+        <span class="flow-letter" aria-hidden="true">N</span>
+        <div class="panel flow-card">
+          <span class="sub"><span class="lang-en">Module 4 · Network</span><span class="lang-de">Modul 4 · Network · Vernetzen</span></span>
+          <h3><span class="lang-en">Connect your real tools</span><span class="lang-de">Deine echten Tools verbinden</span></h3>
+          <p><span class="lang-en">Connect calendar, CRM, notes, drive and email so the system sees your real business.</span><span class="lang-de">Kalender, CRM, Notizen, Drive und E-Mail verbinden, damit das System Dein echtes Business sieht.</span></p>
+          <div class="sessions"><span class="session group"><span class="icon icon-users" aria-hidden="true"></span><span class="lang-en">Group call 3 · 120 min</span><span class="lang-de">Gruppencall 3 · 120 Min.</span></span></div>
+          <p class="flow-out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">your system connected to your tools, with access limits you chose yourself.</span><span class="lang-de">Dein System, verbunden mit Deinen Tools, mit Zugriffsgrenzen, die Du selbst gewählt hast.</span></p>
+        </div>
+      </li>
+      <li class="flow-step reveal" id="m-create">
+        <span class="flow-letter" aria-hidden="true">C</span>
+        <div class="panel flow-card">
+          <span class="sub"><span class="lang-en">Module 5 · Create in Public</span><span class="lang-de">Modul 5 · Create in Public · Öffentlich gestalten</span></span>
+          <h3><span class="lang-en">Make it visible</span><span class="lang-de">Sichtbar machen</span></h3>
+          <p><span class="lang-en">Ship something real with your system and share the process openly.</span><span class="lang-de">Etwas Echtes mit Deinem System veröffentlichen und den Weg dorthin offen teilen.</span></p>
+          <div class="sessions"><span class="session coach"><span class="icon icon-compass" aria-hidden="true"></span><span class="lang-en">1:1 coaching 3 · 90 min</span><span class="lang-de">1:1-Coaching 3 · 90 Min.</span></span><span class="session group"><span class="icon icon-users" aria-hidden="true"></span><span class="lang-en">Group call 4 · 120 min</span><span class="lang-de">Gruppencall 4 · 120 Min.</span></span></div>
+          <p class="flow-out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">a first public project built with your system, and the story of how you made it, shared openly.</span><span class="lang-de">ein erstes öffentliches Projekt, gebaut mit Deinem System, und die Geschichte, wie es entstanden ist, offen geteilt.</span></p>
+        </div>
+      </li>
+      <li class="flow-step reveal" id="m-plan">
+        <span class="flow-letter" aria-hidden="true">Y</span>
+        <div class="panel flow-card">
+          <span class="sub"><span class="lang-en">Module 6 · Your Plan</span><span class="lang-de">Modul 6 · Your Plan · Dein Plan</span></span>
+          <h3><span class="lang-en">Keep going on your own</span><span class="lang-de">Allein weitergehen</span></h3>
+          <p><span class="lang-en">Turn what you built into an actionable plan for your business and your AI system.</span><span class="lang-de">Aus dem, was Du gebaut hast, wird ein umsetzbarer Plan für Dein Business und Dein KI-System.</span></p>
+          <div class="sessions"><span class="session coach"><span class="icon icon-compass" aria-hidden="true"></span><span class="lang-en">1:1 coaching 4 · 90 min</span><span class="lang-de">1:1-Coaching 4 · 90 Min.</span></span><span class="session group"><span class="icon icon-users" aria-hidden="true"></span><span class="lang-en">Group call 5 · closing with peers · 120 min</span><span class="lang-de">Gruppencall 5 · Abschluss mit Gleichgesinnten · 120 Min.</span></span></div>
+          <p class="flow-out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">an actionable plan for your business and your system, and the final version of your personal AI policy.</span><span class="lang-de">ein umsetzbarer Plan für Dein Business und Dein System und die fertige Fassung Deiner persönlichen KI-Policy.</span></p>
+        </div>
+      </li>
+    </ol>
+    <div class="result-box agency-outcome reveal">
+      <b><span class="lang-en">Outcome</span><span class="lang-de">Ergebnis</span></b>
+      <p><span class="lang-en">A working agentic co-work system connected to your tools, a personal AI policy, and a first public project built with it.</span><span class="lang-de">Ein funktionierendes agentisches Co-Work-System, verbunden mit Deinen Tools, eine persönliche KI-Policy und ein erstes öffentliches Projekt, das Du damit gebaut hast.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED ============ -->
+<section class="sec" aria-labelledby="inclTitle">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">What’s included</span><span class="lang-de">Was enthalten ist</span></span>
+      <h2 id="inclTitle"><span class="lang-en">Personal coaching, <span class="o">a group of peers</span> and six modules</span><span class="lang-de">Persönliches Coaching, <span class="o">eine Gruppe Gleichgesinnter</span> und sechs Module</span></h2>
+    </div>
+    <div class="incl-grid">
+      <div class="panel incl reveal">
+        <span class="n">4</span>
+        <h3><span class="lang-en">1:1 coachings</span><span class="lang-de">1:1-Coachings</span></h3>
+        <span class="dur"><span class="lang-en">90 minutes each</span><span class="lang-de">je 90 Minuten</span></span>
+        <p><span class="lang-en">Personal sessions on your business, your system and your questions.</span><span class="lang-de">Persönliche Sessions zu Deinem Business, Deinem System und Deinen Fragen.</span></p>
+      </div>
+      <div class="panel incl reveal" style="--i:1">
+        <span class="n">5</span>
+        <h3><span class="lang-en">Group calls with peers</span><span class="lang-de">Gruppencalls mit Gleichgesinnten</span></h3>
+        <span class="dur"><span class="lang-en">120 minutes each</span><span class="lang-de">je 120 Minuten</span></span>
+        <p><span class="lang-en">Build alongside others, share progress and learn from how they solve things.</span><span class="lang-de">Gemeinsam mit anderen bauen, Fortschritte teilen und davon lernen, wie andere Dinge lösen.</span></p>
+      </div>
+      <div class="panel incl reveal" style="--i:2">
+        <span class="n">6</span>
+        <h3><span class="lang-en">Modules</span><span class="lang-de">Module</span></h3>
+        <span class="dur"><span class="lang-en">Content, exercises, learning on the job</span><span class="lang-de">Inhalte, Übungen, Lernen an der echten Arbeit</span></span>
+        <p><span class="lang-en">Each module brings input, exercises and a step you apply directly to your own business.</span><span class="lang-de">Jedes Modul bringt Input, Übungen und einen Schritt, den Du direkt in Deinem Business umsetzt.</span></p>
+      </div>
+    </div>
+    <div class="agency-cols">
+      <div class="panel reveal">
+        <span class="eyebrow"><span class="lang-en">How you learn</span><span class="lang-de">Wie Du lernst</span></span>
+        <h3><span class="lang-en">Learning on the job</span><span class="lang-de">Lernen an der echten Arbeit</span></h3>
+        <p><span class="lang-en">Your own brand and expression are the learning container, and AI is the learning subject. Everything you practise becomes part of your real business.</span><span class="lang-de">Deine eigene Marke und Dein Ausdruck sind der Lernraum, KI ist der Lerngegenstand. Alles, was Du übst, wird Teil Deines echten Business.</span></p>
+      </div>
+      <div class="panel reveal" style="--i:1">
+        <span class="eyebrow"><span class="lang-en">Tools</span><span class="lang-de">Tools</span></span>
+        <h3><span class="lang-en">Two containers</span><span class="lang-de">Zwei Orte</span></h3>
+        <ul class="checks">
+          <li><span class="icon icon-pen" aria-hidden="true"></span><span><span class="lang-en"><b>To express your thoughts:</b> preferably Notion, or Obsidian or any other writing tool.</span><span class="lang-de"><b>Für Deine Gedanken:</b> am liebsten Notion, oder Obsidian oder ein anderes Schreibtool.</span></span></li>
+          <li><span class="icon icon-spark" aria-hidden="true"></span><span><span class="lang-en"><b>To spar with your thoughts:</b> preferably Claude, or ChatGPT or another AI tool.</span><span class="lang-de"><b>Zum Sparring Deiner Gedanken:</b> am liebsten Claude, oder ChatGPT oder ein anderes KI-Tool.</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAN ============ -->
+<section class="sec" id="plan" aria-labelledby="planTitle">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">How it works</span><span class="lang-de">So läuft es ab</span></span>
+      <h2 id="planTitle"><span class="lang-en">Three steps <span class="o">to your own system</span></span><span class="lang-de">In drei Schritten <span class="o">zu Deinem eigenen System</span></span></h2>
+    </div>
+    <div class="steps">
+      <div class="steps-line" aria-hidden="true"><i></i></div>
+      <div class="step reveal">
+        <div class="orb"><span class="icon icon-mail" aria-hidden="true"></span><b>1</b></div>
+        <h3><span class="lang-en">Apply</span><span class="lang-de">Bewerben</span></h3>
+        <p><span class="lang-en">In January and February 2027. Tell us about your business, and we check together whether the program fits.</span><span class="lang-de">Im Januar und Februar 2027. Erzähl uns von Deinem Business, und wir prüfen gemeinsam, ob das Programm passt.</span></p>
+      </div>
+      <div class="step reveal" style="--i:1">
+        <div class="orb"><span class="icon icon-spark" aria-hidden="true"></span><b>2</b></div>
+        <h3><span class="lang-en">Build</span><span class="lang-de">Aufbauen</span></h3>
+        <p><span class="lang-en">From 1 March 2027. Six modules, four 1:1 coachings and five group calls with peers.</span><span class="lang-de">Ab 1. März 2027. Sechs Module, vier 1:1-Coachings und fünf Gruppencalls mit Gleichgesinnten.</span></p>
+      </div>
+      <div class="step reveal" style="--i:2">
+        <div class="orb"><span class="icon icon-target" aria-hidden="true"></span><b>3</b></div>
+        <h3><span class="lang-en">Work with it</span><span class="lang-de">Damit arbeiten</span></h3>
+        <p><span class="lang-en">You leave with a working system, a personal AI policy and a first public project.</span><span class="lang-de">Du gehst mit einem funktionierenden System, einer persönlichen KI-Policy und einem ersten öffentlichen Projekt.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE AND DATES ============ -->
+<section class="sec" id="apply" aria-labelledby="priceTitle">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">Price and dates</span><span class="lang-de">Preis und Termine</span></span>
+      <h2 id="priceTitle"><span class="lang-en">Your place in <span class="o">AI AGENCY</span></span><span class="lang-de">Dein Platz bei <span class="o">AI AGENCY</span></span></h2>
+      <p class="section-intro">
+        <span class="lang-en">Applications are open in January and February 2027. Write us a few lines about your business and what you want AI for.</span>
+        <span class="lang-de">Bewerben kannst Du Dich im Januar und Februar 2027. Schreib uns ein paar Zeilen zu Deinem Business und wofür Du KI willst.</span>
+      </p>
+    </div>
+    <div class="price-grid">
+      <div class="panel price solution reveal">
+        <span class="kind"><span class="lang-en">Early bird</span><span class="lang-de">Early Bird</span></span>
+        <span class="amount"><span class="lang-en">€900</span><span class="lang-de">900 €</span></span>
+        <p class="when"><span class="lang-en">For applications until 31 January 2027.</span><span class="lang-de">Bei Bewerbung bis 31. Januar 2027.</span></p>
+        <ul class="feats">
+          <li><span class="lang-en">4 × 1:1 coaching, 90 minutes</span><span class="lang-de">4 × 1:1-Coaching, 90 Minuten</span></li>
+          <li><span class="lang-en">5 group calls with peers, 120 minutes</span><span class="lang-de">5 Gruppencalls mit Gleichgesinnten, 120 Minuten</span></li>
+          <li><span class="lang-en">6 modules with content and exercises</span><span class="lang-de">6 Module mit Inhalten und Übungen</span></li>
+        </ul>
+        <a class="btn" href="contact.html?topic=ai-agency"><span class="lang-en">Apply now</span><span class="lang-de">Jetzt bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+      </div>
+      <div class="panel price reveal" style="--i:1">
+        <span class="kind"><span class="lang-en">Regular price</span><span class="lang-de">Regulärer Preis</span></span>
+        <span class="amount"><span class="lang-en">€1,400</span><span class="lang-de">1.400 €</span></span>
+        <p class="when"><span class="lang-en">For applications from 1 February 2027.</span><span class="lang-de">Bei Bewerbung ab 1. Februar 2027.</span></p>
+        <ul class="feats">
+          <li><span class="lang-en">4 × 1:1 coaching, 90 minutes</span><span class="lang-de">4 × 1:1-Coaching, 90 Minuten</span></li>
+          <li><span class="lang-en">5 group calls with peers, 120 minutes</span><span class="lang-de">5 Gruppencalls mit Gleichgesinnten, 120 Minuten</span></li>
+          <li><span class="lang-en">6 modules with content and exercises</span><span class="lang-de">6 Module mit Inhalten und Übungen</span></li>
+        </ul>
+        <a class="btn ghost" href="contact.html?topic=ai-agency"><span class="lang-en">Apply</span><span class="lang-de">Bewerben</span></a>
+      </div>
+    </div>
+    <div class="dates reveal">
+      <div><b><span class="lang-en">1 January</span><span class="lang-de">1. Januar</span></b><small><span class="lang-en">Applications open</span><span class="lang-de">Bewerbung startet</span></small></div>
+      <div><b><span class="lang-en">31 January</span><span class="lang-de">31. Januar</span></b><small><span class="lang-en">Early bird ends</span><span class="lang-de">Early Bird endet</span></small></div>
+      <div><b><span class="lang-en">28 February</span><span class="lang-de">28. Februar</span></b><small><span class="lang-en">Applications close</span><span class="lang-de">Bewerbung endet</span></small></div>
+      <div><b><span class="lang-en">1 March 2027</span><span class="lang-de">1. März 2027</span></b><small><span class="lang-en">Program starts</span><span class="lang-de">Programm startet</span></small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SINGLE COACHING ============ -->
+<section class="sec" id="single" aria-labelledby="singleTitle">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><span class="lang-en">Single coaching</span><span class="lang-de">Einzelcoaching</span></span>
+      <h2 id="singleTitle"><span class="lang-en">Prefer <span class="o">one session at a time</span>?</span><span class="lang-de">Lieber <span class="o">eine Session nach der anderen</span>?</span></h2>
+      <p class="section-intro">
+        <span class="lang-en">One-to-one coaching for leaders, founders, freelancers and creatives, in person in Berlin or online. Three focuses, one coaching.</span>
+        <span class="lang-de">Einzelcoaching für Führungskräfte, Gründende, Selbstständige und Kreative, vor Ort in Berlin oder online. Drei Schwerpunkte, ein Coaching.</span>
+      </p>
+    </div>
+    <div class="sub-grid">
+      <article class="panel subcard reveal" id="leadership-coaching">
+        <span class="ico"><span class="icon icon-compass" aria-hidden="true"></span></span>
+        <h3><span class="lang-en">Leadership coaching</span><span class="lang-de">Führungscoaching</span></h3>
+        <p><span class="lang-en">For leaders and founders who carry decisions about AI and people. We work on clarity under uncertainty, presence and self-awareness, so you lead calmly when the information is incomplete.</span><span class="lang-de">Für Führungskräfte und Gründende, die Entscheidungen über KI und Menschen tragen. Wir arbeiten an Klarheit unter Unsicherheit, Präsenz und Selbstwahrnehmung, damit Du ruhig führst, auch wenn die Informationen unvollständig sind.</span></p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">Decisions under uncertainty</span><span class="lang-de">Entscheiden unter Unsicherheit</span></span>
+          <span class="tag"><span class="lang-en">Presence</span><span class="lang-de">Präsenz</span></span>
+          <span class="tag"><span class="lang-en">Self-awareness</span><span class="lang-de">Selbstwahrnehmung</span></span>
+        </div>
+        <p class="out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">clearer decisions and a steadier way to lead.</span><span class="lang-de">klarere Entscheidungen und eine ruhigere Art zu führen.</span></p>
+      </article>
+      <article class="panel subcard reveal" style="--i:1" id="ai-coaching">
+        <span class="ico"><span class="icon icon-spark" aria-hidden="true"></span></span>
+        <h3><span class="lang-en">AI coaching for your work</span><span class="lang-de">KI-Coaching für Deine Arbeit</span></h3>
+        <p><span class="lang-en">For founders and freelancers who want AI to fit their business. Hands-on with your real tasks: which tools help, which workflows to build, and where your own judgement matters most.</span><span class="lang-de">Für Gründende und Selbstständige, bei denen KI zu ihrem Business passen soll. Praktisch an Deinen echten Aufgaben: welche Tools helfen, welche Workflows Du aufbaust und wo Dein eigenes Urteil am meisten zählt.</span></p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">Tools that fit</span><span class="lang-de">Passende Tools</span></span>
+          <span class="tag"><span class="lang-en">Own workflows</span><span class="lang-de">Eigene Workflows</span></span>
+          <span class="tag"><span class="lang-en">Own judgement</span><span class="lang-de">Eigenes Urteil</span></span>
+        </div>
+        <p class="out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">you use AI with confidence and stay in charge of your work.</span><span class="lang-de">Du nutzt KI mit Sicherheit und behältst Deine Arbeit in der Hand.</span></p>
+      </article>
+      <article class="panel subcard reveal" style="--i:2" id="creative-coaching">
+        <span class="ico"><span class="icon icon-pen" aria-hidden="true"></span></span>
+        <h3><span class="lang-en">Express your creativity ethically with AI</span><span class="lang-de">Kreativität ethisch mit KI ausdrücken</span></h3>
+        <p><span class="lang-en">For creatives, founders and freelancers who want to create with AI and stay true to their own voice. We look at authorship, transparency and respect for other people’s work, and find ways of using AI that add to your creativity instead of replacing it.</span><span class="lang-de">Für Kreative, Gründende und Selbstständige, die mit KI gestalten und ihrer eigenen Stimme treu bleiben wollen. Wir schauen auf Urheberschaft, Transparenz und Respekt vor der Arbeit anderer und finden Wege, KI so zu nutzen, dass sie Deine Kreativität erweitert, statt sie zu ersetzen.</span></p>
+        <div class="tags">
+          <span class="tag"><span class="lang-en">Own voice</span><span class="lang-de">Eigene Stimme</span></span>
+          <span class="tag"><span class="lang-en">Authorship</span><span class="lang-de">Urheberschaft</span></span>
+          <span class="tag"><span class="lang-en">Transparency</span><span class="lang-de">Transparenz</span></span>
+        </div>
+        <p class="out"><b><span class="lang-en">Outcome:</span><span class="lang-de">Ergebnis:</span></b> <span class="lang-en">you create with AI in a way you can stand behind.</span><span class="lang-de">Du gestaltest mit KI so, dass Du dahinterstehen kannst.</span></p>
+      </article>
+    </div>
+    <div class="ctas single-actions reveal">
+      <a class="btn" href="contact.html?topic=coaching"><span class="lang-en">Book a single coaching</span><span class="lang-de">Einzelcoaching buchen</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALL TO ACTION ============ -->
+<section class="sec cta-sec">
+  <div class="wrap">
+    <div class="cta-band center reveal">
+      <span class="eyebrow"><span class="lang-en">Next step</span><span class="lang-de">Nächster Schritt</span></span>
+      <h2><span class="lang-en">Build your system <span class="o">and stay the one who decides</span></span><span class="lang-de">Bau Dein System <span class="o">und bleib die Person, die entscheidet</span></span></h2>
+      <p><span class="lang-en">AI AGENCY starts on 1 March 2027. Apply until 31 January 2027 for the early bird price of €900.</span><span class="lang-de">AI AGENCY startet am 1. März 2027. Bewirb Dich bis 31. Januar 2027 zum Early-Bird-Preis von 900 €.</span></p>
+      <div class="ctas">
+        <a class="btn" href="contact.html?topic=ai-agency"><span class="lang-en">Apply for AI AGENCY</span><span class="lang-de">Für AI AGENCY bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+        <a class="btn ghost" href="contact.html"><span class="lang-en">Ask a question</span><span class="lang-de">Frage stellen</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://aiwareness.space/services/ai-coaching#service",
+      "name": "AI Coaching & Leadership Coaching",
+      "serviceType": "Leadership coaching and AI coaching for individuals",
+      "description": "One-to-one coaching for leaders, founders, freelancers and creatives: leadership coaching, AI coaching for your work, and coaching to express your creativity ethically with AI. In person in Berlin or online.",
+      "provider": {
+        "@id": "https://aiwareness.space/#organization"
+      },
+      "areaServed": [
+        "Berlin",
+        "Germany"
+      ],
+      "url": "https://aiwareness.space/services/ai-coaching",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Leaders, founders, freelancers and creatives"
+      }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://aiwareness.space/services/ai-coaching#program",
+      "name": "AI AGENCY",
+      "description": "Coaching program for entrepreneurs and creatives: build an agentic AI co-work system connected to your tools, with four 1:1 coachings, five group calls with peers and six modules (Awareness, Goals, Essence, Network, Create in Public, Your Plan).",
+      "provider": {
+        "@id": "https://aiwareness.space/#organization"
+      },
+      "url": "https://aiwareness.space/services/ai-coaching#program",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "startDate": "2027-03-01"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Early bird",
+          "price": "900",
+          "priceCurrency": "EUR",
+          "validThrough": "2027-01-31"
+        },
+        {
+          "@type": "Offer",
+          "name": "Regular price",
+          "price": "1400",
+          "priceCurrency": "EUR",
+          "validFrom": "2027-02-01"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aiwareness.space/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Offers",
+          "item": "https://aiwareness.space/solutions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Coaching",
+          "item": "https://aiwareness.space/services/ai-coaching"
+        }
+      ]
+    }
+  ]
+}
+</script>

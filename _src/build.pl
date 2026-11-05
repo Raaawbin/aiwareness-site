@@ -10,6 +10,7 @@
 # nav, head, bodyclass), then a line "---", then the page body.
 #   {{> name}}        includes _src/partials/name.html
 #   {{VER}}           cache-busting version for CSS and JS (bump below)
+#   {{LEADS_URL}}     the Google Apps Script /exec URL that all lead forms post to (set below)
 #   {{cur:key}}       becomes aria-current="page" when nav: key
 #   {{PAGE}}          the page's public address without .html (for canonical URLs)
 #   {{TITLE_EN_JSON}} {{DESC_EN_JSON}}  title and description escaped for JSON-LD
@@ -23,7 +24,11 @@ use utf8;
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
 
-my $VER = '20261102m';
+# Public /exec URL of the Apps Script web app (_server/apps-script/aiwareness-leads.gs).
+# Not a secret: the Mailchimp key stays in the Script Properties. Empty = forms show their error note.
+my $LEADS_URL = 'https://script.google.com/macros/s/AKfycbyTj4qCIVPEMzK4VkLR8l_QP17cYmBOOnvZhjIRLePrapDHcvWEPFdhotUqhmA0j9FQUw/exec';
+
+my $VER = '20261105c';
 
 my $src  = dirname(abs_path($0));
 my $root = dirname($src);
@@ -93,6 +98,7 @@ for my $p (@pages) {
   my $bc = $m{bodyclass} ? qq( class="$m{bodyclass}") : q();
   $out =~ s/\{\{BODYCLASS\}\}/$bc/g;
   $out =~ s/\{\{VER\}\}/$VER/g;
+  $out =~ s/\{\{LEADS_URL\}\}/$LEADS_URL/g;
   $out =~ s/\{\{cur:(\w+)\}\}/$1 eq $m{nav} ? ' aria-current="page"' : ''/ge;
   die "$p: unresolved placeholder $1" if $out =~ /(\{\{[^}]*\}\})/;
 

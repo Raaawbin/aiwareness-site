@@ -1,4 +1,6 @@
-# Contact form: STRATO setup
+# Contact form: STRATO setup (retired)
+
+Since 2026-11-04 the contact form posts to the Google Apps Script below, like the event sign-up. `send.php` is no longer used by the site; it stays here in case we switch back.
 
 The website runs on GitHub Pages, which cannot run server code. The contact form therefore posts to `send.php` on our STRATO webspace, and that script emails the message to hello@aiwareness.space. GitHub Pages does not publish folders starting with `_`, so this folder stays private.
 
@@ -29,3 +31,11 @@ Until steps 2 to 4 are done, the form tells visitors that sending did not work a
 - Recipient or sender: `MAIL_TO` and `MAIL_FROM` at the top of `send.php` (the sender must be an address on our own domain).
 - Topics in the dropdown: keep `TOPICS` in `send.php` in line with the `<option value>` list in `_src/pages/contact.html`.
 - After editing `send.php`, upload it to STRATO again. The copy in this folder is the source.
+
+# Lead forms: Google Apps Script
+
+`apps-script/aiwareness-leads.gs` is the source of the Google Apps Script web app behind the contact form (`contact.html`, tab Contacts), the event sign-up (`event-signup.html`, tab Events) and later lead forms. It writes every submission to the Google Sheet "AIwareness Leads" (Overview plus one tab per form type), emails hello@aiwareness.space with the visitor as Reply-To, and, only if the optional newsletter box is ticked, adds the person to Mailchimp as subscribed (no double opt-in) with the form type as tag. Existing members keep their status. Every form must send `privacy=yes`; the script refuses anything else.
+
+- Secrets live only in Apps Script, Project Settings, Script Properties: `MC_API_KEY`, `MC_LIST_ID`, `NOTIFY_EMAIL`. Never in this repository.
+- The public `/exec` URL goes into `$LEADS_URL` at the top of `_src/build.pl`; then rebuild.
+- After changing the script: paste it into Apps Script, then Deploy, Manage deployments, Edit, New version. The URL stays the same.
