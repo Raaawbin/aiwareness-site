@@ -38,4 +38,5 @@ Until steps 2 to 4 are done, the form tells visitors that sending did not work a
 
 - Secrets live only in Apps Script, Project Settings, Script Properties: `MC_API_KEY`, `MC_LIST_ID`, `NOTIFY_EMAIL`. Never in this repository.
 - The public `/exec` URL goes into `$LEADS_URL` at the top of `_src/build.pl`; then rebuild.
+- Form types and tabs: contact (Contacts), event-signup (Events), agency-application (Programs, the AI AGENCY application on `services/ai-coaching#application`). Every extra form field becomes its own column in the tab.
 - After changing the script: paste it into Apps Script, then Deploy, Manage deployments, Edit, New version. The URL stays the same.

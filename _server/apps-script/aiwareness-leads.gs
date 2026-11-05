@@ -39,6 +39,7 @@ const TAB_FOR_FORM = {
   'talk-request': 'Talks',
   'event-signup': 'Events',
   'program-waitlist': 'Programs',
+  'agency-application': 'Programs',
   'newsletter': 'Funnel'
 };
 

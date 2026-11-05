@@ -61,6 +61,7 @@ nav: solutions
 .dates small { display: block; margin-top: 4px; color: var(--muted); font-size: .8rem; line-height: 1.45; }
 
 .single-actions { justify-content: center; margin-top: 36px; }
+.application { max-width: 780px; margin: 80px auto 0; scroll-margin-top: 100px; }
 
 @media (max-width: 980px) {
   .incl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -89,7 +90,7 @@ nav: solutions
       <span class="lang-de">AI AGENCY ist ein Coaching-Programm für Entrepreneure und Kreative. In sechs Modulen baust Du Dein eigenes KI-Co-Work-System auf, verbunden mit Deinen echten Tools, und bleibst dabei die Person, die entscheidet.</span>
     </p>
     <div class="ctas reveal" style="--i:3">
-      <a class="btn" href="#apply"><span class="lang-en">Apply for AI AGENCY</span><span class="lang-de">Für AI AGENCY bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+      <a class="btn" href="#application"><span class="lang-en">Apply for AI AGENCY</span><span class="lang-de">Für AI AGENCY bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
       <a class="btn ghost" href="#single"><span class="lang-en">Book a single coaching</span><span class="lang-de">Einzelcoaching buchen</span></a>
     </div>
     <div class="agency-facts reveal" style="--i:4">
@@ -362,7 +363,7 @@ nav: solutions
           <li><span class="lang-en">5 group calls with peers, 120 minutes</span><span class="lang-de">5 Gruppencalls mit Gleichgesinnten, 120 Minuten</span></li>
           <li><span class="lang-en">6 modules with content and exercises</span><span class="lang-de">6 Module mit Inhalten und Übungen</span></li>
         </ul>
-        <a class="btn" href="contact.html?topic=ai-agency"><span class="lang-en">Apply now</span><span class="lang-de">Jetzt bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+        <a class="btn" href="#application"><span class="lang-en">Apply now</span><span class="lang-de">Jetzt bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
       </div>
       <div class="panel price reveal" style="--i:1">
         <span class="kind"><span class="lang-en">Regular price</span><span class="lang-de">Regulärer Preis</span></span>
@@ -373,7 +374,7 @@ nav: solutions
           <li><span class="lang-en">5 group calls with peers, 120 minutes</span><span class="lang-de">5 Gruppencalls mit Gleichgesinnten, 120 Minuten</span></li>
           <li><span class="lang-en">6 modules with content and exercises</span><span class="lang-de">6 Module mit Inhalten und Übungen</span></li>
         </ul>
-        <a class="btn ghost" href="contact.html?topic=ai-agency"><span class="lang-en">Apply</span><span class="lang-de">Bewerben</span></a>
+        <a class="btn ghost" href="#application"><span class="lang-en">Apply</span><span class="lang-de">Bewerben</span></a>
       </div>
     </div>
     <div class="dates reveal">
@@ -381,6 +382,91 @@ nav: solutions
       <div><b><span class="lang-en">31 January</span><span class="lang-de">31. Januar</span></b><small><span class="lang-en">Early bird ends</span><span class="lang-de">Early Bird endet</span></small></div>
       <div><b><span class="lang-en">28 February</span><span class="lang-de">28. Februar</span></b><small><span class="lang-en">Applications close</span><span class="lang-de">Bewerbung endet</span></small></div>
       <div><b><span class="lang-en">1 March 2027</span><span class="lang-de">1. März 2027</span></b><small><span class="lang-en">Program starts</span><span class="lang-de">Programm startet</span></small></div>
+    </div>
+
+    <!-- ============ APPLICATION FORM: posts to the AIwareness Leads Apps Script, formType agency-application (tab Programs) ============ -->
+    <div class="application" id="application">
+      <div class="sec-head center reveal">
+        <span class="eyebrow"><span class="lang-en">Application</span><span class="lang-de">Bewerbung</span></span>
+        <h2 id="applicationTitle"><span class="lang-en">Tell us <span class="o">where you stand</span></span><span class="lang-de">Erzähl uns, <span class="o">wo Du stehst</span></span></h2>
+        <p class="section-intro">
+          <span class="lang-en">There are no right answers. Your answers help us see whether AI AGENCY fits you, and they give your first coaching a head start. Take ten quiet minutes and write the way you would talk.</span>
+          <span class="lang-de">Es gibt keine richtigen Antworten. Deine Antworten helfen uns zu sehen, ob AI AGENCY zu Dir passt, und sie geben Deinem ersten Coaching einen Vorsprung. Nimm Dir zehn ruhige Minuten und schreib so, wie Du sprechen würdest.</span>
+        </p>
+      </div>
+      <div class="panel form-card reveal">
+        <form id="applicationForm" class="form" data-leads="{{LEADS_URL}}" aria-labelledby="applicationTitle" novalidate>
+          <div class="row2">
+            <div class="field"><label for="ap-name">Name</label><input id="ap-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="ap-email"><span class="lang-en">Email</span><span class="lang-de">E-Mail</span></label><input id="ap-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="ap-role"><span class="lang-en">What describes you best?</span><span class="lang-de">Was beschreibt Dich am besten?</span></label>
+              <select id="ap-role" name="role" class="select" required>
+                <option value="" data-de="Bitte wählen">Please choose</option>
+                <option value="Own business" data-de="Ich führe mein eigenes Business">I run my own business</option>
+                <option value="Freelancer" data-de="Ich arbeite freiberuflich">I work as a freelancer</option>
+                <option value="Creative" data-de="Ich arbeite kreativ">I work creatively</option>
+                <option value="Leader in an organisation" data-de="Ich führe in einer Organisation">I lead in an organisation</option>
+                <option value="Something else" data-de="Etwas anderes">Something else</option>
+              </select>
+            </div>
+            <div class="field"><label for="ap-aiuse"><span class="lang-en">How do you use AI today?</span><span class="lang-de">Wie nutzt Du KI heute?</span></label>
+              <select id="ap-aiuse" name="aiUse" class="select" required>
+                <option value="" data-de="Bitte wählen">Please choose</option>
+                <option value="Hardly at all" data-de="Kaum">Hardly at all</option>
+                <option value="Chat now and then" data-de="Ich chatte ab und zu mit KI">I chat with AI now and then</option>
+                <option value="Weekly in my work" data-de="Jede Woche in meiner Arbeit">Every week in my work</option>
+                <option value="Agents or automations" data-de="Ich arbeite schon mit Agenten oder Automationen">I already work with agents or automations</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="ap-business"><span class="lang-en">Your business in a few sentences: what do you offer, and to whom?</span><span class="lang-de">Dein Business in ein paar Sätzen: Was bietest Du an, und für wen?</span></label><textarea id="ap-business" name="business" required></textarea></div>
+          <div class="field"><label for="ap-why"><span class="lang-en">Why AI AGENCY, and why now?</span><span class="lang-de">Warum AI AGENCY, und warum gerade jetzt?</span></label><textarea id="ap-why" name="message" required></textarea></div>
+          <div class="field"><label for="ap-time"><span class="lang-en">Where does your time go that you would like back? Name one or two concrete tasks.</span><span class="lang-de">Wohin geht Deine Zeit, die Du gern zurückhättest? Nenn ein oder zwei konkrete Aufgaben.</span></label><textarea id="ap-time" name="timeBack" required></textarea></div>
+          <div class="field"><label for="ap-concerns"><span class="lang-en">What makes you uneasy about letting AI agents work with your data and tools?</span><span class="lang-de">Was macht Dir Unbehagen, wenn KI-Agenten mit Deinen Daten und Tools arbeiten?</span> <span class="opt"><span class="lang-en">(optional)</span><span class="lang-de">(optional)</span></span></label><textarea id="ap-concerns" name="concerns"></textarea></div>
+          <div class="field"><label for="ap-success"><span class="lang-en">At the end of the program, what would make you say: this was worth it?</span><span class="lang-de">Was müsste am Ende des Programms passiert sein, damit Du sagst: Das hat sich gelohnt?</span></label><textarea id="ap-success" name="success" required></textarea></div>
+          <div class="row2">
+            <div class="field"><label for="ap-public"><span class="lang-en">Module C asks you to share your process openly. How does that feel?</span><span class="lang-de">In Modul C teilst Du Deinen Weg öffentlich. Wie fühlt sich das an?</span></label>
+              <select id="ap-public" name="createInPublic" class="select" required>
+                <option value="" data-de="Bitte wählen">Please choose</option>
+                <option value="Yes, gladly" data-de="Gern">Yes, gladly</option>
+                <option value="Yes, within limits" data-de="Ja, mit Grenzen">Yes, within limits</option>
+                <option value="Not sure yet" data-de="Weiß ich noch nicht">Not sure yet</option>
+              </select>
+            </div>
+            <div class="field"><label for="ap-tools"><span class="lang-en">Which tools do you work with today?</span><span class="lang-de">Mit welchen Tools arbeitest Du heute?</span> <span class="opt"><span class="lang-en">(optional)</span><span class="lang-de">(optional)</span></span></label><input id="ap-tools" name="tools" type="text" placeholder="Notion, Obsidian, Claude, ChatGPT, CRM …"></div>
+          </div>
+          <div class="field"><label for="ap-notes"><span class="lang-en">Anything else we should know, for example about your time from March 2027?</span><span class="lang-de">Gibt es noch etwas, das wir wissen sollten, etwa zu Deiner Zeit ab März 2027?</span> <span class="opt"><span class="lang-en">(optional)</span><span class="lang-de">(optional)</span></span></label><textarea id="ap-notes" name="notes"></textarea></div>
+
+          <label class="check required">
+            <input type="checkbox" name="privacy" value="yes" required>
+            <span><span class="lang-en">I agree to the <a href="privacy.html#p3">privacy policy</a> and would like to receive the AIwareness newsletter. I can unsubscribe at any time.</span><span class="lang-de">Ich stimme der <a href="privacy.html#p3">Datenschutzerklärung</a> zu und möchte den AIwareness-Newsletter erhalten. Ich kann mich jederzeit abmelden.</span></span>
+          </label>
+          <!-- One required box covers privacy and newsletter (Robin, 2026-11-04), so every application sends newsletter=yes. -->
+          <input type="hidden" name="newsletter" value="yes">
+
+          <!-- Spam trap: hidden from people, often filled in by bots. -->
+          <div class="hp-field" aria-hidden="true"><label for="ap-website">Website</label><input id="ap-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <input type="hidden" name="formType" value="agency-application">
+          <input type="hidden" name="program" value="AI AGENCY 2027">
+          <input type="hidden" name="lang" value="en">
+          <input type="hidden" name="page" value="">
+          <button class="btn" type="submit"><span class="lang-en">Send application</span><span class="lang-de">Bewerbung senden</span><span class="icon icon-arrow sm" aria-hidden="true"></span></button>
+          <p class="form-note">
+            <span class="lang-en">We save your application in a Google Sheet that only we can open, and it reaches our inbox by email. The newsletter runs on Mailchimp. Details in our <a href="privacy.html#p3">privacy policy</a>.</span>
+            <span class="lang-de">Wir speichern Deine Bewerbung in einer Google-Tabelle, auf die nur wir Zugriff haben, und sie erreicht unser Postfach per E-Mail. Der Newsletter läuft über Mailchimp. Mehr in der <a href="privacy.html#p3">Datenschutzerklärung</a>.</span>
+          </p>
+          <div class="form-error" role="alert" data-error hidden>
+            <p><span class="lang-en">Sending didn’t work just now. Please try again in a moment.</span><span class="lang-de">Das Senden hat gerade nicht geklappt. Bitte versuch es gleich noch einmal.</span></p>
+          </div>
+        </form>
+        <div class="form-success" data-success hidden>
+          <div class="fs-icon"><span class="icon icon-check" aria-hidden="true"></span></div>
+          <h3><span class="lang-en">Thank you for your application</span><span class="lang-de">Danke für Deine Bewerbung</span></h3>
+          <p><span class="lang-en">It is on its way to us. We read every application personally and reply to you by email.</span><span class="lang-de">Sie ist unterwegs zu uns. Wir lesen jede Bewerbung persönlich und antworten Dir per E-Mail.</span></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -445,7 +531,7 @@ nav: solutions
       <h2><span class="lang-en">Build your system <span class="o">and stay the one who decides</span></span><span class="lang-de">Bau Dein System <span class="o">und bleib die Person, die entscheidet</span></span></h2>
       <p><span class="lang-en">AI AGENCY starts on 1 March 2027. Apply until 31 January 2027 for the early bird price of €900.</span><span class="lang-de">AI AGENCY startet am 1. März 2027. Bewirb Dich bis 31. Januar 2027 zum Early-Bird-Preis von 900 €.</span></p>
       <div class="ctas">
-        <a class="btn" href="contact.html?topic=ai-agency"><span class="lang-en">Apply for AI AGENCY</span><span class="lang-de">Für AI AGENCY bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
+        <a class="btn" href="#application"><span class="lang-en">Apply for AI AGENCY</span><span class="lang-de">Für AI AGENCY bewerben</span><span class="icon icon-arrow sm" aria-hidden="true"></span></a>
         <a class="btn ghost" href="contact.html"><span class="lang-en">Ask a question</span><span class="lang-de">Frage stellen</span></a>
       </div>
     </div>
