@@ -1308,3 +1308,20 @@ a.tile .text-link { margin-top: auto; }
 .form-success .fs-when { margin: 18px auto 0; padding: 14px 18px; max-width: 44ch; border-radius: 16px; background: rgba(167, 139, 250, .08); border: 1px solid rgba(167, 139, 250, .25); text-align: center; }
 .form-success .fs-when b { display: block; margin-bottom: 4px; font-weight: 650; }
 .form-success .fs-when a { word-break: break-all; }
+
+/* Offers overview: one card per offer with services, outcome and buttons */
+.offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.offer { display: flex; flex-direction: column; padding: 12px 12px 30px; }
+.offer-photo { display: block; margin: 0 0 24px; overflow: hidden; border-radius: 18px; }
+.offer-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .5s var(--ease); }
+.offer-body { display: flex; flex: 1; flex-direction: column; padding-inline: 16px; }
+.offer .svc-kicker { margin: 0 0 6px; padding: 0; }
+.offer h3 { margin-bottom: 12px; font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
+.offer .offer-lead { margin-bottom: 20px; font-size: .97rem; line-height: 1.75; }
+.offer .checks { gap: 11px; margin-bottom: 24px; }
+.offer .checks li { font-size: .95rem; }
+.offer .result-box { margin-top: auto; padding: 20px 22px; }
+.offer-body > .result-box { margin-top: auto; }
+.offer-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+@media (hover: hover) { .offer:hover .offer-photo img { transform: scale(1.03); } }
+@media (max-width: 900px) { .offer-grid { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; } }
