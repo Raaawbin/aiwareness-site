@@ -383,6 +383,8 @@
     lf.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!lf.checkValidity()) { lf.reportValidity(); return; }
+      if (lf.getAttribute('data-busy')) return;   /* already sending: a second submit must not send twice */
+      lf.setAttribute('data-busy', '1');
       var url = lf.getAttribute('data-leads');
       var btn = lf.querySelector('button[type=submit]');
       var label = btn.innerHTML;
@@ -393,10 +395,10 @@
       lf.elements.page.value = location.pathname;
       var nlField = lf.elements.newsletter;   /* a checkbox, or a hidden field when one box covers privacy and newsletter */
       var wantsNl = !!nlField && (nlField.type === 'checkbox' ? nlField.checked : nlField.value === 'yes');
-      var fail = function () { btn.disabled = false; btn.innerHTML = label; err.hidden = false; };
+      var fail = function () { lf.removeAttribute('data-busy'); btn.disabled = false; btn.innerHTML = label; err.hidden = false; };
       if (!url) { fail(); return; }
       var ctrl = window.AbortController ? new AbortController() : null;
-      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 20000) : null;
+      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 45000) : null;
       /* URL-encoded body: a "simple" request, so the browser sends no CORS preflight to Google. */
       fetch(url, { method: 'POST', body: new URLSearchParams(new FormData(lf)), signal: ctrl ? ctrl.signal : undefined })
         .then(function (r) { return r.json(); })

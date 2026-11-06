@@ -130,6 +130,15 @@ function doPost(e) {
 
     const formType = String(p.formType || 'general').replace(/[^\w-]/g, '').slice(0, 40) || 'general';
     const tab = TAB_FOR_FORM[formType] || DEFAULT_TAB;
+    // The same sign-up arriving twice within two minutes (double click, a retry after a slow
+    // answer) is saved and emailed once. The second one still gets a friendly "ok".
+    const sig = [email, formType, p.event || '', p.message || ''].join('|');
+    const dupKey = 'lead:' + Utilities.base64EncodeWebSafe(
+      Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, sig));
+    const cache = CacheService.getScriptCache();
+    if (cache.get(dupKey)) return json({ ok: true });
+    cache.put(dupKey, '1', 120);
+
     const wantsNewsletter = p.newsletter === 'yes';
     const name = String(p.name || '').trim();
 
