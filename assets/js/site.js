@@ -369,7 +369,7 @@
   /* ---------- Lead forms (contact, event sign-up and more): Google Apps Script ----------
      Posts to the web app in data-leads (source: _server/apps-script/aiwareness-leads.gs), which saves
      the row in the Google Sheet "AIwareness Leads", emails the team inbox and, if the
-     optional newsletter box is ticked, adds the person to Mailchimp with double opt-in. */
+     newsletter box is ticked, adds the person to Mailchimp (via a queue, see the script). */
   document.querySelectorAll('form[data-leads]').forEach(function (lf) {
     var card = lf.parentNode;
     var ok = card.querySelector('[data-success]');
@@ -395,20 +395,30 @@
       lf.elements.page.value = location.pathname;
       var nlField = lf.elements.newsletter;   /* a checkbox, or a hidden field when one box covers privacy and newsletter */
       var wantsNl = !!nlField && (nlField.type === 'checkbox' ? nlField.checked : nlField.value === 'yes');
-      var fail = function () { lf.removeAttribute('data-busy'); btn.disabled = false; btn.innerHTML = label; err.hidden = false; };
+      /* Optimistic: the confirmation shows at once and the request runs in the background.
+         If it fails, the form comes back with the error message so nothing gets lost silently. */
+      var showOk = function () {
+        lf.hidden = true;
+        ok.hidden = false;
+        var nl = ok.querySelector('[data-success-nl]');
+        if (nl) nl.hidden = !wantsNl;
+        ok.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+      };
+      var fail = function () {
+        lf.removeAttribute('data-busy'); btn.disabled = false; btn.innerHTML = label;
+        ok.hidden = true; lf.hidden = false; err.hidden = false;
+        err.scrollIntoView({ behavior: 'auto', block: 'center' });
+      };
       if (!url) { fail(); return; }
+      showOk();
       var ctrl = window.AbortController ? new AbortController() : null;
       var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 45000) : null;
-      /* URL-encoded body: a "simple" request, so the browser sends no CORS preflight to Google. */
-      fetch(url, { method: 'POST', body: new URLSearchParams(new FormData(lf)), signal: ctrl ? ctrl.signal : undefined })
+      /* URL-encoded body: a "simple" request, so the browser sends no CORS preflight to Google.
+         keepalive lets the request finish even if the page is closed right away. */
+      fetch(url, { method: 'POST', body: new URLSearchParams(new FormData(lf)), signal: ctrl ? ctrl.signal : undefined, keepalive: true })
         .then(function (r) { return r.json(); })
         .then(function (d) {
           if (!d || !d.ok) throw new Error((d && d.error) || 'failed');
-          lf.hidden = true;
-          ok.hidden = false;
-          var nl = ok.querySelector('[data-success-nl]');
-          if (nl) nl.hidden = !wantsNl;
-          ok.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
         })
         .catch(fail)
         .then(function () { if (timer) clearTimeout(timer); });

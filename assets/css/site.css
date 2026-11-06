@@ -1303,5 +1303,8 @@ a.tile .text-link { margin-top: auto; }
 
 /* Event info rows (same look as the contact list, but not links) */
 .c-list > div { display: flex; align-items: center; gap: 16px; padding: 10px 0; }
-.form-success .fs-cal { margin: 18px 0 0; }
+.form-success .fs-cal { margin: 18px auto 0; text-align: center; }
 .form-success .fs-cal .btn { width: auto; }
+.form-success .fs-when { margin: 18px auto 0; padding: 14px 18px; max-width: 44ch; border-radius: 16px; background: rgba(167, 139, 250, .08); border: 1px solid rgba(167, 139, 250, .25); text-align: center; }
+.form-success .fs-when b { display: block; margin-bottom: 4px; font-weight: 650; }
+.form-success .fs-when a { word-break: break-all; }

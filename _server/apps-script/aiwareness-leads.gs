@@ -16,6 +16,12 @@
  *        MC_LIST_ID    your Mailchimp Audience ID
  *        NOTIFY_EMAIL  optional, e.g. hello@aiwareness.space
  *   4. Deploy > New deployment > Web app (Execute as: Me, Access: Anyone).
+ *   5. Select the function "installTrigger" and click Run (authorise when asked). It sets up
+ *      a timer that runs "processQueue" every minute.
+ *
+ * Speed: doPost only checks and saves the row (about one second). Mailchimp and the
+ * notification email are queued in the hidden tab "Queue" and sent by processQueue within
+ * a minute, so the visitor does not wait for them.
  *
  * After any later code change: Deploy > Manage deployments > Edit > New version.
  *
@@ -142,20 +148,19 @@ function doPost(e) {
     const wantsNewsletter = p.newsletter === 'yes';
     const name = String(p.name || '').trim();
 
-    const mailchimp = wantsNewsletter ? subscribe(email, name, formType) : 'not requested';
-
     const row = {
       timestamp: new Date(), formType, email, name,
       newsletter: wantsNewsletter ? 'yes' : 'no',
-      mailchimp, page: p.page || '', message: p.message || ''
+      mailchimp: wantsNewsletter ? 'queued' : 'not requested',
+      page: p.page || '', message: p.message || ''
     };
     Object.keys(p).forEach(k => {
       if (!(k in row) && k !== HONEYPOT) row[k] = p[k];
     });
 
-    appendToTab(tab, row);
+    const tabRow = appendToTab(tab, row);
     addToOverview(tab, row);
-    notify(tab, row);
+    enqueue(tab, tabRow, row);
 
     return json({ ok: true });
   } catch (err) {
@@ -183,6 +188,7 @@ function appendToTab(tabName, row) {
 
   writeHeaders(sh, headers);
   sh.appendRow(headers.map(h => safe(row[h])));
+  return sh.getLastRow();
 }
 
 function addToOverview(tab, row) {
@@ -243,6 +249,101 @@ function subscribe(email, name, tag) {
   });
 
   return JSON.parse(res.getContentText()).status; // subscribed, or an existing member's status
+}
+
+
+/* ---------- Queue: Mailchimp and notification run after the visitor got their answer ---------- */
+
+const QUEUE_TAB = 'Queue';
+const MAX_ATTEMPTS = 3;
+
+// Run once from the editor (and again after authorising new permissions).
+function installTrigger() {
+  ScriptApp.getProjectTriggers().forEach(t => {
+    if (t.getHandlerFunction() === 'processQueue') ScriptApp.deleteTrigger(t);
+  });
+  ScriptApp.newTrigger('processQueue').timeBased().everyMinutes(1).create();
+}
+
+function enqueue(tab, tabRow, row) {
+  const ss = SpreadsheetApp.getActive();
+  let q = ss.getSheetByName(QUEUE_TAB);
+  if (!q) {
+    q = ss.insertSheet(QUEUE_TAB);
+    q.getRange(1, 1, 1, 2).setValues([['attempts', 'payload']]).setFontWeight('bold');
+    q.hideSheet();
+  }
+  const payload = JSON.stringify({ tab, tabRow, row: Object.assign({}, row, { timestamp: row.timestamp.toISOString() }) });
+  q.appendRow([0, payload]);
+}
+
+function processQueue() {
+  const lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return;   // the next minute picks it up
+  try {
+    const q = SpreadsheetApp.getActive().getSheetByName(QUEUE_TAB);
+    if (!q || q.getLastRow() < 2) return;
+    const data = q.getRange(2, 1, q.getLastRow() - 1, 2).getValues();
+    const remove = [];
+
+    data.forEach((r, i) => {
+      const sheetRow = i + 2;
+      let job;
+      try { job = JSON.parse(r[1]); } catch (e) { remove.push(sheetRow); return; }
+      try {
+        const row = job.row;
+        row.timestamp = new Date(row.timestamp);
+        if (row.newsletter === 'yes') {
+          row.mailchimp = subscribe(row.email, row.name, row.formType);
+          setMailchimpStatus(job.tab, job.tabRow, row);
+        }
+        notify(job.tab, row);
+        remove.push(sheetRow);
+      } catch (err) {
+        console.error(err);
+        const attempts = Number(r[0]) + 1;
+        if (attempts >= MAX_ATTEMPTS) remove.push(sheetRow);
+        else q.getRange(sheetRow, 1).setValue(attempts);
+      }
+    });
+
+    remove.sort((a, b) => b - a).forEach(n => q.deleteRow(n));
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+// Writes the Mailchimp result into the lead's rows (tab and Overview), if they are still where they were.
+function setMailchimpStatus(tabName, tabRow, row) {
+  const ss = SpreadsheetApp.getActive();
+
+  const sh = ss.getSheetByName(tabName);
+  if (sh && tabRow) {
+    const headers = sh.getRange(1, 1, 1, sh.getLastColumn()).getValues()[0];
+    const col = headers.indexOf('mailchimp') + 1;
+    const mailCol = headers.indexOf('email') + 1;
+    if (col && mailCol && String(sh.getRange(tabRow, mailCol).getValue()).toLowerCase() === row.email) {
+      sh.getRange(tabRow, col).setValue(row.mailchimp);
+    }
+  }
+
+  const ov = ss.getSheetByName(OVERVIEW_TAB);
+  if (ov) {
+    const first = OV_HEADER_ROW + 1;
+    const n = Math.min(100, Math.max(0, ov.getLastRow() - OV_HEADER_ROW));
+    if (n) {
+      const vals = ov.getRange(first, 1, n, OV_HEADERS.length).getValues();
+      const ts = row.timestamp.getTime();
+      const iMail = OV_HEADERS.indexOf('email'), iMc = OV_HEADERS.indexOf('mailchimp');
+      for (let i = 0; i < vals.length; i++) {
+        const t = vals[i][0] instanceof Date ? vals[i][0].getTime() : 0;
+        if (String(vals[i][iMail]).toLowerCase() === row.email && Math.abs(t - ts) < 120000) {
+          ov.getRange(first + i, iMc + 1).setValue(row.mailchimp);
+          break;
+        }
+      }
+    }
+  }
 }
 
 /* ---------- Notification and response ---------- */
