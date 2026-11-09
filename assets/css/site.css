@@ -1325,3 +1325,35 @@ a.tile .text-link { margin-top: auto; }
 .offer-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
 @media (hover: hover) { .offer:hover .offer-photo img { transform: scale(1.03); } }
 @media (max-width: 900px) { .offer-grid { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; } }
+
+/* ---------- Home hero, mirrored (2026-11-09): workshop photo on the left, text on the right ---------- */
+@media (min-width: 761px) {
+  .hero::before {
+    background: radial-gradient(ellipse at 28% 45%, rgba(139, 92, 246, .22), transparent 50%), radial-gradient(ellipse at 4% 64%, rgba(244, 114, 182, .11), transparent 36%), radial-gradient(ellipse at 82% 40%, rgba(110, 231, 255, .07), transparent 45%);
+  }
+  .hero-bg {
+    inset: 70px 0 40px 0;
+    background: url("../img/photos/aoh-training.webp") 50% 40% / cover no-repeat;
+    -webkit-mask-image: linear-gradient(0deg, transparent, #000 22%, #000 78%, transparent);
+    mask-image: linear-gradient(0deg, transparent, #000 22%, #000 78%, transparent);
+  }
+  /* gradient overlay: strong in the middle behind the centred text, more transparent towards the left and right edges */
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(10, 10, 11, .22) 0%, rgba(10, 10, 11, .7) 26%, rgba(10, 10, 11, .93) 50%, rgba(10, 10, 11, .7) 74%, rgba(10, 10, 11, .22) 100%);
+  }
+  .hero-copy { margin-inline: auto; width: min(760px, 92%); text-align: center; }
+  .hero-copy h1 { font-size: clamp(2.8rem, 5.2vw, 5rem); margin-inline: auto; }
+  .hero-copy h1 .o { margin-inline: auto; }
+  .hero-copy .sub { max-width: 640px; margin-inline: auto; }
+  .hero-copy .ctas { justify-content: center; }
+  .hero-caption { right: auto; left: 50%; transform: translateX(-50%); bottom: 72px; }
+}
+.hero-copy .eyebrow::after { content: ""; width: 24px; height: 2px; border-radius: 2px; background: var(--grad); transform: scaleX(-1); }
+@media (max-width: 760px) {
+  .hero-copy { text-align: center; }
+  .hero-copy .eyebrow::after, .hero-copy .eyebrow::before { display: none; }
+  .hero-copy h1 .o, .hero-copy .sub { margin-inline: auto; }
+  .hero-copy .ctas { justify-content: center; }
+  .hero-bg { background-image: url("../img/photos/aoh-training.webp"); background-position: 50% 40%; }
+}

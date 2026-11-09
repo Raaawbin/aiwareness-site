@@ -28,7 +28,7 @@ use Cwd qw(abs_path);
 # Not a secret: the Mailchimp key stays in the Script Properties. Empty = forms show their error note.
 my $LEADS_URL = 'https://script.google.com/macros/s/AKfycbyTj4qCIVPEMzK4VkLR8l_QP17cYmBOOnvZhjIRLePrapDHcvWEPFdhotUqhmA0j9FQUw/exec';
 
-my $VER = '20261108c';
+my $VER = '20261109i';
 
 my $src  = dirname(abs_path($0));
 my $root = dirname($src);
