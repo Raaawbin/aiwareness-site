@@ -1378,3 +1378,8 @@ a.tile .text-link { margin-top: auto; }
 @media (max-width: 760px) {
   .page-hero:not(.left):not(.note-hero) .eyebrow::after, .page-hero:not(.left):not(.note-hero) .eyebrow::before { display: none; }
 }
+
+/* Resources: centred jump links and own-links row */
+.res-jump, .res-own-links { justify-content: center; }
+.res-own { text-align: center; }
+.res-sec .sec-head .section-intro { margin-inline: auto; }
